@@ -1,0 +1,77 @@
+@import "../variables.less";
+
+@toolbar-bg: #242424;//fade(#000000, 95%);
+
+.medium-toolbar-arrow-under:after {
+  border-color: @toolbar-bg transparent transparent transparent;
+  top: 100%;
+}
+
+.medium-toolbar-arrow-over:before {
+  border-color: transparent transparent @toolbar-bg transparent;
+  top: -5px;
+}
+
+.medium-editor-toolbar {
+  background-color: @toolbar-bg;
+  border-radius: 5px;
+  box-shadow: none;
+  border: none;
+}
+.medium-editor-toolbar li button {
+  background-color: @toolbar-bg;
+  border: 0;
+  color: fade(#fff, 70%);
+  height: 36px;
+  min-width: 36px;
+  padding: 8px;
+  transition: @transition-basic;
+  box-shadow: none;
+}
+.medium-editor-toolbar li button:hover {
+  color: #fff;
+  background: @toolbar-bg;
+}
+.medium-editor-toolbar li .medium-editor-button-first {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.medium-editor-toolbar li .medium-editor-button-last {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.medium-editor-toolbar li .medium-editor-button-active {
+  background: @toolbar-bg;
+  color: @color-accent;
+  &:hover {
+    color: @color-accent;
+    background: @toolbar-bg;
+  }
+}
+
+.medium-editor-toolbar-form {
+  background: @toolbar-bg;
+  border-radius: 3px;
+  color: #999;
+  overflow: hidden;
+}
+.medium-editor-toolbar-form .medium-editor-toolbar-input {
+  background: @toolbar-bg;
+  box-sizing: border-box;
+  color: #ccc;
+  height: 36px;
+  padding: 10px;
+}
+.medium-editor-toolbar-form a {
+  color: #fff;
+}
+
+.medium-editor-toolbar-anchor-preview {
+  background: @toolbar-bg;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.medium-editor-placeholder:after {
+  color: #b3b3b1;
+}

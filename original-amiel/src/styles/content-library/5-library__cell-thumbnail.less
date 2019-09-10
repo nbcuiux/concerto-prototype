@@ -1,0 +1,21 @@
+@import "../variables.less";
+
+.library__cell-thumbnail {
+    position: relative;
+    box-sizing: border-box;
+    width: 100px;
+    height: 70px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .t-style & {
+        border-radius: 2px;
+        //box-shadow: 0 1px 2px 0 fade(#000000, 30%);
+    }
+
+    @media (max-width: @width-screen-s) {
+        margin: 5px 15px;
+    }
+}

@@ -1,0 +1,45 @@
+@import "../variables.less";
+
+.filters__item {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 50px;
+    margin: 10px 6px 10px 6px;
+
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100px;
+}
+
+.filters__item:nth-child(1) {
+    flex-basis: 50px;
+}
+.filters__item:nth-child(3) {
+    flex-basis: 30px;
+}
+.filters__item:nth-child(4) {
+    flex-basis: 30px;
+}
+
+.filters__item--checkbox {
+    padding-top: 7px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.filters__item-label--checkbox {
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+
+.c-Header-controls.header__controls--filter.is-open .filters__item {
+    @media (max-width: @width-screen-s) {
+        flex-basis: auto;
+        width: 100%;
+        margin: 20px 0;
+    }
+}

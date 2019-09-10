@@ -1,0 +1,24 @@
+@import "../../variables.less";
+
+.multi-selectbox__list-item {
+    position: relative;
+    padding: 10px;
+
+    overflow: hidden;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:active, &.is-active {
+        background-color: @color-accent;
+        color: #ffffff;
+        pointer-events: none;
+    }
+    &.is-hightlighted {
+        background-color: #eeeeee;
+        color: #000000;
+    }
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}

@@ -1,0 +1,31 @@
+@import "../variables.less";
+
+.controls__group {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+    transition: @transition-basic;
+
+    &:first-child {
+        margin-top: 10px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.controls__group.is-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.controls__group--asset-toggle {
+  margin: 25px 0 20px 0;
+}
+
+.controls__group--toggle {
+  margin: 25px 0 0 0;
+}
+.controls__group--selectbox {
+  margin: 15px 0 0 0;
+}

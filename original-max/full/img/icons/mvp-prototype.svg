@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>mvp-prototype</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Intro-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD-Copy-2" sketch:type="MSArtboardGroup" transform="translate(-247.000000, -480.000000)" fill="#000000">
+            <path d="M264,486 L264,481.993398 C264,481.444946 263.551894,481 262.999128,481 L249.000872,481 C248.444631,481 248,481.444759 248,481.993398 L248,486 L264,486 Z M264,486.635498 L264,498.006602 C264,498.555241 263.555369,499 262.999128,499 L249.000872,499 C248.448106,499 248,498.555054 248,498.006602 L248,486.635498 L264,486.635498 Z M247,481.990795 C247,480.891309 247.892623,480 248.995089,480 L263.004911,480 C264.106768,480 265,480.898212 265,481.990795 L265,498.009205 C265,499.108691 264.107377,500 263.004911,500 L248.995089,500 C247.893232,500 247,499.101788 247,498.009205 L247,481.990795 Z M252,483 L260,483 L260,484 L252,484 L252,483 Z M249,488 L263,488 L263,498 L249,498 L249,488 Z M249.503784,488.484131 L262.5,488.484131 L262.5,497.484131 L249.503784,497.484131 L249.503784,488.484131 Z" id="mvp-prototype" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+@import "../../variables.less";
+
+.content__results {
+	font-weight: 300;
+	color: @color-font-light;
+
+	.is-stuck & {
+		@media (max-width: @width-screen-s) {
+			padding: 0;
+			font-size: @font-size-basic;
+		}
+	}
+
+	.t-animation & {
+		transition: @transition-basic;
+	}
+}
+.content__results-text {
+    display: inline;
+
+    @media @screen-xs {
+        display: none;
+    }
+}

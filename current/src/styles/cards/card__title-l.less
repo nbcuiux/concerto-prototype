@@ -1,0 +1,101 @@
+@import "../variables.less";
+
+.card__title {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px 25px 5px 25px;
+
+    .card.card--foldable & {
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            padding: 7px 0;
+            opacity: 1;
+
+            background-image: url('img/icons/line-arrow-up.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            .t-style & {
+                opacity: 0.4;
+            }
+        }
+    }
+    .card.card--foldable.is-folded & {
+        padding-bottom: 20px;
+
+        &::after {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .t-style & {
+        font-size: 22px;
+        font-weight: 300;
+        color: #000000;
+    }
+
+    &.is-stuck {
+        position: absolute;
+        z-index: @z-index-contentTitle;
+        width: 100%!important;
+        left: 0!important;
+        padding: 15px 17px 10px 17px!important;
+        background-color: #ffffff;
+        border-bottom: 1px solid #dddddd;
+        font-size: @font-size-small;
+        font-weight: 400;
+
+        .card.card--foldable & {
+            &::after {
+                opacity: 0;
+            }
+        }
+
+        .t-animation & {
+            transition: @transition-basic;
+        }
+    }
+
+
+    .t-animation & {
+        &::after {
+            transition: @transition-basic;
+        }
+    }
+}
+.card__title.card__title--mobile {
+    display: none;
+    @media @screen-xs {
+        display: inline-block;
+        opacity: 1;
+    }
+}
+
+.card__title-required-count {
+    position: relative;
+    top: -10px;
+    font-size: 10px;
+    font-weight: 400;
+    color: @color-accent;
+
+
+    .card__title.is-stuck & {
+        top: 0;
+
+        &::before {
+            content: ' — ';
+            position: relative;
+            color: fade(@color-font-light, 50%);
+        }
+
+    }
+}

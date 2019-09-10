@@ -1,0 +1,27 @@
+.intro__image {
+    position: relative;
+    max-height: 65vh;
+    left: 50%;
+    //transform: translate(100%, 0);
+
+    box-shadow: 0 10px 50px 0 fade(#000000, 20%), 0 5px 20px 0 fade(#000000, 5%), 0 1px 4px 0 fade(#000000, 5%);
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        content: '';
+        height: 10%;
+        width: 10%;
+        background: green;
+        border-left: 1px solid fade(#000000, 70%);
+
+        animation: cursor__blink 0.1s infinite;
+    }
+}
+
+@keyframes cursor__blink {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}

@@ -1,0 +1,22 @@
+@import "../../variables.less";
+
+input[type="checkbox"].toggle_style_dark {
+    background-color: transparent;
+    border-color: fade(#ffffff, 50%);
+
+    & + label {
+        color: fade(#ffffff, 70%);
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    &:hover {
+        border-color: fade(#ffffff, 70%);
+
+        & + label {
+            color: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@import "../variables.less";
+
+.c-EmptyPlaceholder {
+    position:relative;
+    min-height: 200px;
+    margin: 10px 4px 30px 4px;
+    flex-grow: 1;
+
+    border-radius: 2px;
+    outline: 1px dashed #eeeeee;
+    background-color: #FAFAFA;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+
+        background-image:url(img/icons/add.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        background-color: transparent;
+
+        opacity: 0.5;
+    }
+    &::before {
+        content: 'Click to upload images to the gallery';
+        position: absolute;
+        //box-sizing:
+        width: 60%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 15px auto;
+
+        text-align: center;
+
+        @media @screen-n {
+            top: 50%;
+        }
+        @media @screen-s {
+            top: 50%;
+        }
+        @media @screen-xs {
+            top: 50%;
+        }
+
+        .t-style  &{
+            font-size: @font-size-basic;
+            color: @color-font-light;
+        }
+
+    }
+
+    .t-style  & {
+        outline: 1px dashed #bbbbbb;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .t-animation  & {
+        transition: @transition-basic;
+    }
+
+}

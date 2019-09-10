@@ -1,0 +1,96 @@
+@import "../../variables.less";
+
+.selectbox__list-item {
+    position: relative;
+    padding: 10px 12px;
+
+    &:active, &.is-active {
+        background-color: @color-accent;
+        color: #ffffff;
+    }
+
+    &.is-hightlighted {
+        background-color: #eeeeee;
+        color: #000000;
+    }
+
+    &--disabled {
+        color: #CCC;
+    }
+
+
+    &--selected,
+    &--selected.is-hightlighted {
+        color: #FFF;
+        background-color: @color-accent;
+        .selectbox__list-item-subtitle {
+            color: #FFF;
+        }
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+
+.selectbox__list-item--text {
+    overflow: hidden;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.selectbox__list-item--complex {
+    border-bottom: 1px solid #eeeeee;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+
+.selectbox__list-item-img {
+    width: 40px;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+    min-width: 40px;
+    min-height: 40px;
+    background: none;
+    img {
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+
+.selectbox__list-item-status {
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size:10px;
+    color: #999;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: -9px;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
+        background-color: #259229;
+
+    }
+
+    .selectbox__list-item--selected & {
+        color: #FFF;
+    }
+}
+
+
+
+

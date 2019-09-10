@@ -1,0 +1,48 @@
+@import "../variables.less";
+
+.file__title {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0.5em 0 0.1em 0;
+    padding: 0 0.1em;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    cursor: default;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: @font-size-small;
+
+    color: @light-font-color;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.file--modal .file__title {
+    font-size: @font-size-small;
+    color: fade(#ffffff, 80%);
+    text-align: center;
+}
+
+.file__title_main {
+	box-sizing: border-box;
+	padding: 0.2em 0;
+	margin: 5px 0 0 0;
+	overflow-wrap: break-word;
+	overflow: hidden;
+	cursor: default;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	font-size: @font-size-small;
+	color: #000000;
+	font-weight: 300;
+}
+
+.file__title--media-card {
+	padding: 0;
+	margin: 5px 0;
+
+	font-size: @font-size-small;
+	color: #000000;
+}

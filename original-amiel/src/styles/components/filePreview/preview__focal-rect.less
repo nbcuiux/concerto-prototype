@@ -1,0 +1,28 @@
+@import "../../variables.less";
+
+.preview__focal-rect {
+  position: absolute;
+  z-index: 100;
+  display: block;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s ease-out, opacity 0.3s ease-out;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  &:active {
+    border: 1px solid @color-accent;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  &.is-hidden {
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.1s ease-out;
+  }
+}

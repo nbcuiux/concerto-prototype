@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="15px" viewBox="0 0 25 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>line-arrow-bottom</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-6856.000000, -4271.000000)" fill="#000000">
+            <path d="M6856.83771,4271.44153 C6856.37506,4271.74996 6856.29666,4272.33226 6856.67205,4272.7527 L6867.82795,4285.2473 C6868.19911,4285.663 6868.79666,4285.66774 6869.17205,4285.2473 L6880.32795,4272.7527 C6880.69911,4272.337 6880.62149,4271.74766 6880.16229,4271.44153 L6880.33771,4271.55847 C6879.87506,4271.25004 6879.20578,4271.32484 6878.82846,4271.74142 L6868.5,4283.14471 L6858.17154,4271.74142 C6857.80066,4271.33195 6857.12149,4271.25234 6856.66229,4271.55847 L6856.83771,4271.44153 Z" id="line-arrow-bottom" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

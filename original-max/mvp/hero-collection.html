@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>New Season</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700,300italic,400italic,500italic,700italic,500,300" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="app-l.css">
+		<link rel="stylesheet" href="lib/cssControl/cssControl.css">
+		<link rel="stylesheet" href="app-s.css">
+		<link rel="stylesheet" href="app-a.css">
+
+		<script type="text/javascript" src="lib/cssControl/cssControl.js"></script>
+	</head>
+	<body class="t-animation t-style">
+		<!-- Asset Library -->
+
+		<div id="wrapper" class="wrapper">
+			<div id="menuToggle" class="c-MenuToggle"></div>
+        	<div class="c-Logo js-logo">Concerto</div>
+
+			<div class="menu js-menu" id="menu">
+			    <div class="menu__logo">Concerto</div>
+			    <div class="menu__close js-close"></div>
+			    <ul class="menu__list">
+			        <li class="menu__item js-menuItem" data-target="dashboard.html">Dashboard</li>
+			        <li class="menu__item">
+			            <span class="js-menuItem" data-target="content-library.html">Content</span>
+			            <ul class="menu__submenu">
+			                <li class="menu__submenu-item js-menuItem" data-target="create-series.html">New Series</li>
+			                <li class="menu__submenu-item js-menuItem" data-target="create-season.html">New Season</li>
+			                <li class="menu__submenu-item js-menuItem" data-target="create-episode.html">New Episode</li>
+			                <li class="menu__submenu-item js-menuItem" data-target="create-event.html">New Event</li>
+			                <li class="menu__submenu-item js-menuItem" data-target="create-gallery.html">New Gallery</li>
+			                <li class="menu__submenu-item js-menuItem" data-target="create-dynamic-promo.html">New Dynamic Promo</li>
+			            </ul>
+			        </li>
+			        <li class="menu__item js-menuItem">
+			            <span class="">Metadata</span>
+			            <ul class="menu__submenu">
+			                <li class="menu__submenu-item js-menuItem" data-target="create-person.html">New Person</li>
+			                <li class="menu__submenu-item js-menuItem" data-target="create-character.html">New Role</li>
+			            </ul>
+			        </li>
+			        <li class="menu__item js-menuItem" data-target="asset-library.html">Media</li>
+			        <li class="menu__item">
+			            <span class="js-menuItem" data-target="collection-library.html">Collections</span>
+			            <ul class="menu__submenu">
+			                <li class="menu__submenu-item js-menuItem" data-target="create-collection.html">New Curated Collection</li>
+			                <li class="menu__submenu-item js-menuItem" data-target="create-masterCollection.html">New Collection Group</li>
+			            </ul>
+			        </li>
+			        <li class="menu__item js-menuItem">
+			            <span class="">Configuration</span>
+			            <ul class="menu__submenu">
+			                <li class="menu__submenu-item js-menuItem">File System</li>
+			                <li class="menu__submenu-item js-menuItem">Event Count</li>
+			                <li class="menu__submenu-item js-menuItem" data-target="config-image-styles.html">Image Styles</li>
+			                <li class="menu__submenu-item js-menuItem">Focal Point</li>
+			            </ul>
+			        </li>
+			    </ul>
+			</div>
+
+			<div class="c-Header js-header">
+				<div class="c-Header-title">
+					<span class="c-Header-title-text is-required" id="collectionTitleText">Hero Carousel</span>
+				</div>
+				<div class="c-Header-controls">
+					<button class="button button_style_transparent-gray u-noMargin" id="publishDraft"><i class="fa fa-external-link"></i><span>  Publish</span></button>
+					<button class="button button_style_transparent-gray u-noMargin u-hidden-xs" id="saveDraft" type="submit"><i class="fa fa-check"></i><span>  Save as Draft</span></button>
+					<button class="button button_style_transparent-gray u-noMargin u-hidden-xs" id="removeDraft"><i class="fa fa-ban"></i><span>  Cancel</span></button>
+
+					<button class="button button_style_transparent-gray u-visible-xs js-dropdown u-noMargin" id="actionDropdown"><i class="fa fa-ellipsis-v"></i></button>
+				</div>
+			</div>
+
+			<ul class="c-Nav js-scrollSpyNav" data-top-offset="50">
+				<li class="c-Nav-item js-scrollNavItem is-active" data-href="card-basic">
+					<span class="c-Nav-item-title">Basic</span>
+				</li>
+				<li class="c-Nav-item js-scrollNavItem" data-href="card-collection">
+					<span class="c-Nav-item-title">Collection</span>
+				</li>
+				<li class="c-Nav-item js-scrollNavItem" data-href="card-association">
+					<span class="c-Nav-item-title">Association</span>
+				</li>
+			</ul>
+
+			<div class="c-Content o-Grid o-Grid--row js-content">
+
+				<div class="card card--foldable js-foldable" id="card-basic">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">Basic <span class="card__title-required-count js-requiredCount"></span></div>
+					<div class="card__body">
+						<div class="controls__group">
+							<input type="text" class="input_style_light js-required" required="true" id="collectionTitleInput" value="Hero Carousel">
+						</div>
+						<div class="controls__group">
+							<input type="text"
+								class="js-input input_style_light"
+								data-label="Short Description"
+								data-help-text="Fusce sodales finibus auctor. Nunc ipsum turpis, porttitor non sem id, luctus tincidunt diam.">
+						</div>
+						<div class="controls__group">
+							<textarea class="js-input input_style_light"
+								data-label="Medium Description"
+								data-help-text="Sed accumsan arcu a mauris blandit tincidunt. In posuere sapien et tincidunt posuere."></textarea>
+						</div>
+						<div class="controls__group">
+							<textarea class="js-input input_style_light"
+								data-label="Long Description"
+								data-help-text="In sed leo at nibh dignissim iaculis vel nec massa. Sed facilisis ultrices lacinia."></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="card card--foldable js-foldable" id="card-collection">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">Collection</div>
+					<div class="card__body" id="collectionSection">
+						<div class="controls__group">
+						</div>
+					</div>
+				</div>
+
+				<div class="card card--foldable js-foldable" id="card-association">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">Association</div>
+					<div class="card__body u-noPadding">
+						<div class="card__section" id="collectionSeriesSection">
+							<header class="card__section-title">
+								<h4 class="card__section-header">Series, Season, Episode</h4>
+							</header>
+							<div class="card__section-body">
+								<div class="controls__group ">
+								</div>
+							</div>
+						</div>
+						<div class="card__section">
+							<header class="card__section-title">
+								<h4 class="card__section-header">Categories & Tags</h4>
+							</header>
+							<div class="card__section-body">
+								<div class="controls__group">
+									<div class="js-tagfield"
+										data-label="Categories"
+										data-items='["Backstage", "Episode Recap", "Red Carpet", "Fun Facts"]'
+										data-placeholder = "Set Categories">
+									</div>
+								</div>
+								<div class="controls__group">
+									<div class="js-tagfield"
+										data-label="Tags"
+										data-items='["Adam Copeland", "Emily Rose", "Eric Balfour", "John Dunsworth", "Laura Mennell", "Lucas Bryant", "Richard Donat"]'
+										data-placeholder="Set Tags"
+										data-create-new-tag="true"
+										data-search-placeholder="Type a tag..."
+										data-help-text="In sed leo at nibh dignissim iaculis vel nec massa. Sed facilisis ultrices lacinia.">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="version">
+		    <a class="version__link" href="version.html#version-2.4" target="_blank">v.2.4</a>
+		</div>
+
+		<div class="al hidden" id="al">
+		    <div class="c-Modal-close" id="alTopCloseButton"></div>
+		    <!-- Asset Library Header -->
+		    <div class="header">
+		        <div class="title">View Library</div>
+		        <div class="searchField">
+		                <input type="text" placeholder="Search asset ..." id="searchField"/>
+		                <div class="filterIcon" id="filterButton"></div>
+		                <div id="filterMenu" class="filter">
+		                    <div class="section" id="filter-show">
+		                        <div class="section-title">Show</div>
+		                        <div class="section-options">
+		                            <input type="checkbox" class="toggle" id="alcatraz"><label for="alcatraz" class="toggle-label">Alcatraz</label>
+		                            <input type="checkbox" class="toggle" id="blade"><label for="blade" class="toggle-label">Blade</label>
+		                            <input type="checkbox" class="toggle" id="blindspot"><label for="blindspot" class="toggle-label">Blindspot</label>
+		                            <input type="checkbox" class="toggle" id="slashers"><label for="slashers" class="toggle-label">Great American Slashers</label>
+		                            <input type="checkbox" class="toggle" id="kids"><label for="kids" class="toggle-label">Horror's Creepiest Kids</label>
+		                            <input type="checkbox" class="toggle" id="river"><label for="river" class="toggle-label">The River</label>
+		                            <input type="checkbox" class="toggle" id="gates"><label for="gates" class="toggle-label">The Gates</label>
+		                        </div>
+		                    </div>
+		                    <div class="section" id="filter-files">
+		                        <div class="section-title">File Types</div>
+		                        <div class="section-options">
+		                            <input type="checkbox" class="toggle" id="img"><label for="img" class="toggle-label">images</label>
+		                            <input type="checkbox" class="toggle" id="video"><label for="video" class="toggle-label">video</label>
+		                            <input type="checkbox" class="toggle" id="music"><label for="music" class="toggle-label">audio</label>
+		                            <input type="checkbox" class="toggle" id="pres"><label for="pres" class="toggle-label">documents</label>
+		                        </div>
+		                    </div>
+		                    <div class="section" id="filter-date">
+		                        <div class="section-title">Date</div>
+		                        <div class="section-options">
+		                            <input type="checkbox" class="toggle" id="week"><label for="week" class="toggle-label">last week</label>
+		                            <input type="checkbox" class="toggle" id="month"><label for="month" class="toggle-label">last month</label>
+		                            <input type="checkbox" class="toggle" id="3month"><label for="3month" class="toggle-label">last 3 month</label>
+		                            <input type="checkbox" class="toggle" id="year"><label for="year" class="toggle-label">year</label>
+		                        </div>
+		                    </div>
+		
+		                </div>
+		        </div>
+		    </div>
+		    <!-- Asset Library Files-->
+		    <div class="files">
+		        <!-- Files Section-->
+		        <div class="section">
+		            <div class="section__files"></div>
+		        </div>
+		
+		    </div>
+		    <div class="controls">
+		        <button class="button button_style_fill-accent" id="addFromALButton">Add Files</button>
+		        <button class="button button_style_outline-white" id="alCloseButton">Cancel</button>
+		    </div>
+		</div>
+		<div class="pr hidden">
+		    <div class="c-Modal-close" id='fpTopCloseButton'></div>
+		    <div class="images images_style_bulk">
+		        <!--<div class="images__title">Bulk Edit</div>-->
+		        <i class="fa fa-chevron-left images__scroll-left"></i>
+		        <div class="images__wrapper" id="images__wrapper">
+		            <div class="images__container"></div>
+		        </div>
+		        <i class="fa fa-chevron-right images__scroll-right"></i>
+		    </div>
+		    <div class="preview">
+		        <div class="img" id="previewImage">
+		            <div class="img-wrapper">
+		                <img src="" id="previewImg" class="preview__img">
+		                <div class="focalPoint" id="focalPoint"></div>
+		                <div class="preview__video-play" id="videoPlay"></div>
+		            </div>
+		            <img src="" id="previewImgBack" class="preview__img-back-placeholder">
+		        </div>
+		        <div class="c-Preview-controls" id="previewControls">
+		            <button class="button button_style_outline-white" id="focalPointToggle">Focal Point</button>
+		            <button class="button button_style_outline-white" id="showPreview">Preview</button>
+		        </div>
+		
+		        <!--div class="c-Card-title u-visible-xs" data-uk-sticky="{boundary: true, top:50, clsactive: 'is-stuck'}">General Info</div-->
+		        <div class="c-Purposes" id="purposes">
+		            <div class="c-Purposes-header">
+		                <input type="text" class="js-input input__field_style_dark" data-label="Search preview" style="max-width: 300px;">
+		                <button class="button button_style_outline-white u-noMargin" id="hidePurpose">Hide Preview</button>
+		            </div>
+		            <div class="c-Purposes-container">
+		                <div class="purpose">
+		                    <div class="pr-1 purpose-img"></div>
+		                    <div class="purpose-title">Android cover</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-1b purpose-img"></div>
+		                    <div class="purpose-title">Android cover (grayscale)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-1 purpose-img"></div>
+		                    <div class="purpose-title">Android cover HTC</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-1b purpose-img"></div>
+		                    <div class="purpose-title">Android cover HTC (grayscale)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-1 purpose-img"></div>
+		                    <div class="purpose-title">Android cover LG</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-1b purpose-img"></div>
+		                    <div class="purpose-title">Android cover LG (grayscale)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-2 purpose-img"></div>
+		                    <div class="purpose-title">Android wide cover</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-2b purpose-img"></div>
+		                    <div class="purpose-title">Android wide cover (grayscale)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-3 purpose-img"></div>
+		                    <div class="purpose-title">Android widest cover</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-3b purpose-img"></div>
+		                    <div class="purpose-title">Android widest cover (grayscale)</div>
+		                </div>
+		
+		                <!--Desktop -->
+		                <div class="purpose">
+		                    <div class="pr-4 purpose-img"></div>
+		                    <div class="purpose-title">Desktop header</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-5 purpose-img"></div>
+		                    <div class="purpose-title">Desktop header (widescreen)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-6 purpose-img"></div>
+		                    <div class="purpose-title">Desktop header (widest)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-7 purpose-img"></div>
+		                    <div class="purpose-title">Desktop side cover</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-8 purpose-img"></div>
+		                    <div class="purpose-title">Desktop side cover (narrow)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-9 purpose-img"></div>
+		                    <div class="purpose-title">Desktop side cover (tight)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-10 purpose-img"></div>
+		                    <div class="purpose-title">Desktop side cover (line)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-11 purpose-img"></div>
+		                    <div class="purpose-title">Desktop square 500</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-11 purpose-img"></div>
+		                    <div class="purpose-title">Desktop square 550</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-11 purpose-img"></div>
+		                    <div class="purpose-title">Desktop square 600</div>
+		                </div>
+		
+		                <!--iOS -->
+		                <div class="purpose">
+		                    <div class="pr-1 purpose-img"></div>
+		                    <div class="purpose-title">iOS cover</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-1b purpose-img"></div>
+		                    <div class="purpose-title">iOS cover (grayscale)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-1 purpose-img"></div>
+		                    <div class="purpose-title">iOS cover retina</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-1b purpose-img"></div>
+		                    <div class="purpose-title">iOS cover retina (grayscale)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-1 purpose-img"></div>
+		                    <div class="purpose-title">iOS cover 6 plus</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-1b purpose-img"></div>
+		                    <div class="purpose-title">iOS cover 6 plus (grayscale)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-2 purpose-img"></div>
+		                    <div class="purpose-title">iOS wide cover</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-2b purpose-img"></div>
+		                    <div class="purpose-title">iOS wide cover (grayscale)</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-3 purpose-img"></div>
+		                    <div class="purpose-title">iOS widest cover</div>
+		                </div>
+		                <div class="purpose">
+		                    <div class="pr-3b purpose-img"></div>
+		                    <div class="purpose-title">iOS widest cover (grayscale)</div>
+		                </div>
+		            </div>
+		            <div class="c-Purposes-footer u-visible-xs">
+		                <button class="button button_style_outline-white u-noMargin" id="loadMore">Load More</button>
+		            </div>
+		        </div>
+		    </div>
+		    <!-- Panel with file metadata -->
+		    <div class="ip">
+		        <div class="ip__title" id="ip__title">Metadata</div>
+		        <!-- Group of controls -->
+		        <div id="imageMetadata">
+		            <div class="ip__group">
+		                <div class="controls__group" id="imageTittleField">
+		                    <input type="text"
+		                        id="title"
+		                        class="js-input input__field_style_dark js-required"
+		                        required="true"
+		                        data-label="Image Title"
+		                        data-err-msg=" Please enter a title for the image">
+		                </div>
+		                <div class="controls__group">
+		                    <input type="text"
+		                        id="caption"
+		                        class="js-input input__field_style_dark"
+		                        data-label="Image Caption"
+		                        data-help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales commodo cursus.">
+		                </div>
+		                <div class="controls__group">
+		                    <textarea type="text"
+		                        id="description"
+		                        class="js-input input__field_style_dark"
+		                        data-label="Image Description"
+		                        data-help-text="Fusce sodales finibus auctor. Nunc ipsum turpis, porttitor non sem id, luctus tincidunt diam."></textarea>
+		                </div>
+		                <div class="controls__group img-only">
+		                    <input type="checkbox" class="toggle toggle_style_dark" id="resolution">
+		                    <label for="resolution">High Resolution<span class="ad-info">2400×1400</span></label>
+		                </div>
+		            </div>
+		
+		            <!-- Group of controls -->
+		            <div class="ip__group">
+		                <div class="controls__group">
+		                    <div class="js-tagfield tagfield_style_dark"
+		                        data-label="Categories"
+		                        data-items='["Backstage", "Episode Recap", "Red Carpet", "Fun Facts"]'
+		                        data-placeholder="Set Categories">
+		                    </div>
+		                </div>
+		                <div class="controls__group">
+		                    <div class="js-tagfield tagfield_style_dark"
+		                        data-label="Tags"
+		                        data-items='["Adam Copeland", "Emily Rose", "Eric Balfour", "John Dunsworth", "Laura Mennell", "Lucas Bryant", "Richard Donat"]'
+		                        data-placeholder="Set Tags"
+		                        data-create-new-tag="true"
+		                        data-search-placeholder="Type a tag...">
+		                    </div>
+		                </div>
+		            </div>
+		
+		            <!-- Group of controls -->
+		            <div class="ip__group">
+		                <div class="controls__group">
+		                    <input type="text" id="altText" class="js-input input__field_style_dark" data-label="Alt Text">
+		                </div>
+		                <div class="controls__group">
+		                    <input type="text" id="credit" class="js-input input__field_style_dark" data-label="Credit">
+		                </div>
+		                <div class="controls__group">
+		                    <input type="text" id="copyright" class="js-input input__field_style_dark" data-label="Copyright">
+		                </div>
+		                <div class="controls__group">
+		                    <input type="text" id="source" class="js-input input__field_style_dark" data-label="Source">
+		                </div>
+		                <div class="controls__group">
+		                    <div class="cg__title cg__title_style_dark">Association</div>
+		                    <div class="cg__controls cg__controls_style_col">
+		                        <div class="cg__control cg__control_style_col">
+		                            <div class="js-selectbox selectbox_style_dark"
+		                                data-label="Series"
+		                                data-items='["The Tonight Show", "The Robot", "Blindspot", "Law & Order"]'
+		                                data-placeholder="Select Series"
+		                                style="min-width: 120px;">
+		                            </div>
+		                        </div>
+		                        <div class="cg__control cg__control_style_col">
+		                            <div class="js-selectbox selectbox_style_dark"
+		                                data-label="Season"
+		                                data-items='["01", "02", "03", "04", "05", "06", "07", "08", "09"]'
+		                                data-placeholder="Select Season">
+		                            </div>
+		                        </div>
+		                        <div class="cg__control cg__control_style_col">
+		                            <div class="js-selectbox selectbox_style_dark"
+		                                data-label="Episode"
+		                                data-items='["1. It is a Fae Fae Fae Fae World", "2. Where There is a Will, There is a Fae", "3. Oh Kappa, My Kappa", "4. Faetal Attraction", "5. Dead Lucky", "6. Food For Thought", "7. Arachnofaebia", "8. Vexed", "9. Fae Day", "10. The Mourning After", "11. Faetal Justice", "12. (Dis)Members Only", "13. Blood Lines"]'
+		                                data-placeholder="Select Episode"
+		                                style="min-width: 120px;">
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		
+		        <div class="hidden" id="videoMetadata">
+		            <div class="ip__group">
+		                <div class="controls__group">
+		                    <div class="js-selectbox selectbox_style_dark"
+		                        data-label="Videoplayer"
+		                        data-items='["Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6"]'
+		                        data-placeholder="Select videoplayer"
+		                        style="min-width: 120px;">
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="ip__group" id="fielEdit-videoMetadata">
+		                <div class="controls__group">
+		                    <div class="text-group text-group--dark">
+		                        <div class="text-group__title">Title</div>
+		                        <div class="text-group__text" id="videoTitle"></div>
+		                    </div>
+		                    <div class="text-group text-group--dark">
+		                        <div class="text-group__title">Description</div>
+		                        <div class="text-group__text" id="videoDescription"></div>
+		                    </div>
+		                    <div class="text-group text-group--dark">
+		                        <div class="text-group__title">Author</div>
+		                        <div class="text-group__text" id="videoAuthor"></div>
+		                    </div>
+		                    <div class="text-group text-group--dark">
+		                        <div class="text-group__title">GUID</div>
+		                        <div class="text-group__text" id="videoGuid"></div>
+		                    </div>
+		                    <div class="text-group text-group--dark">
+		                        <div class="text-group__title">Keywords</div>
+		                        <div class="text-group__text" id="videoKeywords"></div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="ip__title">Promotional</div>
+		            <div class="ip__group">
+		              <div class="controls__group">
+		                  <input type="text" id="promotional-kicker" class="js-input input__field_style_dark" data-label="Promotional Kicker">
+		              </div>
+		              <div class="controls__group">
+		                  <input type="text" id="promotional-title" class="js-input input__field_style_dark" data-label="Promotional Title">
+		              </div>
+		              <div class="controls__group">
+		                  <textarea id="promotional-description" class="js-input input__field_style_dark" data-label="Promotional Description"></textarea>
+		              </div>
+		            </div>
+		        </div>
+		
+		    </div>
+		    <div class="controls">
+		        <div class="right">
+		            <button class="button button_style_fill-accent" id="saveChanges">Save</button>
+		            <button class="button button_style_outline-white" id="cancelChanges">Cancel</button>
+		        </div>
+		
+		    </div>
+		</div>
+
+		<div id="dropZone" class="dz hidden">
+			<div class="dz-zone locked">
+				<div class="dz-title">Drop files here</div>
+			</div>
+		</div>
+
+		<script src="lib/jQuery/jquery-1.11.3.min.js"></script>
+		<script src="lib/jQuery/jquery-ui.min.js"></script>
+		
+		<script src="lib/UIKit/uikit.min.js"></script>
+		<script src="lib/UIKit/smooth-scroll.min.js"></script>
+		<script src="lib/UIKit/scrollspy.min.js"></script>
+		<script src="lib/UIKit/sticky.min.js"></script>
+		
+		<script src="lib/jquery.sticky-kit.min.js"></script>
+		<script src="lib/jquery.elastic.source.js"></script>
+		<script src="js/create-series.js"></script>
+
+	</body>
+</html>

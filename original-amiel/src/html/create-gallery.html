@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>New Gallery</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	//= templates/page-head.html
+
+</head>
+
+<body class="t-animation t-style">
+	<!-- Asset Library -->
+	<!--div id="galery-version-2"></div>-->
+	<div id="wrapper" class="wrapper">
+		<div id="menuToggle" class="c-MenuToggle"></div>
+		<div class="c-Logo js-logo">Concerto</div>
+
+		//= templates/menu.html
+
+		<div class="c-Header js-header">
+			<div class="c-Header-title">
+				<span class="c-Header-title-text" id="galleryTitleText">New Gallery</span>
+				<div class="c-Header-favorite">
+					<input type="checkbox" class="favorite" id="toDashboard"><label for="toDashboard">Add to favorites</label>
+				</div>
+				<div class="header__subhead is-hidden">
+					<span>Gallery</span>
+				</div>
+			</div>
+			<div class="c-Header-controls">
+				<button class="button button_style_transparent-gray u-noMargin" id="publishDraft"><i class="fa fa-external-link"></i><span>  Publish</span></button>
+				<button class="button button_style_transparent-gray u-noMargin u-hidden-xs" id="saveDraft" type="submit"><i class="fa fa-check"></i><span>  Save as Draft</span></button>
+				<button class="button button_style_transparent-gray u-noMargin u-hidden-xs" id="removeDraft"><i class="fa fa-ban"></i><span>  Cancel</span></button>
+
+				<button class="button button_style_transparent-gray u-visible-xs js-dropdown u-noMargin" id="actionDropdown"><i class="fa fa-ellipsis-v"></i></button>
+			</div>
+		</div>
+		<ul class="c-Nav js-scrollSpyNav" data-top-offset="50">
+			<li class="c-Nav-item is-active js-scrollNavItem" data-href="card-basic">
+				<span class="c-Nav-item-title">General</span>
+			</li>
+			<li class="c-Nav-item js-scrollNavItem" data-href="card-taxonomy">
+				<span class="c-Nav-item-title">Taxonomy</span>
+			</li>
+			<li class="c-Nav-item js-scrollNavItem" data-href="card-media">
+				<span class="c-Nav-item-title">Media</span>
+			</li>
+		</ul>
+
+		<div class="c-Content grid grid--row js-content">
+			<div class="col col--wide js-column">
+				<div class="card card--foldable js-foldable" id="card-basic">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">General Info <span class="card__title-required-count js-requiredCount"></span></div>
+					<div class="card__body">
+						<div class="controls__group">
+							<input type="text" class="input_style_light js-required" required="true" id="galleryTitleInput">
+						</div>
+						<div class="controls__group">
+							<input type="text"
+							class="js-input input_style_light"
+							data-label="Short Description"
+							data-help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales commodo cursus.">
+						</div>
+						<div class="controls__group">
+							<textarea
+							class="js-input input_style_light"
+							data-label="Medium Description"
+							data-help-text="Fusce sodales finibus auctor. Nunc ipsum turpis, porttitor non sem id, luctus tincidunt diam."
+							data-err-msg="Please fill the title"></textarea>
+						</div>
+						<div class="controls__group">
+							<textarea class="js-input input_style_light"
+							data-label="Long Description"
+							data-help-text="In sed leo at nibh dignissim iaculis vel nec massa. Sed facilisis ultrices lacinia."></textarea>
+						</div>
+						<div class="controls__group">
+							<div class="cg__title u-hidden-xs">Association</div>
+							<div class="cg__controls cg__controls_style_row">
+								<div class="cg__control cg__control_style_row">
+									<div class="js-selectbox"
+									data-label="Series"
+									data-items='["Blindspot", "Slasher", "The Robot", "The Tonight Show", "The Voice"]'
+									data-placeholder="Select Series"
+									style="min-width: 120px;"
+									data-unselect="— None —">
+								</div>
+							</div>
+							<div class="cg__control cg__control_style_row" style="min-width: 70px; max-width: 80px;">
+								<div class="js-selectbox"
+								data-label="Season"
+								data-items='["09", "08", "07", "06", "05", "04", "03", "02", "01"]'
+								data-placeholder="Select Season"
+								data-unselect="— None —">
+							</div>
+						</div>
+						<div class="cg__control cg__control_style_row">
+							<div class="js-selectbox"
+							data-label="Episode"
+							data-items='["6. All Alone", "5. Don’t Get Lost", "4. The Blood Moon", "3. The First Slice", "2. The Man in the Shadows", "1. A New Visitor"]'
+							data-placeholder="Select Episode"
+							style="min-width: 120px;"
+							data-unselect="— None —">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col col--narrow js-column">
+	<div class="card card--foldable js-foldable" id="card-promotional">
+		<div class="card__title js-foldedToggle js-stickyOnMobile">Promotional</div>
+		<div class="card__body">
+			<div class="controls__group">
+				<input type="text"
+				class="js-input input_style_light"
+				data-label="Promotional Kicker"
+				data-help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales commodo cursus.">
+			</div>
+			<div class="controls__group">
+				<input type="text"
+				class="js-input input_style_light"
+				data-label="Promotional Title"
+				data-help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales commodo cursus.">
+			</div>
+			<div class="controls__group">
+				<textarea class="js-input input_style_light"
+				data-label="Promotional Description"
+				data-help-text="Sed accumsan arcu a mauris blandit tincidunt. In posuere sapien et tincidunt posuere."></textarea>
+			</div>
+		</div>
+	</div>
+
+	<div class="card card--foldable js-foldable" id="card-taxonomy">
+		<div class="card__title js-foldedToggle js-stickyOnMobile">Association</div>
+		<div class="card__body">
+			<div class="controls__group">
+				<div class="js-tagfield"
+				data-label="Categories"
+				data-items='["Backstage", "Episode Recap", "Red Carpet", "Fun Facts"]'
+				data-placeholder = "Set Categories"></div>
+			</div>
+			<div class="controls__group">
+				<div class="js-tagfield"
+				data-label="Tags"
+				data-items='["Adam Copeland", "Emily Rose", "Eric Balfour", "John Dunsworth", "Laura Mennell", "Lucas Bryant", "Richard Donat"]'
+				data-placeholder="Set Tags"
+				data-create-new-tag="true"
+				data-search-placeholder="Type a tag..."
+				data-help-text="In sed leo at nibh dignissim iaculis vel nec massa. Sed facilisis ultrices lacinia."></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+//= templates/card-media--gallery.html
+
+</div>
+
+</div>
+
+//= templates/version.html
+
+//= templates/asset-library-overlay.html
+//= templates/file-edit.html
+
+<div id="dropZone" class="dz hidden">
+	<div class="dz-zone locked">
+		<div class="dz-title">Drop files here</div>
+	</div>
+</div>
+
+//= templates/js-files.html
+<script src="js/create-gallery.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

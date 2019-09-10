@@ -1,0 +1,15 @@
+@import "../variables.less";
+
+.filters__title {
+    margin-top: 10px;
+
+    &::after {
+        content: ':';
+    }
+
+    @media (max-width: @width-screen-s) {
+        &::after {
+            content: '';
+        }
+    }
+}

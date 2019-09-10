@@ -1,0 +1,40 @@
+@import "../variables.less";
+@import "../keyframes.less";
+
+.library__header {
+    display: none;
+    border-bottom: 1px solid transparent;
+
+    @media (min-width: @width-screen-s) {
+        display: block;
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+}
+
+.library__header.is-stuck {
+    position: fixed;
+    z-index: @z-index-libraryHeader;
+    left: 0;
+    width: 100%;
+    top: 195px;
+    padding: 5px 20px;
+    justify-content: flex-end;
+
+    background-color: #ffffff;
+    border-color: #dddddd;
+
+    .t-animation & {
+        //transition: width 0.4s ease-out, left 0.4s ease-out;
+        //animation: fade-in 0.2s ease-out;
+    }
+
+    @media @screen-l {
+        left: @size-menuWidth;
+        width: ~"calc(100% - @{size-menuWidth})";
+    }
+
+}

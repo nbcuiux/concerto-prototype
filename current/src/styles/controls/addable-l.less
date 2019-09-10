@@ -1,0 +1,166 @@
+@import "../variables.less";
+
+.c-Addable-row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 8px 0 8px 0;
+
+    background-color: #ffffff;
+
+    .t-style {
+        border-radius: 2px;
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+
+    &.is-dragging {
+        box-shadow: 0 4px 0 10px #ffffff, 0 4px 6px 10px fade(#000000, 20%);
+        transition: none;
+        transition: opacity 0.3s ease-out;
+        transform: rotate(-1deg);
+        opacity: 0.95;
+        //padding: 10px 10px 15px 10px;
+    }
+
+    &:first-child {
+        padding-top: 0;
+    }
+}
+.c-Addable-row--collection {
+    align-items: center;
+    background-color: transparent;
+
+    &:active {
+        box-shadow: none;
+    }
+}
+.c-Addable-row-dragHandler {
+    position: relative;
+    box-sizing: border-box;
+    //left: -17px;
+    //top: 8px;
+    width: 14px;
+    height: 32px;
+    padding: 6px 0 0 0;
+    margin: 0 5px 0 0;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-image: url('img/icons/drag-handler.svg');
+    opacity: 0.15;
+    cursor: move;
+
+    &:hover {
+        opacity: 0.4;
+    }
+    &:active {
+        opacity: 0.7;
+    }
+    .t-animation & {
+        transition: opacity 0.3s ease-out;
+    }
+    .c-Addable-row--collection & {
+        height: 14px;
+    }
+}
+.c-Addable-item {
+    width: ~"calc(100% - 64px)!important";
+    margin-right: 3px;
+
+    .c-Addable-row-dragHandler ~ & {
+        width: ~"calc(100% - 83px)!important";
+    }
+}
+
+.js-addableRemoveButton {
+    display: none;
+
+    .js-addableWrapper.has-multipleRows &,
+    .js-addableWrapper.js-hasValue & {
+        margin: 18px 0 2px 4px;
+        align-self: flex-end;
+        display: inline-block;
+
+        background-color: #ffffff;
+        opacity: 1;
+
+        @media @screen-xs {
+            margin-bottom: 14px;
+        }
+    }
+    .js-addableWrapper.has-multipleRows .c-Addable-row--collection &,
+    .js-addableWrapper.js-hasValue .c-Addable-row--collection & {
+        margin: 0 0 0 4px;
+        align-self: center;
+    }
+    .c-Addable-row.is-dragging & {
+        opacity: 0;
+    }
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+
+.c-Addable-row-addButton {
+    display: none;
+
+    .c-Addable-row:last-child & {
+        margin: 18px 0 2px 4px;
+        align-self: flex-end;
+        display: inline-block;
+
+        background-color: #ffffff;
+        opacity: 1;
+
+        @media @screen-xs {
+            align-self: flex-end;
+            margin-bottom: 14px;
+        }
+    }
+    .c-Addable-row.c-Addable-row--collection:last-child & {
+        margin: 0 0 0 4px;
+        align-self: center;
+    }
+    .c-Addable-row.is-dragging & {
+        opacity: 0;
+    }
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+.c-Addable-rowPlaceholder {
+    min-height: 50px;
+    margin-bottom: 10px;
+
+    border: 1px dashed #dddddd;
+	background-color: #fafafa;
+
+    .t-style & {
+        border-radius: 2px;
+    }
+}
+
+.c-Addable-rowPlaceholder--collection {
+    min-height: 60px;
+    width: ~"calc(100% - 83px)!important";
+    margin: 10px 0 10px 19px;
+
+    border: 1px dashed #dddddd;
+	background-color: #fafafa;
+
+    .t-style & {
+        border-radius: 2px;
+    }
+}
+
+@keyframes placeholder-blink {
+    0% {box-shadow: 0 0 8px 2px fade(@color-accent, 0%);}
+    50% {box-shadow: 0 0 8px 2px fade(@color-accent, 100%);}
+    100% {box-shadow: 0 0 8px 2px fade(@color-accent, 0%);}
+}

@@ -1,0 +1,119 @@
+@import "variables.less";
+
+@keyframes fade-in {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes fade-out {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes modal-fade-in {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes modal-fade-out {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+@keyframes scale-in {
+	0% {transform: scale(1.1); opacity: 0;}
+	100% {transform: scale(1); opacity: 1;}
+}
+@keyframes zoom-in {
+	0% {transform: scale(0.6); opacity: 0;}
+	100% {transform: scale(1); opacity: 1;}
+}
+@keyframes zoom-out {
+	0% {transform: scale(1); opacity: 1;}
+	100% {transform: scale(0.6); opacity: 0;}
+}
+
+@keyframes slide-in-right {
+	0% {transform: translateX(40px); opacity: 0;}
+	100% {transform: translateX(0); opacity: 1;}
+}
+@keyframes slide-out-right {
+	0% {transform: translateX(0); opacity: 1;}
+	100% {transform: translateX(40px); opacity: 0;}
+}
+
+@keyframes slide-in-left {
+	0% {transform: translateX(-40px); opacity: 0;}
+	100% {transform: translateX(0); opacity: 1;}
+}
+@keyframes slide-out-left {
+	0% {transform: translateX(0); opacity: 1;}
+	100% {transform: translateX(-40px); opacity: 0;}
+}
+
+@keyframes slide-in-down {
+	0% {transform: translateY(40px); opacity: 0;}
+	100% {transform: translateY(0); opacity: 1;}
+}
+@keyframes slide-out-down {
+	0% {transform: translateY(0); opacity: 1;}
+	100% {transform: translateY(40px); opacity: 0;}
+}
+
+@keyframes slide-in-up {
+	0% {transform: translateY(-40px); opacity: 0;}
+	100% {transform: translateY(0); opacity: 1;}
+}
+@keyframes slide-out-up {
+	0% {transform: translateY(0); opacity: 1;}
+	100% {transform: translateY(-40px); opacity: 0;}
+}
+
+@keyframes scale-in-right {
+	0% {transform: translate(5px, -15px) scale(1.1); opacity: 0;}
+	100% {transform: translate(0, 0) scale(1); opacity: 1;}
+}
+@keyframes scale-in-down {
+	0% {transform: translate(0, -15px) scale(1.1); opacity: 0;}
+	100% {transform: translate(0, 0) scale(1); opacity: 1;}
+}
+@keyframes place-left {
+	0% {transform: translate(-5px, -15px) scale(1.1); opacity: 0;}
+	100% {transform: translate(0, 0) scale(1); opacity: 1;}
+}
+@keyframes place-top {
+	0% {transform: translate(0, -15px) scale(1.1); opacity: 0;}
+	100% {transform: translate(0, 0) scale(1); opacity: 1;}
+}
+@keyframes grow-down {
+	0% {max-height: 0;}
+	100% {max-height: 500px;}
+}
+@keyframes progressBar {
+	0% {width: 0;}
+	100% {width: 100%;}
+}
+
+@keyframes round-loader {
+	0% {transform: rotate(0);}
+	50% {transform: rotate(360deg);}
+	99% {transform: rotate(720deg); opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes pulse-out {
+  0% {box-shadow: 0 0 10px 0 fade(@color-accent, 20%);}
+  100% {box-shadow: 0 0 10px 20px fade(@color-accent, 0%);}
+}
+
+@keyframes section-expand {
+  0% {opacity: 0; transform: scaleY(0);}
+  100% {opacity: 1; transform: scaleY(1);}
+}
+@keyframes section-collapse {
+  0% {opacity: 0; transform: scaleY(0);}
+  100% {opacity: 1; transform: scaleY(1);}
+}
+
+@keyframes item-pulse-out {
+  0% {box-shadow: 0 0 10px 0 fade(@color-accent, 20%);}
+  100% {box-shadow: 0 0 10px 20px fade(@color-accent, 0%);}
+}

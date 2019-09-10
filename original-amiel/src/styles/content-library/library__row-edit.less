@@ -1,0 +1,30 @@
+@import "../variables.less";
+
+.library__row-edit {
+    position: absolute;;
+    top: 50%;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+    margin: -7px 4px 4px 4px;
+
+    background-image: url('img/icons/icon-edit.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    opacity: 0.2;
+    cursor: pointer;
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+
+    .library__row--content:hover & {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 1!important;
+    }
+}

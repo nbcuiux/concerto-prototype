@@ -1,0 +1,238 @@
+@import "../variables.less";
+
+.c-Header {
+    padding: 0;
+    position: relative;
+    z-index: 30;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    padding-bottom: 40px;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e2e2;
+
+    @media @screen-l {
+		left: @size-menuWidth;
+		width: ~"calc(100% - @{size-menuWidth})";
+	}
+    @media @screen-s {
+        .c-Header--fixed();
+    }
+    @media @screen-xs {
+        .c-Header--fixed();
+    }
+    .t-animation & {
+        transition: @transition-menu;
+    }
+}
+
+.c-Header--fixed {
+    position: fixed;
+    z-index: @z-index-topBar;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    min-height: 50px;
+    padding-bottom: 0;
+
+    @media @screen-l {
+        width: ~"calc(100% - @{size-menuWidth})";
+        left: @size-menuWidth;
+    }
+}
+
+.c-Header.is-stuck {
+    .c-Header--fixed();
+}
+
+.c-Header-title {
+    position: relative;
+    box-sizing: border-box;
+    margin: 60px 20px 0 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    font-size: 32px;
+    font-weight: 300;
+
+    .c-Header.is-stuck & {
+        .c-Header-title--fixed();
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+    @media @screen-s {
+        .c-Header-title--fixed();
+    }
+    @media @screen-xs {
+        .c-Header-title--fixed();
+    }
+
+}
+
+.c-Header-title-text {
+
+    .c-Header.is-stuck  & {
+        .header__title-text--short();
+    }
+
+    @media @screen-s {
+        .header__title-text--short();
+    }
+    @media @screen-xs {
+        .header__title-text--short();
+    }
+}
+
+.header__title-text--short {
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.c-Header-title-text.js-editable, .c-Header.is-stuck .c-Header-title-text.js-editable {
+
+    .t-style & {
+        border: none;
+        border-bottom: 1px solid #dddddd;
+
+        &:hover {
+            border-color: #bbbbbb;
+        }
+        &:focus, &active {
+            outline: none;
+            border-color: @color-accent;
+        }
+    }
+
+    .t-animation & {
+        transition: border 0.3s ease-out;
+    }
+}
+.c-Header-title--fixed {
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    left: 135px;
+    margin: 0;
+    padding-left: 30px;
+
+    font-size: 22px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        left:0;
+        top: 50%;
+        transform: translate(0, -50%);
+        margin-left: 10px;
+
+        background-image: url('/img/icons/arrow-l.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.3;
+    }
+
+    @media @screen-l {
+        left: 0;
+        margin-left: 20px;
+        padding-left: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+    @media @screen-s {
+        left: @size-menuToggleOffset;
+        margin-left: 10px;
+        padding-left: 0;
+        width: ~"calc(100% - @{size-menuToggleOffset} - 10px - 320px)";
+        &::before {
+            display: none;
+        }
+    }
+    @media @screen-xs {
+        left: @size-menuToggleOffset;
+        margin-left: 10px;
+        padding-left: 0;
+        width: ~"calc(100% - @{size-menuToggleOffset} - 10px - 160px)";
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.header__subtitle {
+    margin: 10px 0 0 0;
+    font-size: @font-size-basic;
+    color: @color-font-light;
+    font-weight: 300;
+}
+
+.c-Header-favorite {
+    position: relative;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+
+    .c-Header.is-stuck & {
+        display: none;
+    }
+    @media @screen-s {
+        display: none;
+    }
+    @media @screen-xs {
+        display: none;
+    }
+}
+
+.c-Header-controls {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    margin: 13px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.c-Header-controls--center {
+    position: relative;
+    width: 50%;
+    padding-bottom: 30px;
+    justify-content: center;
+
+    .c-Header.is-stuck & {
+        position: absolute;
+        justify-content: flex-end;
+    }
+    @media @screen-xs {
+        position: absolute;
+        justify-content: flex-end;
+    }
+    @media @screen-s {
+        position: absolute;
+        justify-content: flex-end;
+    }
+}

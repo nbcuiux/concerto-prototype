@@ -1,0 +1,9 @@
+build
+history
+prototype
+history/
+prototype/
+node_modules/
+*.orig
+.DS_Store
+

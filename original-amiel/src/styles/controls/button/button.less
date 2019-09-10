@@ -1,0 +1,239 @@
+@import "../../variables.less";
+
+.button {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 6px 12px 7px 12px;
+	margin: 0 5px;
+	width: auto;
+
+	white-space: nowrap;
+	cursor: pointer;
+
+	font-size: @basic-font-size;
+	font-weight: 300;
+	transition: @transition-basic;
+	border-radius: 2px;
+
+	span {
+		pointer-events: none;
+	}
+	&.is-disabled {
+		opacity: 0.5;
+		pointer-events: disabled;
+	}
+}
+.button .fa {
+	pointer-events: none;
+}
+.button.button--small {
+	font-size: @font-size-small;
+	padding: 3px 7px;
+	margin: 0 2px;
+
+	@media @screen-xs {
+		font-size: @basic-font-size;
+		padding: 4px 6px;
+
+		.t-style & {
+			padding: 6px 12px;
+		}
+	}
+}
+
+.button--round {
+	border-radius: 50%;
+	padding: 0;
+	margin: 0 3px;
+	width: 22px;
+	height: 22px;
+	white-space: nowrap;
+
+	&:active, &:focus {
+		outline: none;
+	}
+}
+.button--add {
+	background-image:url(img/icons/add.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 10px 10px;
+}
+.button--remove {
+	background-image:url(img/icons/remove.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 8px 8px;
+
+	.dark & {
+		background-image:url(img/icons/remove-light.svg);
+	}
+}
+
+.button--selectAll {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: none;
+	border: 1px solid #999999;
+	margin-right: 5px;
+
+	&:hover {
+		border-color: #777777;
+		&::after {
+			color: #777777;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+	&::after {
+		position: absolute;
+		content: "•";
+		top: 1px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		color: #999999;
+
+	}
+	&.is-empty {
+		&::after {
+			content: "";
+		}
+
+	}
+	&.is-all {
+		border-color: @accent-color;
+		background-color: @accent-color;
+		background-position: center;
+		background-image: url(img/icons/checkmark.svg);
+		background-repeat: no-repeat;
+
+		&:hover {
+			border-color: @accent-dark-color;
+		}
+		&::after {
+			content: "";
+		}
+	}
+
+	.t-animation {
+		transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+	}
+}
+
+.button:active, .button:focus {
+	outline: none;
+}
+
+.button_style_transparent-gray {
+	background-color: transparent;
+	border: none;
+	color: #555555;
+
+	&:hover {
+		background-color: fade(#000000, 6%);
+		color: #000000;
+	}
+	&:active {
+		background-color: fade(#000000, 12%);
+		color: #000000;
+	}
+}
+.button_style_transparent-white {
+	background-color: transparent;
+	border: 1px solid fade(#ffffff, 0%);
+	color: fade(#ffffff, 60%);
+
+	&:hover {
+		border-color: fade(#ffffff, 70%);
+		color: #ffffff;
+	}
+	&:active {
+		background-color: fade(#ffffff, 70%);
+		color: #000000;
+	}
+}
+
+.button_style_outline-white {
+	background-color: transparent;
+	border: 1px solid fade(#ffffff, 50%);
+	color: fade(#ffffff, 70%);
+
+	&:hover {
+		border-color: fade(#ffffff, 70%);
+		color: #ffffff;
+	}
+	&:active {
+		background-color: fade(#ffffff, 70%);
+		color: #000000;
+	}
+}
+
+.button_style_outline-gray {
+	background-color: transparent;
+	border: 1px solid #dddddd;
+	color: #666666;
+
+	&:hover {
+		color: #000000;
+		border-color: #bbbbbb;
+	}
+	&:active {
+		background-color: #dddddd;
+		border-color: #dddddd;
+	}
+
+	&.is-selected {
+		border-color: #dddddd;
+		background-color: #dddddd;
+
+		&:hover {
+			color: #000000;
+			border-color: #aaaaaa;
+		}
+		&:active {
+			background-color: #dddddd;
+			border-color: #dddddd;
+		}
+	}
+}
+
+.button_style_outline-accent {
+	background-color: transparent;
+	min-width: 80px;
+	border: 1px solid fade(@color-accent, 70%);
+	color: @color-accent;
+
+	&:hover {
+		border-color: @accent-color;
+	}
+	&:active {
+		background-color: @accent-color;
+		color: #ffffff;
+	}
+}
+.button_style_fill-accent {
+	background-color: @color-accent;
+	border: 1px solid @color-accent;
+	color: #ffffff;
+
+	&:hover {
+		border-color: @color-accent-dark;
+	}
+	&:active {
+		background-color: @color-accent-dark;
+	}
+}
+
+.disabled .fa {
+	opacity: 0.5;
+}
+
+.button--filter {
+	margin-top: 5px;
+	min-width: 0;
+}

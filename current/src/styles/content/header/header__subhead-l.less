@@ -1,0 +1,50 @@
+@import "../../variables.less";
+
+
+.header__subhead {
+    position: absolute;
+    margin: 5px 0 0 0;
+    left: ~"calc(50% - 13px)";
+    top: 100%;
+    font-size: @font-size-basic;
+    color: fade(@color-font-light, 60%);
+    font-weight: 300;
+    transform: translate(-50%, 0);
+
+    white-space: nowrap;
+    opacity: 1;
+    pointer-events: all;
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        display: none; //
+    }
+
+    .t-animation & {
+        transition: opacity 0.3s ease-out;
+    }
+
+    .is-stuck & {
+        .header__subhead.is-stuck();
+    }
+    @media @screen-s {
+        .header__subhead.is-stuck();
+    }
+    @media @screen-xs {
+        .header__subhead.is-stuck();
+    }
+}
+
+.header__subhead.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header__subhead.is-stuck {
+    position: relative;
+    margin: 0 20px 1px 10px;
+    left: 0;
+    top: 0;
+    transform: none;
+}

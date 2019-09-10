@@ -1,0 +1,70 @@
+@import "../variables.less";
+
+.library__row {
+    position: relative;
+    box-sizing: border-box;
+    padding: 15px 20px 15px 10px;
+    margin: 15px 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    @media (max-width: @width-screen-s) {
+        flex-direction: column;
+        padding: 10px;
+        max-height: 400px;
+
+        &.is-folded {
+            max-height: 150px;
+            overflow: hidden;
+            padding: 10px;
+        }
+    }
+
+}
+
+.library__row--header {
+    margin: 0;
+    padding: 0 20px 0 10px;
+
+    .is-stuck & {
+        padding: 5px 20px 5px 10px;
+    }
+}
+
+.library__row--content {
+
+    &:first-child {
+        margin-top: 5px;
+    }
+
+    .t-style & {
+        border: none;
+        background-color: #ffffff;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
+        border-radius: 2px;
+    }
+
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+    @media (max-width: @width-screen-s) {
+
+        .t-animation & {
+            transition: none;
+            animation-name: place-top;
+            animation-duration: 0.15s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: backwards;
+            .row-animation(50);
+        }
+    }
+}
+.row-animation(@counter) when (@counter > 0) {
+  .row-animation((@counter - 1));    // next iteration
+  &:nth-child(@{counter}) {
+	  animation-delay: (0.06s * @counter);
+	}
+}

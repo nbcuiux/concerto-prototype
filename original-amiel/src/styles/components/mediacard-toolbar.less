@@ -1,0 +1,133 @@
+@import "../variables.less";
+
+
+#mediaActionsFull {
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+  @media (min-width: 1350px) {
+    display: none;
+  }
+}
+#mediaActionsSmall {
+  display: none;
+
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
+  @media (min-width: 800px) {
+    display: none;
+  }
+  @media (min-width: 1070px) {
+    display: inline-block;
+  }
+  @media (min-width: 1480px) {
+    display: none;
+  }
+}
+
+#galleryActionsSmall {
+  display: none;
+
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
+  @media (min-width: 800px) {
+    display: none;
+  }
+}
+#galleryActionsMedium {
+  display: none;
+}
+#galleryActionsFull {
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+#assetActionsSmall {
+  display: none;
+
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
+  @media (min-width: 700px) {
+    display: none;
+  }
+}
+#assetActionsFull {
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+#bulkEdit {
+  display: none;
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
+}
+#multiEdit {
+  display: none;
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
+}
+#bulkRemove {
+  display: none;
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
+}
+#moreActions {
+  display: none;
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
+}
+
+#uploadFiles {
+  display: none;
+
+  @media (min-width: 800px) {
+    display: inline-block;
+  }
+
+  .content__controls & {
+    @media (min-width: 700px) {
+      display: inline-block;
+    }
+  }
+
+  .col--wide & {
+    @media (min-width: 800px) {
+      display: inline-block;
+    }
+    @media (min-width: 1070px) {
+      display: none;
+    }
+    @media (min-width: 1480px) {
+      display: inline-block;
+    }
+  }
+}
+
+#assetLibrary {
+  display: none;
+  @media (min-width: 800px) {
+    display: inline-block;
+  }
+
+  .col--wide & {
+    @media (min-width: 800px) {
+      display: inline-block;
+    }
+    @media (min-width: 1070px) {
+      display: none;
+    }
+    @media (min-width: 1480px) {
+      display: inline-block;
+    }
+  }
+}

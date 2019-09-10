@@ -1,0 +1,61 @@
+@import "../variables.less";
+
+.file__controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; //~"calc(100% + 10px)";
+    height: 100%; //~"calc(100% + 10px)";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //outline: solid 2px rgba(0,0,0,0);
+    //outline-offset: -2px;
+    box-shadow: inset 0 0 0 2px fade(@color-accent, 0);
+
+    overflow: hidden;
+
+    .button {
+        display: none;
+    }
+    @media (max-width: 500px) {
+        background-color: rgba(0,0,0,0.2);
+
+        .button {
+            display: none;
+        }
+    }
+
+    .t-style & {
+        border-radius: 1px;
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+
+.file__img:hover .file__controls {
+    background-color: rgba(0,0,0,0.7);
+
+    .button {
+        display: block;
+        font-size: 14px;
+        padding: 6px 20px;
+        margin: 0;
+    }
+
+    @media (max-width: 500px) {
+        background-color: rgba(0,0,0,0.2);
+
+        .button {
+            display: none;
+        }
+    }
+}
+
+.file.selected .file__controls {
+    //outline-color: @accent-color;
+    box-shadow: inset 0 0 0 2px @color-accent;
+}

@@ -1,0 +1,100 @@
+/*@import "../variables.less";
+
+.c-Content {
+	position: relative;
+	box-sizing: border-box;
+	padding: 10px 30px 40px 30px;
+	margin: 0;
+	left: 0;
+
+	opacity: 1;
+
+	.c-Header.is-stuck ~ & {
+		margin-top: 70px;
+	}
+
+	@media @screen-l {
+		left: @size-menuWidth;
+		width: ~"calc(100% - @{size-menuWidth})";
+	}
+	@media @screen-s {
+		margin-top: 50px;
+
+		.c-Header.is-stuck ~ & {
+			margin-top: 50px;
+		}
+	}
+	@media @screen-xs {
+		padding: 10px 0;
+		margin-top: 50px;
+
+		.c-Header.is-stuck ~ & {
+			margin-top: 50px;
+		}
+	}
+	.t-animation & {
+		transition: @transition-menu;
+	}
+	.c-Header.is-stuck {
+		.c-Content--scrolled();
+	}
+}
+.c-Content--scrolled {
+	margin-top: 50px;
+}
+
+.c-Content.is-invisible {
+	opacity: 0;
+}
+
+
+.c-Content-controls {
+	position: relative;
+	width: 100%;
+	padding: 15px 20px 10px 20px;
+	margin: 0;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+
+	&.is-stuck {
+		width: 100%!important;
+		//left: 0!important;
+		z-index: @z-index-contentControls;
+
+		background-color: #ffffff;
+		border-bottom: 1px solid #dddddd;
+
+		@media @screen-l {
+            left: @size-menuWidth;
+        }
+		.t-style & {
+			opacity: 0.99;
+		}
+	}
+	.t-animation & {
+		transition: @transition-basic;
+	}
+}
+.content__controls-left {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+.content__controls-right {
+	float: right;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+.c-Content-files {
+	position: relative;
+	width: 100%auto;
+	padding: 10px;
+}
+*/

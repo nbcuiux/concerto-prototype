@@ -1,0 +1,49 @@
+<div class="card card--foldable js-foldable create-new-version" id="card-schedule">
+    <div class="card__title js-foldedToggle js-stickyOnMobile">Schedule and Status</div>
+    <div class="card__body schedule__card">
+        <div class="controls__group">
+            <div class="version__group">
+                <div class="controls__label version__status">
+                    <div class="library__cell-value library__cell-value--published"></div>
+                </div>
+            </div>
+        </div>
+        <div class="controls__group ">
+
+            <div class="publishDate">
+
+                <div class="filters__item use-datepicker">
+                    <textarea id="" 
+                        readonly="readonly"
+                        rows="1"
+                        class="js-input input_style_light use-datepicker__trigger"
+                        data-label="Publish Date"
+                        data-filter-type="publishedDate"
+                        data-help-text=""
+                        data-element="publishedDate"
+                        data-err-msg=""></textarea>
+                    <div class="use-datepicker__container"></div>
+                </div>
+
+                <div class="filters__item">
+                    <input id="" 
+                        rows="1"
+                        class="js-input input_style_light time-selector"
+                        data-element="publishedTime"
+                         />
+                </div>
+
+                <button class="button--round button_style_outline-gray button--remove js-addableRemoveButton"></button>
+                
+            </div>
+
+            <div class="conflicts">
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,37 @@
+@import "../variables.less";
+
+.c-Card-placeholders {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+
+    //border-bottom: 1px solid #eeeeee;
+}
+
+.c-Card-placeholders--card {
+    position:relative;
+    min-height: 200px;
+    margin: 10px 4px 30px 4px;
+
+    border-radius: 2px;
+    outline: 1px dashed #dddddd;
+    background-color: #FAFAFA;
+
+    @media @screen-l{
+		width: ~"calc(20% - 10px)";
+	}
+	@media @screen-n {
+		width: ~"calc(25% - 10px)";
+	}
+	@media @screen-s {
+		width: ~"calc(50% - 10px)";
+	}
+    @media @screen-xs {
+        margin: 10px 0 30px 0;
+		width: ~"calc(100%)";
+	}
+}
+.c-Card-placeholders.c-Card-placeholders--small-card {
+    padding: 0;
+}

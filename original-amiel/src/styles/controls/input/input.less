@@ -1,0 +1,355 @@
+@import "../../variables.less";
+
+.input__wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+.input__label {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 10px 0 0 0;
+  padding: 7px 1px;
+
+  pointer-events: none;
+
+  font-size: @font-size-basic;
+  font-weight: 300;
+  color: @color-font-light;
+
+  .t-animation & {
+    transition: @transition-basic;
+  }
+
+  .dark & {
+    color: #CCC;
+  }
+}
+
+.input__label-isolated {
+  box-sizing: border-box;
+  margin: 10px 0 0 0;
+  padding: 7px 1px;
+  pointer-events: none;
+  font-size: @font-size-basic;
+  font-weight: 300;
+  color: @color-font-light;
+
+  .dark & {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .t-animation & {
+    transition: @transition-basic;
+  }
+}
+.input__help-text {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 5px 0;
+  line-height: 1.3;
+
+  font-size: 12px;
+  color:@color-font-light;
+  font-weight: 300;
+  opacity: 0.6;
+
+  .dark & {
+    color: #CCC;
+    opacity: 1;
+  }
+
+  //In case we wrap input in addable field, help text will be displayed only for last item
+  .c-Addable-row & {
+    display: none;
+  }
+  .c-Addable-row:last-child & {
+    display: block;
+    position: absolute;
+
+    @media @screen-xs {
+      position: relative;
+    }
+  }
+  .is-dragging & {
+    display: none!important;
+  }
+
+}
+.input__err-msg {
+  display: none;
+}
+.input__field {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 7px 1px;
+  resize: none;
+
+  font-size: @font-size-basic;
+  background-color: transparent;
+
+  border: 1px solid;
+  border-color: #dddddd;
+
+  .dark & {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    font-weight: 300;
+  }
+
+  &:required ~ .input__label::before {
+    content: '* ';
+    position: absolute;
+    right: 100%;
+    top: 0;
+    margin: 2px;
+    color: @color-accent;
+  }
+
+  &.input_state_not-empty ~ .input__label,
+  .input--expanded & {
+    margin: 0;
+    padding: 0 1px;
+    top: -1px;
+
+    font-size: 11px;
+    font-weight: 300;
+    color: @color-font-light;
+
+    &::before {
+      margin-top: 0;
+    }
+  }
+
+  .t-style & {
+    border: none;
+    border-bottom: 1px solid;
+    border-color: #dddddd;
+  }
+
+  &:hover {
+    border-color: #bbbbbb;
+  }
+
+  .placeholder({
+    color: #FFF;
+  });
+
+  &:focus, &:active, &:focus:hover, .input--expanded &   {
+    border-color: @color-accent;
+    box-shadow: 0 1px 0 0 @accent-color;
+    outline: none;
+
+    & ~ .input__label {
+      margin: 0;
+      padding: 0 1px;
+      top: -1px;
+
+      font-size: 11px;
+      font-weight: 400;
+      color: @color-accent;
+
+      &::before {
+        margin-top: 0;
+      }
+    }
+
+    & ~ .input__help-text {
+      display: block;
+      opacity: 1;
+    }
+    & ~ .input__err-msg {
+      display: none;
+    }
+
+    .placeholder({
+      color: #999;
+    });
+  }
+
+  &.input_state_err, &.input_state_err:focus, &.input_state_err:active {
+    border-color: @color-red!important;
+    box-shadow: 0 1px 0 0 @color-red!important;
+
+    &:hover {
+      border-color: @color-red-dark;
+    }
+
+    & ~ .input__label {
+      color: @color-red;
+
+      &::before {
+        color: @color-red!important;
+      }
+    }
+
+    & ~ .input__help-text {
+      display: none;
+    }
+
+    & ~ .input__err-msg {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 5px 0;
+
+      font-size: 10px;
+      color:@color-red;
+    }
+  }
+
+  &.input_state_err.is-blinking:focus  ~ .input__blink {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 0;
+    top: -1px;
+
+    animation: textfield-focus-blink 1.5s 2;
+  }
+}
+
+
+
+/**** MVP version *****/
+
+.is-mvp {
+
+
+  .input__field {
+
+    //box-shadow: 0 1px 0 0 @accent-color;
+    outline: none;
+
+    & ~ .input__label {
+      margin: 0;
+      padding: 0 1px;
+      top: -1px;
+
+      font-size: 11px;
+      font-weight: 400;
+
+      &::before {
+        margin-top: 0;
+      }
+    }
+
+    & ~ .input__help-text {
+      display: none !important;
+      opacity: 1;
+    }
+    & ~ .input__err-msg {
+      display: none;
+    }
+
+    .placeholder({
+      color: #999;
+    });
+  }
+}
+
+
+
+
+
+
+.input__field_style_dark,
+.theme--dark .input__field {
+  color: #ffffff;
+  font-weight: 300;
+
+  .t-style & {
+    border-color: fade(#ffffff, 30%);
+
+    &:hover {
+      border-color: fade(#ffffff, 60%);
+    }
+    &:focus:hover {
+      border-color: @color-accent;
+    }
+  }
+}
+
+@keyframes textfield-focus-blink {
+  0% {box-shadow: 0 1px 6px 2px transparent};
+  50% {box-shadow: 0 1px 6px 2px @color-red};
+  100% {box-shadow: 0 1px 6px 2px transparent};
+}
+
+.input__err-msg {
+  display: none;
+}
+.input__field {
+  border: none;
+  border-bottom: 1px solid #dddddd;
+
+  &:hover {
+    border-color: #bbbbbb;
+  }
+
+  &:focus, &:active {
+    border-color: @color-accent;
+    box-shadow: 0 1px 0 0 @accent-color;
+    outline: none;
+  }
+}
+
+.input__field_style_dark {
+  border-color: fade(#ffffff, 30%);
+
+  &:hover {
+    border-color: fade(#ffffff, 60%);
+  }
+}
+
+.input__help-text {
+  transition: @transition-basic;
+}
+.input__err-msg {
+  display: @transition-basic;
+}
+.input__field {
+  transition: @transition-basic;
+}
+
+
+/**** RTE Editor input fields ****/
+
+.input__rteditor-editor {
+  padding-top: 16px;
+  transition: opacity 0.4s;
+  opacity: 1;
+  .input--expanded & {
+    opacity: 1;
+  }
+}
+
+.input__rteditor {
+
+
+
+  .input__field {
+    overflow: hidden;
+    height: 32px;
+    opacity: 1;
+  }
+
+  &.input--expanded {
+    .input__field {
+      height: 0px;
+      opacity: 0;
+    }
+  }
+}

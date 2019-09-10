@@ -1,0 +1,223 @@
+@import "../variables.less";
+
+.library__cell {
+    display: table-cell;
+    padding: 10px;
+    vertical-align: top;
+    box-sizing: border-box;
+
+    font-size: @font-size-basic;
+    font-weight: 400;
+
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+
+    //pointer-events: none;
+
+    @media (max-width: @width-screen-s) {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%!important;
+        padding: 5px 20px 5px 120px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+
+        &:first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+        }
+
+        &.is-empty {
+            display: none;
+        }
+    }
+}
+
+.library__cell:nth-child(1) {
+    width: 120px;
+    flex-shrink: 0;
+}
+.library__cell:nth-child(2) {
+    width: 15%;
+    flex-shrink: 0;
+    font-weight: 400;
+}
+.library__cell:nth-child(3) {
+    width: 6%;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+.library__cell:nth-child(4) {
+    width: 8%;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+.library__cell:nth-child(5) {
+    width: 10%;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+.library__cell:nth-child(6) {
+    width: 5%;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+.library__cell:nth-child(7) {
+    width: 5%;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+.library__cell:nth-child(8) {
+    width: 10%;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+.library__cell:nth-child(9) {
+    width: 10%;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+.library__cell:nth-child(10) {
+    width: 7%;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+.library__cell:nth-child(11) {
+    width: 7%;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+.library__cell:nth-child(12) {
+    width: 7%;
+    flex-shrink: 0;
+    font-weight: 300;
+}
+
+.library__cell--header {
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 0;
+
+    font-size: @font-size-small;
+    color: @color-font-light;
+    font-weight: 400!important;
+
+    vertical-align: top;
+    text-align: left;
+
+    &.library__cell-header--sortable {
+        cursor: pointer;
+    }
+
+    &.js-ascending::after {
+        opacity: 1;
+    }
+
+    &.js-descending::before {
+        opacity: 1;
+    }
+}
+
+.library__cell-header-text {
+    display: inline-block;
+    position: relative;
+    max-width: ~"calc(100% - 10px)";
+    pointer-events: none;
+    padding-right: 10px;
+
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    //padding
+
+    .library__cell--sortable & {
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 4px;
+            right: 0;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            opacity: 0.2;
+
+            .t-animation & {
+                transition: @transition-basic;
+            }
+
+        }
+        &::before {
+            top: ~"calc(50% - 1px)";
+            transform: translate(0, -100%);
+            background-image: url('img/icons/triangle-up.svg');
+        }
+        &::after {
+            top: ~"calc(50% + 1px)";
+            background-image: url('img/icons/triangle-down.svg');
+        }
+    }
+
+    .js-ascending & {
+        color: #000000;
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    .js-descending & {
+        color: #000000;
+        &::after {
+            opacity: 1;
+        }
+    }
+
+}
+
+
+/**** Mvp version only ****/
+
+.is-mvp {
+    .library__cell:nth-child(1) {
+        display: none;
+    }
+    .library__cell:nth-child(2) {
+        width: 30%;
+    }
+    .library__cell:nth-child(3) {
+        width: 15%;
+    }
+    .library__cell:nth-child(4) {
+        width: 15%;
+    }
+    .library__cell:nth-child(5) {
+        width: 15%;
+    }
+    .library__cell:nth-child(6) {
+        display: none;
+    }
+    .library__cell:nth-child(7) {
+        display: none;
+    }
+    .library__cell:nth-child(8) {
+        width: 30%;
+    }
+    .library__cell:nth-child(9) {
+        display: none;
+    }
+    .library__cell:nth-child(10) {
+        display: none;
+    }
+    .library__cell:nth-child(11) {
+        display: none;
+    }    
+}

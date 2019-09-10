@@ -1,0 +1,27 @@
+@import "../../variables.less";
+
+.blurb-item__expand-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  margin: 0 7px;
+  padding: 8px 1px;
+  opacity: 0.4;
+  background-image: url('img/icons/line-arrow-up.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: @transition-basic;
+  cursor: pointer;
+
+  .blurb-item.is-folded & {
+    transform: rotate(180deg);
+  }
+
+  .blurb-item.is-expanded & {
+    transform: rotate(0);
+  }
+
+}

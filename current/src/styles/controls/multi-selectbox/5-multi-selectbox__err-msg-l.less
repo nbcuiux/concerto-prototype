@@ -1,0 +1,19 @@
+@import "../../variables.less";
+
+.multi-selectbox__err-msg {
+    display: none;
+}
+.multi-selectbox_state_err ~ .multi-selectbox__err-msg {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 5px 0;
+
+    font-size: 10px;
+    color: @color-red;
+}
+/*.multi-selectbox__field.multi-selectbox_state_open ~ .smulti-selectbox__err-msg,
+.multi-selectbox__field:active ~ .smulti-selectbox__err-msg {
+    display: none;
+}*/

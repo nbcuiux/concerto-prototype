@@ -1,0 +1,27 @@
+@import "../variables.less";
+
+.content__library {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 20px;
+    width: 100%;
+
+    .content__controls--library.is-stuck ~ & {
+        padding-top: 50px;
+
+        @media (max-width: @width-screen-s) {
+            padding-top: 60px;
+        }
+    }
+
+}
+
+.library__table {
+    position: relative;
+    width: 100%;
+
+    table-layout: auto;
+    border-spacing: 0 10px;
+    border-collapse: separate;
+}

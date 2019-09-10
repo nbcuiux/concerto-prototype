@@ -1,0 +1,67 @@
+@import '../../variables.less';
+
+.file__caption {
+    position: relative;
+    width: 100%;
+    margin: 5px 0;
+
+    textarea {
+
+        background-color: transparent;
+        //border-radius: 2px;
+        border: 1px solid #dddddd;
+
+        font-size: @small-font-size;
+
+        &:hover {
+            border-color: #dddddd;
+        }
+
+        /*&:active, &:focus {
+            border-color: @accent-color;
+        }*/
+    }
+}
+.file__caption-toggle {
+
+    input[type="checkbox"].toggle {
+    	//transition: 0.2s ease-in;
+        background: #eeeeee;
+    	border: 1px solid #dddddd;
+    	background-position: left;
+    	background-size: contain;
+    	background-image: url(img/icons/circle.svg);
+    	background-repeat: no-repeat;
+
+    	&:hover {
+    		border-color: #cccccc;
+    	}
+    	&:focus {
+    		box-shadow: none;
+    	}
+    }
+
+    input[type="checkbox"]:checked.toggle {
+    	background-color: @accent-color;
+    	background-position: right;
+    	background-size: contain;
+    	background-image: url(img/icons/circle.svg);
+    	background-repeat: no-repeat;
+
+    	border: 1px solid @accent-color;
+    	padding: 0;
+
+    	&:hover {
+    		border-color: @accent-dark-color;
+    	}
+    	&:active {
+    		background-color: @accent-dark-color;
+    	}
+    }
+    input[type="checkbox"].toggle ~ label {
+        color: #555555;
+        opacity: 0.9;
+
+        //transition: 0.3s ease-out;
+    }
+}

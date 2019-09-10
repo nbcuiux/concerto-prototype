@@ -1,0 +1,21 @@
+@import "../variables.less";
+
+.library__cell-label {
+    display: none;
+
+    @media (max-width: @width-screen-s) {
+        display: inline-block;
+        position: relative;
+        margin: 2px 5px 0 0;
+
+        white-space: nowrap;
+        font-size: @font-size-small;
+
+        //pointer-events: none;
+
+        &::after {
+            content: ':';
+            position: relative;
+        }
+    }
+}

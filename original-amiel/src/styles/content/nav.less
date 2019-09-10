@@ -1,0 +1,138 @@
+@import "../variables.less";
+
+.c-Nav {
+    position: fixed;
+    z-index: @z-index-nav;
+    top: 50%;
+    left: 6px;
+    transform: translate(0, -50%);
+
+    list-style: none;
+    padding: 0;
+
+    @media @screen-l {
+		left: @size-menuWidth + 6;
+	}
+    @media @screen-xs {
+        display: none;
+    }
+    .t-animation & {
+        transition: @transition-menu;
+    }
+}
+
+.c-Nav-item {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    margin: 12px;
+
+    border-radius: 10px;
+    background-color: @color-font-light;
+    opacity: 0.4;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    /*&.is-active {
+        background-color: @color-font-light;
+        opacity: 1;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -2px;
+            left: -2px;
+
+            border-radius: 10px;
+            border: 1px solid  @color-font-light;
+
+            .t-animation & {
+                animation: nav-item-in 0.3s ease-out;
+            }
+        }
+    }*/
+
+    &.is-required {
+        background-color: @color-accent;
+        opacity: 1;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -2px;
+            left: -2px;
+
+            border-radius: 10px;
+            border: 1px solid  @color-accent;
+
+            .t-animation & {
+                animation: nav-item-in 0.3s ease-out;
+            }
+        }
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+
+.c-Nav-item-title {
+    position: absolute;
+    z-index: @z-index-navItem;
+    box-sizing: border-box;
+    left: 100%;
+    top: 50%;
+    display: inline-block;
+    white-space: nowrap;
+    transform: translate(0, -50%);
+    margin: 0 15px;
+    padding: 4px 10px 4px 7px;
+
+    background-color: fade(#000000, 90%);
+    color: #ffffff;
+    font-size: @font-size-small;
+
+    opacity: 0;
+    pointer-events: none;
+
+    .c-Nav-item:hover & {
+        opacity: 1;
+    }
+
+    .t-style & {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+
+        box-shadow: 0 1px 2px 0 fade(#000000, 30%);
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            transform: translate(0, -50%);
+
+        	width: 0;
+        	height: 0;
+        	border-top: 11px solid transparent;
+        	border-bottom: 11px solid transparent;
+
+        	border-right:11px solid fade(#000000, 90%);
+        }
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+
+@keyframes nav-item-in {
+    0% {opacity: 0; transform: scale(0.6);}
+    80% {opacity: 1; transform: scale(1.1);}
+    100% {transform: scale(1);}
+}

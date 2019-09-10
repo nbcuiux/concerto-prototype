@@ -1,0 +1,41 @@
+@import "../variables.less";
+
+.post-content__textarea {
+  padding: 0;
+  margin: 0;
+  outline: none;
+
+  transition: @transition-basic;
+
+  p {
+    margin: 0 0 10px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.has-preview {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+  }
+}
+
+.post-content__heading {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.post-content__preview {
+  &.has-preview {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+}

@@ -1,0 +1,59 @@
+@import "../variables.less";
+
+.o-Columns {
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px 0;
+    -webkit-column-count: 2;
+}
+.o-Col--2 {
+    width: 50%;
+
+    @media @screen-s {
+        width: 100%;
+    }
+    @media @screen-xs {
+        width: 100%;
+    }
+}
+.o-Col--wide {
+    width: 57%;
+
+    @media @screen-s {
+        width: 100%;
+    }
+    @media @screen-xs {
+        width: 100%;
+    }
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+.o-Col--narrow {
+    width: 43%;
+
+    @media @screen-s {
+        width: 100%;
+    }
+    @media @screen-xs {
+        width: 100%;
+    }
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+.o-Col--center {
+    width: 70%;
+    max-width: 900px;
+    align-self: center;
+
+    @media @screen-s {
+        width: 100%;
+    }
+    @media @screen-xs {
+        width: 100%;
+    }
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}

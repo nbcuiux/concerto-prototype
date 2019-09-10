@@ -1,0 +1,140 @@
+@import "../variables.less";
+
+.library__cell-value {
+    position: relative;
+    opacity: 1;
+    line-height: 1.4;
+
+    //pointer-events: none;
+
+    @media (max-width: @width-screen-s) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        //vertical-align: bottom;
+        min-width: 0;
+    }
+}
+
+.library__cell-value.is-shortable {
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.library__cell-value--name {
+    font-size: @font-size-small;
+    font-weight: 300;
+    color: @color-font-light;
+    margin: 2px 0 0 0;
+    @media (max-width: @width-screen-s) {
+        margin-left: 5px;
+    }
+}
+
+.library__cell-value--title {
+    display: inline-block;;
+    padding-right: 20px;
+    text-decoration: none;
+    color: #000000;
+
+    flex-grow: 1;
+    min-width: 0;
+
+    @media (max-width: @width-screen-s) {
+        display: inline-block;
+    }
+}
+
+.library__cell-value--published {
+    //color: @color-green;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding-left: 10px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
+
+        background-color: @green-color;
+    }
+}
+
+.library__cell-value--not-published {
+    //color: @color-red;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding-left: 10px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
+
+        background-color: @color-red;
+    }
+}
+
+
+.library__cell-value--draft {
+    //color: @color-green;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding-left: 10px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
+
+        background-color: @blue-color;
+    }
+}
+
+.library__cell-value--scheduled {
+    //color: @color-red;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding-left: 10px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
+        background-color: @color-golden;
+    }
+}

@@ -1,0 +1,44 @@
+@import "../variables.less";
+
+.c-Logo {
+    position: fixed;
+    z-index: @z-index-logo;
+    top: 15px;
+    left: 45px;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 300;
+    cursor: pointer;
+
+    @media @screen-l {
+        .c-Logo--menuState();
+    }
+    @media @screen-s {
+        display: none;
+    }
+    @media @screen-xs {
+        display: none;
+    }
+}
+
+.c-Logo--menuState {
+    left: 30px;
+
+    .t-style & {
+        color: fade(#ffffff, 70%);
+    }
+    .t-animation & {
+		animation: logo-slide-in 0.4s ease-out;
+	}
+    @media @screen-xs {
+        display: block;
+    }
+    @media @screen-s {
+        display: block;
+    }
+}
+
+@keyframes logo-slide-in {
+    0% {transform: translate(-230px, 0);}
+    100% {transform: translate(0, 0);}
+}

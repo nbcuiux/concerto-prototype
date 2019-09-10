@@ -1,0 +1,52 @@
+@import "../variables";
+
+.card {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: ~"calc(100% - 30px)";
+  height: auto;
+  margin: 10px 15px 20px 15px;
+  padding: 0;
+  background-color: #ffffff;
+
+  .t-animation & {
+    transition: @transition-basic;
+
+    &.is-active {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 1px;
+
+        animation: pulse-out 0.8s ease-out 2;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  .t-style & {
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
+    border-radius: 2px;
+  }
+}
+
+//Cheat for mobile navigation
+.card > .uk-sticky-placeholder {
+  @media @screen-l {
+    display: none;
+  }
+  @media @screen-n {
+    display: none;
+  }
+  @media @screen-s {
+    display: none;
+  }
+  @media @screen-xs {
+    display: block;
+    height: 25px!important;
+  }
+}

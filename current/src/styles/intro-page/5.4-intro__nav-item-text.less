@@ -1,0 +1,32 @@
+.intro__nav-item-text {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+    margin-left: 6px;
+
+    letter-spacing: 0.05em;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        height: 1px;
+        width: 0;
+        opacity: 0.5;
+
+        background-color: #000000;
+
+        transition: 0.3s ease-out;
+    }
+    &::before {
+        left: 50%;
+    }
+    &::after {
+        right: 50%;
+    }
+
+    .intro__nav-item-link:hover &::before,
+    .intro__nav-item-link:hover &::after {
+        width: 50%;
+    }
+}

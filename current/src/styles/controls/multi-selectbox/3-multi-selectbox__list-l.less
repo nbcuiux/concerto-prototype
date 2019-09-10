@@ -1,0 +1,25 @@
+@import "../../variables.less";
+
+.multi-selectbox__list {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    min-width: 250px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.3);
+
+    cursor: pointer;
+
+    .t-atyle & {
+        border-radius: 2px;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.3);
+    }
+}

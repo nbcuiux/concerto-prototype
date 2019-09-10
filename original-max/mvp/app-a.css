@@ -1,0 +1,62 @@
+/**
+ *
+ * New variables names
+ *
+ */
+input[type="checkbox"] {
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+}
+input[type="checkbox"] + label {
+  transition: 0.3s ease-out;
+}
+input[type="checkbox"].toggle {
+  transition: border 0.2s ease-out, background 0.2s ease-out;
+}
+input[type="checkbox"].favorite {
+  transition: 0.3s ease-out;
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.input__help-text {
+  transition: 0.3s ease-out;
+}
+.input__err-msg {
+  display: 0.3s ease-out;
+}
+.input__field {
+  transition: 0.3s ease-out;
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.selectbox__help-text {
+  transition: 0.3s ease-out;
+}
+.selectbox__err-msg {
+  display: 0.3s ease-out;
+}
+.selectbox__field {
+  transition: 0.3s ease-out;
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.tagfield__help-text {
+  transition: 0.3s ease-out;
+}
+.tagfield__err-msg {
+  display: 0.3s ease-out;
+}
+.tagfield__field {
+  transition: 0.3s ease-out;
+}

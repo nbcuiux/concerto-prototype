@@ -1,0 +1,221 @@
+@font-face {
+  font-family: 'concerto';
+  src: url('fonts/concerto/concerto.eot?h0jnrj');
+  src: url('fonts/concerto/concerto.eot?h0jnrj#iefix') format('embedded-opentype'), url('fonts/concerto/concerto.woff2?h0jnrj') format('woff2'), url('fonts/concerto/concerto.ttf?h0jnrj') format('truetype'), url('fonts/concerto/concerto.woff?h0jnrj') format('woff'), url('fonts/concerto/concerto.svg?h0jnrj#concerto') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'concerto' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-process:before {
+    content: "\e905";
+}
+.icon-mvp-prototype:before {
+    content: "\e904";
+}
+.icon-history:before {
+    content: "\e900";
+}
+.icon-lab:before {
+    content: "\e901";
+}
+.icon-prototype:before {
+    content: "\e902";
+}
+.icon-style-guide:before {
+    content: "\e903";
+}
+
+.intro-page {
+  position: relative;
+  font-family: 'Roboto';
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-color: #fafafa;
+}
+
+.intro__promo {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.intro__image {
+  position: relative;
+  max-height: 65vh;
+  left: 50%;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.05), 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+}
+.intro__image::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  content: '';
+  height: 10%;
+  width: 10%;
+  background: green;
+  border-left: 1px solid rgba(0, 0, 0, 0.7);
+  animation: cursor__blink 0.1s infinite;
+}
+@keyframes cursor__blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.intro__left {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 25%;
+  transform: translate(-50%, 0);
+  padding: 20px 0;
+  height: 100%;
+}
+
+.intro__nav {
+  position: relative;
+  top: calc(50% - 20px);
+  transform: translate(0, -50%);
+}
+
+.intro__logo {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.1em;
+}
+
+.intro__nav-list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.intro__nav-item {
+  position: relative;
+  font-weight: 300;
+  font-size: 18;
+  padding: 14px 4px;
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.intro__nav-item-link {
+  text-decoration: none;
+  color: #666666;
+  transition: 0.3s ease-out;
+}
+.intro__nav-item-link:hover {
+  color: #000000;
+}
+
+.intro__nav-item-text {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin-left: 6px;
+  letter-spacing: 0.05em;
+}
+.intro__nav-item-text::before,
+.intro__nav-item-text::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  height: 1px;
+  width: 0;
+  opacity: 0.5;
+  background-color: #000000;
+  transition: 0.3s ease-out;
+}
+.intro__nav-item-text::before {
+  left: 50%;
+}
+.intro__nav-item-text::after {
+  right: 50%;
+}
+.intro__nav-item-link:hover .intro__nav-item-text::before,
+.intro__nav-item-link:hover .intro__nav-item-text::after {
+  width: 50%;
+}
+
+.nav {
+  position: absolute;
+  padding: 15px;
+  top: 0;
+  left: 0;
+}
+.nav__link {
+  position: relative;
+  color: #777777;
+  font-weight: 300;
+  text-decoration: none;
+  transition: 0.3s ease-out;
+}
+.nav__link:hover {
+  color: #000000;
+}
+.nav__text {
+  position: relative;
+}
+.nav__text::before,
+.nav__text::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  height: 1px;
+  width: 0;
+  opacity: 0.5;
+  background-color: #000000;
+  transition: 0.3s ease-out;
+}
+.nav__text::before {
+  left: 50%;
+}
+.nav__text::after {
+  right: 50%;
+}
+.nav__link:hover .nav__text::before,
+.nav__link:hover .nav__text::after {
+  width: 50%;
+}
+.iframe {
+  position: relative;
+  height: calc(100vh - 80px);
+  width: calc(100vw - 80px);
+  box-shadow: 0 2px 15px rgba(0,0,0, 0.2);
+  top: 50px;
+  left: 40px;
+  border: none;
+}

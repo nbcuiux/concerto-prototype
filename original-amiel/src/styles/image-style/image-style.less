@@ -1,0 +1,263 @@
+@import "../variables.less";
+@import "../keyframes.less";
+
+.image-style {
+	position: relative;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+
+
+	margin: 10px 5px 10px 5px;
+    width: ~"calc(100% - 10px)";
+
+    @media (min-width: 650px) {
+        margin: 0 5px;
+        width: ~"calc(50% - 10px)";
+    }
+    @media (min-width: 800px) {
+        width: ~"calc(33% - 10px)";
+    }
+    @media (min-width: 900px) {
+        width: ~"calc(25% - 10px)";
+    }
+	@media (min-width: 1400px) {
+        width: ~"calc(20% - 10px)";
+    }
+}
+
+.image-style__img {
+    position: relative;
+    background-image: url(img/nighthawks.jpg);
+    background-repeat: no-repeat!important;
+    box-shadow: 0 0 1px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.2);
+    border-radius: 2px;
+    width: 100%;
+    transition: 0.4s ease-out;
+
+	&:hover {
+		box-shadow: 0 0 2px 0 rgba(0,0,0,0.3), 0 2px 8px 0 rgba(0,0,0,0.4);
+	}
+}
+
+.image-style__controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: inset 0 0 0 2px fade(@color-accent, 0);
+    overflow: hidden;
+
+    @media (max-width: 500px) {
+        background-color: rgba(0,0,0,0.2);
+
+    }
+
+	.image-style__img:hover & {
+		background-color: rgba(0,0,0,0.7);
+	}
+
+    .t-style & {
+        border-radius: 1px;
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+
+.image-style__delete {
+    display: none;
+
+	.image-style__img:hover & {
+		position: absolute;
+		display: block;
+		top: 6px;
+		right: 6px;
+		width: 16px;
+		height: 16px;
+		cursor: default;
+		background-image: url('img/icons/close.svg');
+		background-size: 50%;
+		background-color: rgba(255,255,255,0.5);
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 50%;
+		transition: 0.3s ease-out;
+		animation: fade-in 0.4s ease-out 0.2s;
+		-webkit-animation-fill-mode: backwards;
+
+		&:hover {
+			background-color: rgba(255,255,255,0.8)
+		}
+	}
+}
+
+button.image-style__controls-edit {
+	display: none;
+
+	.image-style__img:hover & {
+        display: block;
+
+		.t-animation & {
+			animation: scale-in 0.3s ease-out 0.1s;
+			-webkit-animation-fill-mode: backwards;
+		}
+    }
+}
+
+.image-style__title {
+	margin: 0.8em auto 0 auto;
+	color: #000000;
+	font-size: @font-size-mobile-basic;
+	//text-align: center;
+	@media (min-width: 600px) {
+		font-size: @font-size-basic;
+		text-align: center;
+	}
+}
+
+.image-style__info {
+	margin: 0.3em auto;
+	font-size: @font-size-mobile-small;
+	font-weight: 100;
+	color: @light-font-color;
+
+	@media (min-width: 600px) {
+		font-size: @font-size-small;
+		text-align: center;
+	}
+	//text-align: center;
+}
+
+button.image-style__edit {
+	display: inline-block;
+
+	@media (min-width: 600px) {
+		display: none;
+	}
+}
+/*
+	.purpose-img {
+
+
+		.purpose-controls {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: background 0.4s ease-out, outline 0.4s ease-out;
+			border-radius: 2px;
+			outline: solid 3px rgba(0,0,0,0);
+			outline-offset: -2px;
+
+			.close {display: none;}
+			.type {display: none;}
+			.button {display: none;}
+			.checkmark {
+				position: absolute;
+					top: 6px;
+					left: 6px;
+					width: 16px;
+					height: 16px;
+					border: 1px solid rgba(255,255,255,0.0);
+					border-radius: 50%;
+					transition: border 0.2s ease-out, background-color 0.2s ease-out;
+			}
+		}
+		&:hover {
+			box-shadow: 0 0 1px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 8px 0 rgba(0,0,0,0.35), 0 0 20px 0 rgba(0,0,0,0.25);
+
+			.purpose-controls {
+				background-color: rgba(0,0,0,0.7);
+
+				.close {
+					position: absolute;
+					display: block;
+					top: 6px;
+					right: 6px;
+					width: 16px;
+					height: 16px;
+					cursor: default;
+					background-image: url('img/icons/close.svg');
+					background-size: 50%;
+					background-color: rgba(255,255,255,0.5);
+					background-repeat: no-repeat;
+					background-position: center;
+					border-radius: 50%;
+					transition: 0.3s ease-out;
+					animation: fade-in 0.4s ease-out 0.2s;
+					-webkit-animation-fill-mode: backwards;
+
+					&:hover {
+						background-color: rgba(255,255,255,0.8)
+					}
+				}
+				.checkmark {
+					border: 1px solid rgba(255,255,255,0.7);
+
+					&:hover {
+						border-color: #ffffff;
+					}
+				}
+				.button {
+					display: block;
+					font-size: 14px;
+					padding: 6px 20px;
+					margin: 0;
+					border-radius: 3px;
+					border-width: 1px;
+					animation: scale-in 0.3s ease-out 0.1s;
+					-webkit-animation-fill-mode: backwards;
+				}
+			}
+		}
+	}
+	.purpose-title {
+		margin: 0.8em auto 0 auto;
+		color: #000000;
+		text-align: center;
+	}
+	.purpose-info {
+		margin: 0.3em auto;
+		font-size: @small-font-size;
+		font-weight: 100;
+		color: @light-font-color;
+		text-align: center;
+	}
+	.button {
+		display: none;
+	}
+	&.selected {
+		.purpose-controls {
+			outline: solid 3px @accent-color;
+			outline-offset: -2px;
+
+			.checkmark {
+				background-color: @accent-color;
+				background-position: center;
+				background-origin: content-box;
+				background-image: url(img/icons/checkmark.svg);
+				background-repeat: no-repeat;
+				border-color: @accent-color;
+
+				&:hover {
+					border-color: @accent-dark-color;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		width: ~"calc(100% - 40px)";
+	}
+}*/

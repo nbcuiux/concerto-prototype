@@ -1,0 +1,15 @@
+@import "../../variables.less";
+
+.selectbox__list-item-title {
+    position: relative;
+    pointer-events: none;
+
+    overflow: hidden;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    .selectbox__list-item-type ~ & {
+        margin-left: 40px;
+    }
+}

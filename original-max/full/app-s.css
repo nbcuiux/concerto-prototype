@@ -1,0 +1,298 @@
+/**
+ *
+ * New variables names
+ *
+ */
+.cards {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 20px 30px;
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.button:active,
+.button:focus {
+  outline: none;
+}
+.button_style_transparent-gray {
+  background-color: transparent;
+  border: none;
+  color: #555555;
+}
+.button_style_transparent-gray:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: #000000;
+}
+.button_style_transparent-gray:active {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: #000000;
+}
+.button_style_outline-white {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
+}
+.button_style_outline-white:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+}
+.button_style_outline-white:active {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000000;
+}
+.button_style_outline-gray {
+  background-color: transparent;
+  border: 1px solid #dddddd;
+  color: #666666;
+}
+.button_style_outline-gray:hover {
+  color: #000000;
+  border-color: #bbbbbb;
+}
+.button_style_outline-gray:active {
+  background-color: #dddddd;
+  border-color: #dddddd;
+}
+.button_style_outline-gray.is-selected {
+  border-color: #dddddd;
+  background-color: #dddddd;
+}
+.button_style_outline-gray.is-selected:hover {
+  color: #000000;
+  border-color: #aaaaaa;
+}
+.button_style_outline-gray.is-selected:active {
+  background-color: #dddddd;
+  border-color: #dddddd;
+}
+.button_style_outline-accent {
+  background-color: transparent;
+  min-width: 80px;
+  border: 1px solid rgba(255, 103, 0, 0.7);
+  color: #FF6700;
+}
+.button_style_outline-accent:hover {
+  border-color: #FF6700;
+}
+.button_style_outline-accent:active {
+  background-color: #FF6700;
+  color: #ffffff;
+}
+.button_style_fill-accent {
+  background-color: #FF6700;
+  border: 1px solid #FF6700;
+  color: #ffffff;
+}
+.button_style_fill-accent:hover {
+  border-color: #db5900;
+}
+.button_style_fill-accent:active {
+  background-color: #db5900;
+}
+.disabled .fa {
+  opacity: 0.5;
+}
+.button--filter {
+  margin-top: 5px;
+  min-width: 0;
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+input[type="checkbox"].toggle_style_dark {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+input[type="checkbox"].toggle_style_dark + label {
+  color: rgba(255, 255, 255, 0.7);
+}
+input[type="checkbox"].toggle_style_dark + label:hover {
+  color: #ffffff;
+}
+input[type="checkbox"].toggle_style_dark:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+input[type="checkbox"].toggle_style_dark:hover + label {
+  color: #ffffff;
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.input__err-msg {
+  display: none;
+}
+.input__field {
+  border: none;
+  border-bottom: 1px solid #dddddd;
+}
+.input__field:hover {
+  border-color: #bbbbbb;
+}
+.input__field:focus,
+.input__field:active {
+  border-color: #FF6700;
+  box-shadow: 0 1px 0 0 #FF6700;
+  outline: none;
+}
+.input__field_style_dark {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.input__field_style_dark:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.selectbox__field {
+  border: none;
+  border-bottom: 1px solid #dddddd;
+  color: #000000;
+  font-weight: normal;
+}
+.selectbox__field:hover {
+  border-color: #bbbbbb;
+}
+.selectbox__field.selectbox_state_open,
+.selectbox__field:active {
+  border-color: #FF6700 !important;
+  box-shadow: 0 1px 0 0 #FF6700;
+  outline: none;
+  color: #999999;
+  font-weight: 300;
+}
+.selectbox_style_dark.selectbox__field {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.selectbox_style_dark.selectbox__field:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.tagfield__field {
+  border: none;
+  border-bottom: 1px solid #dddddd;
+}
+.tagfield__field:hover {
+  border-color: #bbbbbb;
+}
+.tagfield__field.tagfield_state_not-empty {
+  color: #000000;
+  font-weight: normal;
+}
+.tagfield__field.tagfield_state_open,
+.tagfield__field:active {
+  border-color: #FF6700 !important;
+  box-shadow: 0 1px 0 0 #FF6700;
+  outline: none;
+  color: #999999;
+  font-weight: 300;
+}
+.tagfield__list {
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.tagfield__field.tagfield_style_dark {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.tagfield__field.tagfield_style_dark:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.file__img:hover .file__delete {
+  background-image: url('img/icons/close.svg');
+  background-size: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.file__img:hover .file__delete:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/**
+ *
+ * New variables names
+ *
+ */
+.file__caption {
+  position: relative;
+  width: 100%;
+  margin: 5px 0;
+}
+.file__caption textarea {
+  background-color: transparent;
+  border: 1px solid #dddddd;
+  font-size: 12px;
+  /*&:active, &:focus {
+            border-color: @accent-color;
+        }*/
+}
+.file__caption textarea:hover {
+  border-color: #dddddd;
+}
+.file__caption-toggle input[type="checkbox"].toggle {
+  background: #eeeeee;
+  border: 1px solid #dddddd;
+  background-position: left;
+  background-size: contain;
+  background-image: url(img/icons/circle.svg);
+  background-repeat: no-repeat;
+}
+.file__caption-toggle input[type="checkbox"].toggle:hover {
+  border-color: #cccccc;
+}
+.file__caption-toggle input[type="checkbox"].toggle:focus {
+  box-shadow: none;
+}
+.file__caption-toggle input[type="checkbox"]:checked.toggle {
+  background-color: #FF6700;
+  background-position: right;
+  background-size: contain;
+  background-image: url(img/icons/circle.svg);
+  background-repeat: no-repeat;
+  border: 1px solid #FF6700;
+  padding: 0;
+}
+.file__caption-toggle input[type="checkbox"]:checked.toggle:hover {
+  border-color: #db5900;
+}
+.file__caption-toggle input[type="checkbox"]:checked.toggle:active {
+  background-color: #db5900;
+}
+.file__caption-toggle input[type="checkbox"].toggle ~ label {
+  color: #555555;
+  opacity: 0.9;
+}

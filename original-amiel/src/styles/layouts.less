@@ -1,0 +1,65 @@
+@import "variables";
+
+.grid {
+  display: flex;
+}
+
+.grid--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.grid--center {
+  justify-content: center;
+}
+.grid--col {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col {
+  .t-animation & {
+    transition: @transition-basic;
+  }
+}
+.col--2 {
+  width: 50%;
+
+  @media @screen-s {
+    width: 100%;
+  }
+  @media @screen-xs {
+    width: 100%;
+  }
+}
+.col--wide {
+  width: 57%;
+
+  @media @screen-s {
+    width: 100%;
+  }
+  @media @screen-xs {
+    width: 100%;
+  }
+}
+.col--narrow {
+  width: 43%;
+
+  @media @screen-s {
+    width: 100%;
+  }
+  @media @screen-xs {
+    width: 100%;
+  }
+}
+.col--center {
+  width: 70%;
+  max-width: 900px;
+  align-self: center;
+
+  @media @screen-s {
+    width: 100%;
+  }
+  @media @screen-xs {
+    width: 100%;
+  }
+}

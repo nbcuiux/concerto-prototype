@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>New Promo</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	//= templates/page-head.html
+</head>
+
+<body class="t-animation t-style">
+	<!-- Asset Library -->
+
+	<div id="wrapper" class="wrapper">
+		<div id="menuToggle" class="c-MenuToggle"></div>
+		<div class="c-Logo js-logo">Concerto</div>
+
+		//= templates/menu.html
+
+		<div class="c-Header js-header">
+			<div class="c-Header-title">
+				<span class="c-Header-title-text" id="promoTitleText">New Promo</span>
+				<div class="c-Header-favorite">
+					<input type="checkbox" class="favorite" id="toDashboard"><label for="toDashboard">Add to favorites</label>
+				</div>
+				<div class="header__subhead is-hidden">
+					<span>Promo Wrapper</span>
+				</div>
+			</div>
+			<div class="c-Header-controls">
+				<button class="button button_style_transparent-gray u-noMargin" id="publishDraft"><i class="fa fa-external-link"></i><span>  Publish</span></button>
+				<button class="button button_style_transparent-gray u-noMargin u-hidden-xs" id="saveDraft" type="submit"><i class="fa fa-check"></i><span>  Save as Draft</span></button>
+				<button class="button button_style_transparent-gray u-noMargin u-hidden-xs" id="removeDraft"><i class="fa fa-ban"></i><span>  Cancel</span></button>
+
+				<button class="button button_style_transparent-gray u-visible-xs js-dropdown u-noMargin" id="actionDropdown"><i class="fa fa-ellipsis-v"></i></button>
+			</div>
+		</div>
+
+		<ul class="c-Nav js-scrollSpyNav" data-top-offset="50">
+			<li class="c-Nav-item js-scrollNavItem is-active" data-href="card-basic">
+				<span class="c-Nav-item-title">General</span>
+			</li>
+			<li class="c-Nav-item js-scrollNavItem" data-href="card-media">
+				<span class="c-Nav-item-title">Media</span>
+			</li>
+			<li class="c-Nav-item js-scrollNavItem" data-href="card-actions">
+				<span class="c-Nav-item-title">Actions</span>
+			</li>
+			<li class="c-Nav-item js-scrollNavItem" data-href="card-association">
+				<span class="c-Nav-item-title">Association</span>
+			</li>
+		</ul>
+
+		<div class="c-Content grid grid--row js-content">
+			<div class="col col--wide js-column">
+				<div class="card card--foldable js-foldable" id="card-basic">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">General Info <span class="card__title-required-count js-requiredCount"></span></div>
+					<div class="card__body">
+						<div class="controls__group">
+							<input type="text" class="js-input is-required js-required" required="true" id="promoTitleInput"
+							 data-label="Title"
+							 data-help-text="This is only for internal searching purposes.">
+						</div>
+						<div class="controls__group">
+							<input type="text"
+							class="js-input input_style_light"
+							data-label="Promo Kicker"
+							data-help-text="Fusce sodales finibus auctor. Nunc ipsum turpis, porttitor non sem id, luctus tincidunt diam.">
+						</div>
+						<div class="controls__group">
+							<input type="text"
+							class="js-input input_style_light"
+							data-label="Promo Title"
+							data-help-text="Fusce sodales finibus auctor. Nunc ipsum turpis, porttitor non sem id, luctus tincidunt diam.">
+						</div>						
+						<div class="controls__group">
+							<input type="text"
+							class="js-input input_style_light"
+							data-label="Promo Description"
+							data-help-text="In sed leo at nibh dignissim iaculis vel nec massa. Sed facilisis ultrices lacinia." />
+						</div>
+					</div>
+				</div>
+
+				//= templates/card-media.html
+
+			</div>
+
+			<div class="col col--narrow js-column" id="rightColumn">
+				<div class="card card--foldable js-foldable" id="card-association">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">Association</div>
+					<div class="card__body card__body--with-section">
+						<div class="card__section" id="collectionSeriesSection">
+							<header class="card__section-title">
+								<h4 class="card__section-header">Series, Season, Episode</h4>
+							</header>
+							<div class="card__section-body">
+								<div class="controls__group ">
+								</div>
+							</div>
+						</div>
+						<div class="card__section">
+							<header class="card__section-title">
+								<h4 class="card__section-header">Categories & Tags</h4>
+							</header>
+							<div class="card__section-body">
+								<div class="controls__group">
+									<div class="js-tagfield"
+									data-label="Categories"
+									data-items='["Backstage", "Episode Recap", "Fun Facts", "Red Carpet"]'
+									data-placeholder = "Set Categories">
+									</div>
+								</div>
+								<div class="controls__group">
+									<div class="js-tagfield"
+									data-label="Tags"
+									data-items='["Adam Copeland", "Emily Rose", "Eric Balfour", "John Dunsworth", "Laura Mennell", "Lucas Bryant", "Richard Donat"]'
+									data-placeholder="Set Tags"
+									data-create-new-tag="true"
+									data-search-placeholder="Type a tag..."
+									data-help-text="In sed leo at nibh dignissim iaculis vel nec massa. Sed facilisis ultrices lacinia.">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="card card--foldable js-foldable" id="card-cta">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">Links</div>
+					<div class="card__body card__body--with-section">
+						<div class="card__section">
+							<div class="card__section-body">
+								<div class="controls__group">
+									<div class="js-link-repeater"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+
+
+
+
+
+		</div>
+	</div>
+
+</div>
+</div>
+
+//= templates/version.html
+
+//= templates/asset-library-overlay.html
+//= templates/file-edit.html
+
+<div id="dropZone" class="dz hidden">
+	<div class="dz-zone locked">
+		<div class="dz-title">Drop files here</div>
+	</div>
+</div>
+
+//= templates/js-files.html
+<script src="js/create-promo.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

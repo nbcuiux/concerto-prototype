@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="9px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>unlock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Files-UserFLow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M8.063,6.436 C8.063,6.029 7.733,5.71 7.337,5.71 L7.337,3.136 C7.337,0.958 5.896,0.573 4.037,0.573 C2.167,0.573 0.737,0.958 0.737,3.136 L0.737,4.236 L2.2,4.236 C2.2,2.344 2.046,2.036 4.037,2.036 C4.939,2.036 5.874,1.959 5.874,3.147 C5.874,4.005 5.863,4.852 5.863,5.71 L0.737,5.71 C0.33,5.71 0,6.04 0,6.436 L0,10.836 C0,11.243 0.33,11.573 0.737,11.573 L7.337,11.573 C7.733,11.573 8.063,11.243 8.063,10.836 L8.063,6.436 Z" id="unlock" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

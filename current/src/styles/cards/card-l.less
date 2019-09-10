@@ -1,0 +1,130 @@
+@import "../variables";
+
+.card {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: ~"calc(100% - 30px)";
+    height: auto;
+    margin: 10px 15px 20px 15px;
+    padding: 0;
+    background-color: #ffffff;
+
+    .t-animation & {
+        transition: @transition-basic;
+        //animation-name: card_scale-in;
+        //animation-duration: 0.7s;
+        //animation-timing-function: ease-out;
+        //animation-fill-mode: backwards;
+
+        &.is-active {
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                border-radius: 1px;
+
+                animation: pulse-out 0.8s ease-out 2;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    .t-style & {
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
+        border-radius: 2px;
+    }
+}
+
+.card_wide {
+    width: ~"calc(100% - 30px)";
+}
+
+
+.c-Card-panel {
+    position: relative;
+    box-sizing: border-box;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+}
+.c-Card-panel--right {
+    right: 0;
+    border-top-right-radius: @border-radius-card;
+    border-bottom-right-radius: @border-radius-card;
+}
+.c-Card-panel--left {
+    left: 0;
+    border-top-left-radius: @border-radius-card;
+    border-bottom-left-radius: @border-radius-card;
+}
+.c-Card-panel--small {
+    width: @size-cardSmallPanel;
+}
+.c-Card-panel--wide {
+    width: 100%; //~"calc(100% - @{size-cardSmallPanel})";
+}
+.c-Card-panel--second {
+    background-color: #fafafa;
+    border-left: 1px solid #e2e2e2;
+
+    .t-style {
+        background-color: #fafaf5;
+    }
+}
+
+.c-Card-title {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 25px 0 25px;
+
+    .t-style & {
+        font-size: 22px;
+        font-weight: 300;
+        color: #000000;
+    }
+
+    &.is-stuck {
+        position: absolute;
+        z-index: @z-index-contentTitle;
+        width: 100%!important;
+        left: 0!important;
+        padding: 15px 17px 10px 17px!important;
+        background-color: #ffffff;
+        border-bottom: 1px solid #dddddd;
+        font-size: @font-size-small;
+        font-weight: 400;
+    }
+
+    .t-animation & {
+        transition: background 0.3s ease-out, border 0.3s ease-out;
+    }
+}
+
+//Cheat for mobile navigation
+.card > .uk-sticky-placeholder {
+    @media @screen-l {
+        display: none;
+    }
+    @media @screen-n {
+        display: none;
+    }
+    @media @screen-s {
+        display: none;
+    }
+    @media @screen-xs {
+        display: block;
+        height: 25px!important;
+    }
+}
+
+
+@keyframes card_scale-in {
+    0% {opacity: 0; transform: scale(0.95);}
+    100% {opacity: 1; transform: scale(1);}
+}

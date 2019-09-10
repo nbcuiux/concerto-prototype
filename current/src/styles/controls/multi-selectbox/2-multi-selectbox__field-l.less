@@ -1,0 +1,67 @@
+@import "../../variables.less";
+
+.multi-selectbox__field {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 32px;
+    margin: 10px 0 0 0;
+    padding: 7px 1px;
+
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    font-size: @font-size-basic;
+    background-color: transparent;
+
+    border-bottom: 1px solid #dddddd;
+
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+
+    background-image: url(img/icons/arrow.svg);
+	background-repeat: no-repeat;
+	background-position: ~"calc(100% - 5px) 50%";
+
+    &.multi-selectbox_state_not-empty {
+        padding: 5px 0px 4px 0;
+        color: #000000;
+        font-weight: normal;
+    }
+
+    &:hover {
+        border-color: #bbbbbb;
+    }
+
+    &.multi-selectbox_state_err {
+        border-color: @color-red;
+
+        &:hover {
+            border-color: @color-red-dark;
+        }
+    }
+
+    &.multi-selectbox_state_open, &:active {
+        border-color: @color-accent!important;
+        box-shadow: 0 1px 0 0 @accent-color;
+        outline: none;
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+
+//Dark theme
+.multi-selectbox__field.multi-selectbox_style_dark {
+    color: #ffffff;
+    border-color: fade(#ffffff, 30%);
+
+    &:hover {
+        border-color: fade(#ffffff, 60%);
+    }
+}

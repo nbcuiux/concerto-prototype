@@ -1,0 +1,44 @@
+@import "../../variables.less";
+
+.collection-item__type {
+    position: absolute;
+    bottom: 4px;
+    right: 6px;
+    font-size: 14px;
+
+    color: #000000;
+    opacity: 0.9;
+
+    .is-empty & {
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 42px;
+
+        .t-style & {
+            color: #dddddd;
+        }
+
+        .fa {
+            height: 100%;
+        }
+    }
+}
+
+.collection-item__type.collection-item__type--image {
+    .is-empty & {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.collection-item__type--episode {
+    background-image: url('img/icons/type-episode.svg');
+    opacity: 0.3;
+}

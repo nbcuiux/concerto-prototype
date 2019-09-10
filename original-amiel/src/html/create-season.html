@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>New Season</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	//= templates/page-head.html
+</head>
+
+<body class="t-animation t-style">
+
+	<div id="wrapper" class="wrapper">
+		<div id="menuToggle" class="c-MenuToggle"></div>
+		<div class="c-Logo js-logo">Concerto</div>
+
+		//= templates/menu.html
+
+		<div class="c-Header js-header">
+			<div class="c-Header-title">
+				<span class="c-Header-title-text" id="seasonTitleText">New Season</span>
+				<div class="c-Header-favorite">
+					<input type="checkbox" class="favorite" id="toDashboard"><label for="toDashboard">Add to favorites</label>
+				</div>
+				<div class="header__subhead is-hidden">
+					<span>Season</span>
+				</div>
+			</div>
+			<div class="c-Header-controls">
+				<button class="button button_style_transparent-gray u-noMargin" id="publishDraft"><i class="fa fa-external-link"></i><span>  Publish</span></button>
+				<button class="button button_style_transparent-gray u-noMargin u-hidden-xs" id="saveDraft" type="submit"><i class="fa fa-check"></i><span>  Save as Draft</span></button>
+				<button class="button button_style_transparent-gray u-noMargin u-hidden-xs" id="removeDraft"><i class="fa fa-ban"></i><span>  Cancel</span></button>
+				<button class="button button_style_transparent-gray u-visible-xs js-dropdown u-noMargin" id="actionDropdown"><i class="fa fa-ellipsis-v"></i></button>
+			</div>
+		</div>
+
+		<ul class="c-Nav js-scrollSpyNav" data-top-offset="50">
+			<li class="c-Nav-item js-scrollNavItem is-active" data-href="card-basic">
+				<span class="c-Nav-item-title">General</span>
+			</li>
+			<li class="c-Nav-item js-scrollNavItem" data-href="card-cast">
+				<span class="c-Nav-item-title">Cast & Credit</span>
+			</li>
+			<li class="c-Nav-item js-scrollNavItem" data-href="card-media">
+				<span class="c-Nav-item-title">Media</span>
+			</li>
+			<li class="c-Nav-item js-scrollNavItem" data-href="card-taxonomy">
+				<span class="c-Nav-item-title">Association</span>
+			</li>
+			<li class="c-Nav-item js-scrollNavItem" data-href="card-links">
+				<span class="c-Nav-item-title">Links</span>
+			</li>
+			<li class="c-Nav-item js-scrollNavItem" data-href="card-mps">
+				<span class="c-Nav-item-title">MPS Ad Fields</span>
+			</li>
+		</ul>
+
+		<div class="c-Content grid grid--row js-content">
+			<div class="col col--wide js-column">
+				<div class="card card--foldable js-foldable" id="card-basic">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">General Info <span class="card__title-required-count js-requiredCount"></span></div>
+					<div class="card__body">
+						<div class="controls__group">
+							<input type="text" class="input_style_light js-required" required="true" id="seasonTitleInput">
+						</div>
+						<div class="controls__group">
+							<input type="text"
+							class="js-input input_style_light"
+							data-label="Season Subtitle"
+							data-help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales commodo cursus.">
+						</div>
+						<div class="controls__group">
+							<input type="text"
+							class="js-input input_style_light"
+							data-label="Short Description"
+							data-help-text="Fusce sodales finibus auctor. Nunc ipsum turpis, porttitor non sem id, luctus tincidunt diam.">
+						</div>
+						<div class="controls__group">
+							<textarea class="js-input input_style_light"
+							data-label="Medium Description"
+							data-help-text="Sed accumsan arcu a mauris blandit tincidunt. In posuere sapien et tincidunt posuere."></textarea>
+						</div>
+						<div class="controls__group">
+							<textarea class="js-input input_style_light"
+							data-label="Long Description"
+							data-help-text="In sed leo at nibh dignissim iaculis vel nec massa. Sed facilisis ultrices lacinia."></textarea>
+						</div>
+						<div class="controls__group">
+							<div class="js-selectbox is-required js-required"
+							data-label="Series"
+							data-items='["Blindspot", "Slasher", "The Robot", "The Tonight Show", "The Voice"]'
+							data-placeholder = "Set series"
+							data-unselect="— None —"></div>
+						</div>
+						<div class="controls__group">
+							<input type="number"
+							class="js-input input_style_light js-required"
+							required="true"
+							data-label="Season Number"
+							data-err-msg="Please fill the title">
+						</div>
+						<div class="controls__group">
+							<input type="number"
+							class="js-input input_style_light"
+							data-label="Production Number"
+							data-err-msg="Please fill the title">
+						</div>
+						<div class="controls__group">
+							<div class="cg__title">Season Dates</div>
+							<div class="cg__controls cg__controls_style_row">
+								<div class="cg__control cg__control_style_row">
+									<input type="text"
+									class="js-input js-date input_style_light"
+									data-label="Start Date"
+									id="startDate"
+									placeholder="MM/DD/YYYY">
+								</div>
+								<div class="cg__control cg__control_style_row">
+									<input type="text"
+									class="js-input js-date input_style_light"
+									data-label="End Date"
+									id="endDate"
+									placeholder="MM/DD/YYYY">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card card--foldable js-foldable" id="card-cast">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">Cast and Credits</div>
+					<div class="card__body card__body--with-section">
+						<div class="card__section" id="castSection">
+							<header class="card__section-title">
+								<h4 class="card__section-header">Cast</h4>
+							</header>
+							<div class="card__section-body">
+								<div class="controls__group ">
+								</div>
+							</div>
+						</div>
+						<div class="card__section" id="creditSection">
+							<header class="card__section-title">
+								<h4 class="card__section-header">Credits</h4>
+							</header>
+							<div class="card__section-body">
+								<div class="controls__group">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				//= templates/card-media.html
+			</div>
+
+			<div class="col col--narrow js-column">
+				<div class="card card--foldable js-foldable" id="card-promotional">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">Promotional</div>
+					<div class="card__body">
+						<div class="controls__group">
+							<input type="text"
+								class="js-input input_style_light"
+								data-label="Promotional Kicker"
+								data-help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales commodo cursus.">
+						</div>
+						<div class="controls__group">
+							<input type="text"
+								class="js-input input_style_light"
+								data-label="Promotional Title"
+								data-help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales commodo cursus.">
+						</div>
+						<div class="controls__group">
+							<textarea class="js-input input_style_light"
+								data-label="Promotional Description"
+								data-help-text="Sed accumsan arcu a mauris blandit tincidunt. In posuere sapien et tincidunt posuere."></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="card card--foldable js-foldable" id="card-taxonomy">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">Association</div>
+					<div class="card__body card__body--with-section">
+						<div class="card__section">
+							<header class="card__section-title">
+								<h4 class="card__section-header">Categories & Tags</h4>
+							</header>
+							<div class="card__section-body">
+								<div class="controls__group">
+									<div class="js-tagfield"
+									data-label="Categories"
+									data-items='["Backstage", "Episode Recap", "Red Carpet", "Fun Facts"]'
+									data-placeholder = "Set Categories"></div>
+								</div>
+								<div class="controls__group">
+									<div class="js-tagfield"
+									data-label="Tags"
+									data-items='["Adam Copeland", "Emily Rose", "Eric Balfour", "John Dunsworth", "Laura Mennell", "Lucas Bryant", "Richard Donat"]'
+									data-placeholder="Set Tags"
+									data-create-new-tag="true"
+									data-search-placeholder="Type a tag..."
+									data-help-text="In sed leo at nibh dignissim iaculis vel nec massa. Sed facilisis ultrices lacinia."></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card card--foldable js-foldable" id="card-links">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">Links</div>
+					<div class="card__body">
+						<div class="controls__group ">
+							<div class="cg__controls cg__controls_style_row js-addable">
+								<div class="cg__control cg__control_style_row">
+									<input type="text"
+									class="js-input input_style_light"
+									data-label="Link Title">
+								</div>
+								<div class="cg__control cg__control_style_row">
+									<input type="text"
+									class="js-input input_style_light"
+									data-label="Link URL"
+									placeholder="www.example.com">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card card--foldable js-foldable" id="card-mps">
+					<div class="card__title js-foldedToggle js-stickyOnMobile">MPS Ad Fields</div>
+					<div class="card__body">
+						<div class="controls__group">
+							<input type="text"
+							class="js-input input_style_light"
+							data-label="MPS Category Set"
+							data-help-text="Sed accumsan arcu a mauris blandit tincidunt. In posuere sapien et tincidunt posuere.">
+						</div>
+						<div class="controls__group">
+							<input type="checkbox" class="toggle">
+							<label>MPS Sponsored</label>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	//= templates/version.html
+
+	//= templates/asset-library-overlay.html
+	//= templates/file-edit.html
+
+	<div id="dropZone" class="dz hidden">
+		<div class="dz-zone locked">
+			<div class="dz-title">Drop files here</div>
+		</div>
+	</div>
+
+	//= templates/js-files.html
+	<script src="js/create-season.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

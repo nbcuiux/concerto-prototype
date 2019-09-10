@@ -1,0 +1,68 @@
+@import "../../variables.less";
+
+.cg__control {
+    position:relative;
+    box-sizing: border-box;
+    min-width: 50px;
+}
+
+.cg__control_style_row {
+    margin: 0 10px 0 0;
+    flex-grow: 1;
+    flex-basis: 100px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    @media @screen-xs {
+        margin: 0 0 10px 0;
+        width: 100%;
+        flex-basis: auto;
+    }
+}
+.cg__control_style_col {
+    margin: 5px 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.cg__prefix {
+    margin: 0 15px 0 0;
+    width: 50px;
+    flex-basis: 0;
+
+    @media @screen-xs {
+        width: 100%;
+        margin: 0 0 15px;
+        flex-basis: auto;
+    }
+}
+
+.cg__first-name, .cg__middle-name, .cg__last-name {
+    width: ~"calc((100% - 60px - 60px - 45px) / 3)";
+
+    @media @screen-xs {
+        width: 100%;
+        margin: 0 0 15px;
+    }
+}
+
+.cg__suffix {
+    margin: 0;
+    width: 50px;
+    flex-basis: 0;
+
+    @media @screen-xs {
+        width: 100%;
+        margin: 0 0 15px;
+        flex-basis: auto;
+    }
+}

@@ -1,0 +1,41 @@
+@import "../../variables.less";
+
+.blurb-item__asset {
+  position: relative;
+  box-sizing: border-box;
+
+  transition: @transition-basic;
+
+  .blurb-item.is-folded & {
+    opacity: 0;
+  }
+  .blurb-item.is-expanded & {
+    opacity: 1;
+  }
+}
+.blurb-item__asset--link {
+  margin: 0 0 15px 0;
+  width: 100%;
+  font-size: @font-size-small;
+  line-height: 1.4;
+  color: @color-accent;
+  font-weight: 300;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+}
+.blurb-item__asset.blurb-item__asset--video {
+  margin: 10px 0 20px 0;
+  width: 200px;
+  height: 140px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 2px;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.2);
+
+}

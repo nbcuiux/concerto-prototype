@@ -1,0 +1,19 @@
+@import "../variables.less";
+
+.header__filters {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.c-Header-controls.header__controls--filter.is-open .header__filters {
+    @media (max-width: @width-screen-s) {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,26 @@
+@import "../../variables.less";
+
+.selectbox__list-item-subtitle {
+    position: relative;
+    pointer-events: none;
+    padding: 3px 0 0 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+
+    font-size: @font-size-small;
+    color: @color-font-light;
+    font-weight: 300;
+
+    margin-right: 70px;
+
+    .is-active & {
+        color: fade(#ffffff, 50%);
+    }
+
+    .selectbox__list-item-type ~ & {
+        margin-left: 40px;
+    }
+}

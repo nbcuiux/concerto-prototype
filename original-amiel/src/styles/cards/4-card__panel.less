@@ -1,0 +1,33 @@
+@import "../variables.less";
+
+.card__panel {
+  position: relative;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+}
+.card__panel--right {
+  right: 0;
+  border-top-right-radius: @border-radius-card;
+  border-bottom-right-radius: @border-radius-card;
+}
+.card__panel--left {
+  left: 0;
+  border-top-left-radius: @border-radius-card;
+  border-bottom-left-radius: @border-radius-card;
+}
+.card__panel--small {
+  width: @size-cardSmallPanel;
+}
+.card__panel--wide {
+  width: 100%;
+}
+.card__panel--second {
+  background-color: #fafafa;
+  border-left: 1px solid #e2e2e2;
+
+  .t-style {
+    background-color: #fafaf5;
+  }
+}

@@ -1,0 +1,177 @@
+/**
+ *
+ * New variables names
+ *
+ */
+.preview-update.preview-update--show-preview-modal {
+  overflow: hidden;
+}
+.preview-update.preview-update--show-preview-modal .preview-modal {
+  pointer-events: all;
+  opacity: 1;
+}
+.preview-update .preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s linear;
+  opacity: 0;
+  pointer-events: none;
+}
+.preview-update .preview-modal__row {
+  display: flex;
+  flex-direction: row;
+}
+.preview-update .preview-modal__label {
+  color: #fff;
+  font-size: 22px;
+  width: 30%;
+  margin-right: 50px;
+  flex-shrink: 0;
+}
+.preview-update .preview-modal__options {
+  width: 70%;
+}
+.preview-update .preview-modal__column {
+  display: flex;
+  flex-direction: column;
+}
+.preview-update .preview-modal__devices-col {
+  margin-right: 50px;
+}
+.preview-update .preview-modal__devices-col:last-of-type {
+  margin-right: 0;
+}
+.preview-update .preview-modal__datetime {
+  opacity: 0.6;
+  transition: all 0.3s linear;
+}
+.preview-update .preview-modal__option {
+  color: #999;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+}
+.preview-update .preview-modal__option.preview-modal__option--selected {
+  opacity: 1.0;
+}
+.preview-update .preview-modal__option.preview-modal__option--selected .preview-modal__option-point {
+  opacity: 1.0;
+}
+.preview-update .preview-modal__option.preview-modal__option--selected .preview-modal__option-label {
+  color: #fff;
+  opacity: 1.0;
+}
+.preview-update .preview-modal__option.preview-modal__option--selected .preview-modal__datetime {
+  opacity: 1.0;
+}
+.preview-update .preview-modal__option-point {
+  opacity: 0;
+  transition: all 0.3s linear;
+  background-color: #FF6700;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+  display: flex;
+}
+.preview-update .preview-modal__option-point:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: 1px solid #000;
+  position: absolute;
+  flex-shrink: 1;
+  top: 1px;
+  left: 1px;
+}
+.preview-update .preview-modal__option-label {
+  white-space: nowrap;
+}
+.preview-update .preview-modal__input {
+  outline: 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #999;
+  margin-right: 20px;
+  color: #ccc;
+  transition: all 0.2s linear;
+  font-size: 14px;
+  padding: 8px;
+}
+.preview-update .preview-modal__input:focus {
+  color: #fff;
+  border-bottom: 1px solid #FF6700;
+}
+.preview-update .preview-modal__date.preview-modal__date--show .preview-modal__cal {
+  opacity: 1;
+  pointer-events: all;
+}
+.preview-update .preview-modal__cal {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s linear;
+  position: relative;
+}
+.preview-update .preview-modal__cal .ui-datepicker {
+  position: absolute;
+  bottom: 0;
+  z-index: 10002 !important;
+}
+.preview-update .preview-modal__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  opacity: 0.6;
+  transition: opacity 0.3s linear;
+  cursor: pointer;
+}
+.preview-update .preview-modal__close path {
+  stroke: #fff;
+}
+.preview-update .preview-modal__close:hover {
+  opacity: 1.0;
+}
+.preview-update .preview-modal__input-label {
+  font-size: 10px;
+  font-weight: 100;
+}
+.preview-update .preview-modal__required {
+  color: #FF6700;
+}
+.preview-update .preview-modal__controls {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.preview-update .preview-modal__button {
+  border-radius: 4px;
+  border: 1px solid #FF6700;
+  padding: 6px 15px;
+  font-size: 16px;
+  color: #FF6700;
+  display: inline-block;
+  text-decoration: none;
+}
+.preview-update .preview-modal__button:hover {
+  color: #fff;
+  background-color: #FF6700;
+}
+.preview-update .preview-modal__devices {
+  margin-bottom: 30px;
+}
+.preview-update .preview-modal__schedule {
+  margin-bottom: 30px;
+}

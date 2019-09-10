@@ -1,0 +1,52 @@
+@import "variables.less";
+
+.pagination {
+  position: relative;
+  margin-left: 20px;
+}
+
+.pagination__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination__next,
+.pagination__prev {
+  display: inline-block;
+  padding: 4px 13px;
+  margin: 0 0 0 -1px;
+
+  font-size: 20px;
+  opacity: 1;
+
+  cursor: pointer;
+
+  border: 1px solid #dddddd;
+  color: @color-font-light;
+  background-color: transparent;
+
+  .t-animation & {
+    transition: @transition-basic;
+  }
+
+  &:hover {
+    color: #555555;
+    background-color: #e8e8e8;
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    color: #bbbbbb;
+  }
+}
+
+.pagination__prev {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.pagination__next {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}

@@ -1,0 +1,30 @@
+@import "../../variables.less";
+
+.selectbox__field {
+    border: none;
+    border-bottom: 1px solid #dddddd;
+    color: #000000;
+    font-weight: normal;
+
+    &:hover {
+        border-color: #bbbbbb;
+    }
+
+    &.selectbox_state_open, &:active {
+        border-color: @color-accent!important;
+        box-shadow: 0 1px 0 0 @accent-color;
+        outline: none;
+
+        color: @color-font-light;
+        font-weight: 300;
+    }
+}
+
+//Dark theme
+.selectbox_style_dark.selectbox__field {
+    border-color: fade(#ffffff, 30%);
+
+    &:hover {
+        border-color: fade(#ffffff, 60%);
+    }
+}

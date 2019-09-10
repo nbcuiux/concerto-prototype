@@ -1,0 +1,87 @@
+@import "../variables.less";
+
+.new-template {
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+}
+
+.nt__list {
+  position: relative;
+  margin: 40px 0 20px 0;
+}
+
+.nt-item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 15px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+  border: 1px solid fade(#ffffff, 30%);
+  border-radius: 2px;
+  color: fade(#ffffff, 70%);
+
+  transition: @transition-basic;
+
+  &:hover {
+    border-color: fade(#ffffff, 50%);
+    color: fade(#ffffff, 100%);
+  }
+
+  &.is-selected {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: transparent;
+    box-shadow: 0 2px 4px 0 fade(#000000, 20%);
+
+    &:hover {
+      box-shadow: 0 2px 8px 2px fade(#000000, 90%);
+    }
+  }
+}
+.nt-item__checkmark {
+  position: relative;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid fade(#ffffff, 60%);
+  border-radius: 20px;
+
+  transition: border 0.2s ease-out, background-color 0.2s ease-out;
+
+  .nt-item:hover & {
+    border-color: fade(#ffffff, 90%);
+  }
+  .nt-item.is-selected & {
+    background-color: @accent-color;
+    background-position: center;
+    background-origin: content-box;
+    background-image: url(img/icons/checkmark.svg);
+    background-repeat: no-repeat;
+    background-size: 72%;
+    border-color: @accent-color;
+    &:hover {
+      border-color: @accent-dark-color;
+    }
+  }
+}
+
+.nt-item__title {
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+.nt-item__icon {
+  font-size: 16px;
+  margin: 0 10px 0 15px;
+}

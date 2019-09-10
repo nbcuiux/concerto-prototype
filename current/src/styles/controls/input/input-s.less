@@ -1,0 +1,28 @@
+@import "../../variables.less";
+
+
+.input__err-msg {
+    display: none;
+}
+.input__field {
+    border: none;
+    border-bottom: 1px solid #dddddd;
+
+    &:hover {
+        border-color: #bbbbbb;
+    }
+
+    &:focus, &:active {
+        border-color: @color-accent;
+        box-shadow: 0 1px 0 0 @accent-color;
+        outline: none;
+    }
+}
+
+.input__field_style_dark {
+    border-color: fade(#ffffff, 30%);
+
+    &:hover {
+        border-color: fade(#ffffff, 60%);
+    }
+}

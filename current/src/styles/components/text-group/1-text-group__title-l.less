@@ -1,0 +1,15 @@
+@import "../../variables.less";
+
+.text-group__title {
+    position: relative;
+    margin: 0;
+    padding: 0 0 5px 0;
+
+    font-size: 10px;
+    font-weight: 500;
+    color: @color-font-light;
+
+    .text-group--dark  & {
+        color: fade(#ffffff, 60%);
+    }
+}

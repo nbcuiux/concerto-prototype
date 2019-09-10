@@ -1,0 +1,42 @@
+<div class="card card--foldable js-foldable" id="card-media">
+  <div class="card__title js-foldedToggle js-stickyOnMobile">Media</div>
+  <div class="card__body card__body--with-section grid grid--row u-nowrap">
+    <div class="card__panel card__panel--left card__panel--wide">
+      <div class="card__controls" data-uk-sticky="{boundary: true, top:50, clsactive: 'is-stuck'}">
+        <div class="left">
+          <div class="selectAll">
+            <button class="empty" id="selectAll" title="Select All"></button><label id="selectAllLabel" for="selectAll">All</label>
+          </div>
+          <button class="button button_style_transparent-gray" id="multiEdit">
+            <i class="fa fa-pencil-square"></i>
+            <span class="">  Multi Edit</span>
+            <div class="button__warning is-hidden"></div>
+          </button>
+          <button class="button button_style_transparent-gray" id="bulkRemove"><i class="fa fa-times-circle"></i><span class="">  Remove</span></button>
+          <button class="button button_style_transparent-gray" id="moreActions"><span class="">Move</span></button>
+        </div>
+        <div class="right">
+          <button class="button button_style_transparent-gray" id="uploadFiles" ><i class="fa fa-upload"></i><span class="">  Upload Files</span></button>
+          <button class="button button_style_transparent-gray" id="assetLibrary"><i class="fa fa-folder-open"></i><span class="">  Add from Library</span></button>
+
+          <button class="button button_style_transparent-gray js-dropdown u-noMargin" id="galleryActionsSmall"><i class="fa fa-ellipsis-v"></i></button>
+          <button class="button button_style_transparent-gray js-dropdown u-noMargin" id="galleryActionsMedium"><i class="fa fa-ellipsis-v"></i></button>
+          <button class="button button_style_transparent-gray js-dropdown u-noMargin" id="galleryActionsFull"><i class="fa fa-ellipsis-v"></i></button>
+        </div>
+      </div>
+      <div class="card__placeholder">
+        <div class="js-imagePlaceholder" data-name='Cover'></div>
+      </div>
+      <div class="files js-files" data-files-type="mediaGallery">
+        <!-- Files Section-->
+        <div class="section">
+          <div class="section__title section__title--card" >
+            <div class="section__title-text js-sectionTitle" id="assets-count"> span</div>
+          </div>
+          <div class="section__files section__files_view_grid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

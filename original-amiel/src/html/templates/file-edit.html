@@ -1,0 +1,326 @@
+<div class="js-file-edit">
+</div>
+
+
+
+<div class="pr hidden modal--full theme--dark">
+  <div class="modal__close" id='fpTopCloseButton'></div>
+  <div class="images images_style_bulk">
+    <i class="fa fa-chevron-left images__scroll-left"></i>
+    <div class="images__wrapper" id="images__wrapper">
+      <div class="images__container"></div>
+    </div>
+    <i class="fa fa-chevron-right images__scroll-right"></i>
+  </div>
+  <div class="preview" id="filePreview">
+    <div class="preview__image" id="previewImage">
+      <div class="preview__image-wrapper">
+        <img src="" id="previewImg" class="preview__image-img">
+        <div class="preview__focal-point is-hidden" id="focalPoint"></div>
+        <div class="preview__focal-rect is-hidden" id="focalRect"></div>
+        <div class="preview__video-play" id="videoPlay"></div>
+      </div>
+    </div>
+    <div class="preview__controls" id="previewControls">
+      <button class="button button_style_outline-white" id="focalPointToggle">Focal Point</button>
+      <button class="button button_style_outline-white" id="focalRectToggle">Focal Rectangle</button>
+      <button class="button button_style_outline-white" id="showPreview">Preview</button>
+    </div>
+
+    <div class="purposes is-hidden" id="purposes">
+      <div class="purpose__header">
+        <div>
+          <input type="text" class="js-input input__field_style_dark" style="max-width: 300px" data-label="Search Preview" placeholder="Type preview name" />
+        </div>
+        <div class="right">
+          <button class="button button_style_outline-white u-noMargin" id="hidePurpose">Hide Preview</button>
+          <div class="purpose-paginator" id="p-paginator"></div>
+        </div>
+      </div>
+      <i class="purposes__left fa fa-chevron-left" id="scrollLeft"></i>
+      <div class="purposes__wrapper" id="purposeWrapper">
+        <div class="purposes__container">
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">Android cover</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">Android cover (grayscale)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">Android cover HTC</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">Android cover HTC (grayscale)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">Android cover LG</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">Android cover LG (grayscale)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-2 purpose-img"></div>
+            <div class="purpose-title">Android wide cover</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-2 purpose-img"></div>
+            <div class="purpose-title">Android wide cover (grayscale)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-3 purpose-img"></div>
+            <div class="purpose-title">Android widest cover</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-3 purpose-img"></div>
+            <div class="purpose-title">Android widest cover (grayscale)</div>
+          </div>
+
+          <!--Desktop -->
+          <div class="purpose">
+            <div class="pr-4 purpose-img"></div>
+            <div class="purpose-title">Desktop header</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-5 purpose-img"></div>
+            <div class="purpose-title">Desktop header (widescreen)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-6 purpose-img"></div>
+            <div class="purpose-title">Desktop header (widest)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-7 purpose-img"></div>
+            <div class="purpose-title">Desktop side cover</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-8 purpose-img"></div>
+            <div class="purpose-title">Desktop side cover (narrow)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-9 purpose-img"></div>
+            <div class="purpose-title">Desktop side cover (tight)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-10 purpose-img"></div>
+            <div class="purpose-title">Desktop side cover (line)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-11 purpose-img"></div>
+            <div class="purpose-title">Desktop square 500</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-11 purpose-img"></div>
+            <div class="purpose-title">Desktop square 550</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-11 purpose-img"></div>
+            <div class="purpose-title">Desktop square 600</div>
+          </div>
+
+          <!--iOS -->
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">iOS cover</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">iOS cover (grayscale)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">iOS cover retina</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">iOS cover retina (grayscale)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">iOS cover 6 plus</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-1 purpose-img"></div>
+            <div class="purpose-title">iOS cover 6 plus (grayscale)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-2 purpose-img"></div>
+            <div class="purpose-title">iOS wide cover</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-2 purpose-img"></div>
+            <div class="purpose-title">iOS wide cover (grayscale)</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-3 purpose-img"></div>
+            <div class="purpose-title">iOS widest cover</div>
+          </div>
+          <div class="purpose">
+            <div class="pr-3 purpose-img"></div>
+            <div class="purpose-title">iOS widest cover (grayscale)</div>
+          </div>
+        </div>
+        <div class="c-Purposes-footer u-visible-xs">
+          <button class="button button_style_outline-white u-noMargin" id="loadMore">Load More</button>
+        </div>
+      </div>
+      <i class="purposes__right fa fa-chevron-right" id="scrollRight"></i>
+    </div>
+  </div>
+
+  <!-- Panel with file metadata -->
+  <div class="ip">
+    <div class="ip__title" id="ip__title">Metadata</div>
+    <div id="imageMetadata">
+      <div class="ip__group">
+        <div class="controls__group" id="imageTittleField">
+          <input type="text"
+          id="title"
+          class="js-input input__field_style_dark js-required"
+          required="true"
+          data-label="Image Title"
+          data-err-msg=" Please enter a title for the image"
+          data-theme="dark">
+        </div>
+        <div class="controls__group">
+          <input type="text"
+          id="caption"
+          class="js-input input__field_style_dark"
+          data-label="Image Caption"
+          data-help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales commodo cursus."
+          data-theme="dark">
+        </div>
+        <div class="controls__group">
+          <textarea type="text"
+          id="description"
+          class="js-input input__field_style_dark"
+          data-label="Image Description"
+          data-help-text="Fusce sodales finibus auctor. Nunc ipsum turpis, porttitor non sem id, luctus tincidunt diam."
+          data-theme="dark"></textarea>
+        </div>
+        <div class="controls__group img-only">
+          <input type="checkbox" class="toggle toggle_style_dark" id="resolution">
+          <label for="resolution">High Resolution<span class="ad-info">2400×1400</span></label>
+        </div>
+      </div>
+
+      <!-- Group of controls -->
+      <div class="ip__group">
+        <div class="controls__group">
+          <div class="js-tagfield tagfield_style_dark"
+          data-label="Categories"
+          data-items='["Backstage", "Episode Recap", "Red Carpet", "Fun Facts"]'
+          data-placeholder="Set Categories"
+          data-theme="dark"></div>
+        </div>
+        <div class="controls__group">
+          <div class="js-tagfield tagfield_style_dark"
+          data-label="Tags"
+          data-items='["Adam Copeland", "Emily Rose", "Eric Balfour", "John Dunsworth", "Laura Mennell", "Lucas Bryant", "Richard Donat"]'
+          data-placeholder="Set Tags"
+          data-create-new-tag="true"
+          data-search-placeholder="Type a tag..."></div>
+        </div>
+      </div>
+
+      <!-- Group of controls -->
+      <div class="ip__group">
+        <div class="controls__group">
+          <input type="text" id="altText" class="js-input input__field_style_dark" data-label="Alt Text">
+        </div>
+        <div class="controls__group">
+          <input type="text" id="credit" class="js-input input__field_style_dark" data-label="Credit">
+        </div>
+        <div class="controls__group">
+          <input type="text" id="copyright" class="js-input input__field_style_dark" data-label="Copyright">
+        </div>
+        <div class="controls__group">
+          <input type="text" id="source" class="js-input input__field_style_dark" data-label="Source">
+        </div>
+        <div class="controls__group">
+          <div class="cg__title cg__title_style_dark">Association</div>
+          <div class="cg__controls cg__controls_style_col">
+            <div class="cg__control cg__control_style_col">
+              <div class="js-selectbox selectbox_style_dark"
+              data-label="Series"
+              data-items='["The Tonight Show", "The Robot", "Blindspot", "Law & Order"]'
+              data-placeholder="Select Series"
+              style="min-width: 120px;"></div>
+            </div>
+            <div class="cg__control cg__control_style_col">
+              <div class="js-selectbox selectbox_style_dark"
+              data-label="Season"
+              data-items='["01", "02", "03", "04", "05", "06", "07", "08", "09"]'
+              data-placeholder="Select Season"></div>
+            </div>
+            <div class="cg__control cg__control_style_col">
+              <div class="js-selectbox selectbox_style_dark"
+              data-label="Episode"
+              data-items='["1. It is a Fae Fae Fae Fae World", "2. Where There is a Will, There is a Fae", "3. Oh Kappa, My Kappa", "4. Faetal Attraction", "5. Dead Lucky", "6. Food For Thought", "7. Arachnofaebia", "8. Vexed", "9. Fae Day", "10. The Mourning After", "11. Faetal Justice", "12. (Dis)Members Only", "13. Blood Lines"]'
+              data-placeholder="Select Episode"
+              style="min-width: 120px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden" id="videoMetadata">
+      <div class="ip__group">
+        <div class="controls__group">
+          <div class="js-selectbox selectbox_style_dark"
+          data-label="Videoplayer"
+          data-items='["Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6"]'
+          data-placeholder="Select videoplayer"
+          style="min-width: 120px;"></div>
+        </div>
+      </div>
+      <div class="ip__group" id="fielEdit-videoMetadata">
+        <div class="controls__group">
+          <div class="text-group text-group--dark">
+            <div class="text-group__title">Title</div>
+            <div class="text-group__text" id="videoTitle"></div>
+          </div>
+          <div class="text-group text-group--dark">
+            <div class="text-group__title">Description</div>
+            <div class="text-group__text" id="videoDescription"></div>
+          </div>
+          <div class="text-group text-group--dark">
+            <div class="text-group__title">Author</div>
+            <div class="text-group__text" id="videoAuthor"></div>
+          </div>
+          <div class="text-group text-group--dark">
+            <div class="text-group__title">GUID</div>
+            <div class="text-group__text" id="videoGuid"></div>
+          </div>
+          <div class="text-group text-group--dark">
+            <div class="text-group__title">Keywords</div>
+            <div class="text-group__text" id="videoKeywords"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ip__title">Promotional</div>
+      <div class="ip__group">
+        <div class="controls__group">
+            <input type="text" id="promotional-kicker" class="js-input input__field_style_dark" data-label="Promotional Kicker" data-theme="dark">
+        </div>
+        <div class="controls__group">
+            <input type="text" id="promotional-title" class="js-input input__field_style_dark" data-label="Promotional Title" data-theme="dark">
+        </div>
+        <div class="controls__group">
+            <textarea id="promotional-description" class="js-input input__field_style_dark" data-label="Promotional Description" data-theme="dark"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__controls modal__controls--bottom modal__controls--file-edit">
+    <button class="button button_style_fill-accent" id="saveChanges">Save</button>
+    <button class="button button_style_outline-white" id="cancelChanges">Cancel</button>
+  </div>
+</div>

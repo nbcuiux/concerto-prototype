@@ -1,0 +1,70 @@
+@import "../../variables.less";
+@import "../../keyframes.less";
+
+.button__warning {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    z-index: @z-index-requiredMark;
+
+    border-radius: 10px;
+    background-color: @color-accent;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1;
+    padding: 2px 0;
+    text-align: center;
+
+    background-image: url('img/icons/required-mark-small.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 1;
+    pointer-events: all;
+
+    &::after {
+        position: relative;
+        content: 'Images and videos are selected';
+        left: 100%;
+        top: -6px;
+        width: auto;
+        display: none;
+        white-space: nowrap;
+        margin: 0 3px;
+        padding: 4px 6px;
+
+        background-color: fade(#000000, 80%);
+        color: #ffffff;
+        font-size: @small-font-size;
+        font-weight: 300;
+    }
+    &:hover::after {
+        display: inline-block;
+
+        .t-animation & {
+            animation: fade-in 0.3s ease-out;
+        }
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+    .t-animation &::after {
+        transition: @transition-basic;
+    }
+
+    .t-style &::after {
+        border-radius: 2px;
+        box-shadow: 0 1px 4px 0 fade(#000000, 20);
+    }
+}
+
+.button__warning.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}

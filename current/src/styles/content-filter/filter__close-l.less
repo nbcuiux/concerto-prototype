@@ -1,0 +1,33 @@
+@import "../variables";
+
+.filters__close {
+    display: none;
+    @media (max-width: @width-screen-s) {
+        display: block;
+        position: fixed;
+        z-index: @z-index-modalClose;
+        top: 20px;
+        right: 20px;
+        width: 22px;
+        height: 22px;
+        background-image: url(img/icons/close-modal.svg);
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+
+        .t-style & {
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 0.8;
+            }
+            &:active {
+                opacity: 1;
+            }
+        }
+        .t-animation {
+            transition: @transition-basic;
+        }
+    }
+
+}

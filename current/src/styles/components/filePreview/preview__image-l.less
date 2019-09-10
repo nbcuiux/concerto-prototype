@@ -1,0 +1,27 @@
+@import "../../variables.less";
+
+.preview__image {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 90%;
+    max-height: 90%;
+    min-height: 300px;
+
+    margin: 20px;
+}
+
+.preview__image-wrapper {
+    position: relative;
+    width: 100%;
+    max-height: ~"calc(100% - 50px)";
+}
+
+.preview__image-img {
+    position: relative;
+    max-width: 100%;
+    max-height: ~"calc(100vh - 220px)";
+
+    .preview_style_multi & {
+        max-height: ~"calc(100vh - 300px)";
+    }
+}

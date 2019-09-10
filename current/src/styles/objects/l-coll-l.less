@@ -1,0 +1,39 @@
+@import "../variables";
+
+.l-coll {
+    width: 100%;
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+.l-coll--half {
+    width: 50%;
+
+    @media @screen-s {
+        width: 100%;
+    }
+    @media @screen-xs {
+        width: 100%;
+    }
+}
+.l-coll--wide {
+    width: 57%;
+
+    @media @screen-s {
+        width: 100%;
+    }
+    @media @screen-xs {
+        width: 100%;
+    }
+}
+.l-coll--narrow {
+    width: 43%;
+
+    @media @screen-s {
+        width: 100%;
+    }
+    @media @screen-xs {
+        width: 100%;
+    }
+}

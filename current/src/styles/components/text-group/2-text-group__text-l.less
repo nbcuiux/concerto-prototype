@@ -1,0 +1,14 @@
+@import "../../variables.less";
+
+.text-group__text {
+    position: relative;
+
+    font-size: @font-size-basic;
+    line-height: 1.5;
+    font-weight: 300;
+    color: fade(#000000, 90%);
+
+    .text-group--dark  & {
+        color: fade(#ffffff, 90%);
+    }
+}

@@ -1,0 +1,167 @@
+@import 'variables.less';
+
+body {
+	background-color: @color-bg-light;
+	margin: 0;
+    font-family: 'Roboto';
+    font-size: @basic-font-size;
+    letter-spacing: 0.03em;
+	//overflow-x: hidden;
+
+}
+
+label {
+	@media @screen-xs {
+		display: inline-block!important;
+	}
+}
+
+.tb {
+	position: absolute;
+	z-index: 45;
+	height: 40px;
+	width: 190px;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+
+	.logo {
+		margin: 20px 10px 5px 30px;
+		color: #000000;
+		font-size: 22px;
+		font-weight: 300;
+	}
+
+	@media (max-width: 992px) {
+		position: absolute;
+		z-index: 45;
+		height: 40px;
+		width: 190px;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: row;
+		opacity: 0.6;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		.menuToggle {
+			display: block;
+			width: 30px;
+			height: 34px;
+			margin: 10px 0 4px 15px;
+			background-image: url(img/icons/menu.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			opacity: 1;
+			transition: 0.2s ease-out;
+
+		}
+		.logo {
+			margin: 15px 10px 5px 5px;
+			color: #000000;
+			font-size: 22px;
+			font-weight: 300;
+		}
+	}
+	@media (max-width: 500px) {
+		position: fixed;
+		z-index: 20;
+		height: 40px;
+		width: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: row;
+		background-color: @basic-bg-color;
+		box-shadow:  0 0 1px 0 rgba(0,0,0,0.8);
+		opacity: 1;
+
+		.menuToggle {
+			display: block;
+			width: 30px;
+			height: 34px;
+			margin: 3px 0 4px 15px;
+			background-image: url(img/icons/menu-w.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			opacity: 1;
+			transition: 0.2s ease-out;
+
+		}
+		.logo {
+			margin: 10px 10px 5px 5px;
+			color: #ffffff;
+			font-size: 18px;
+			font-weight: 300;
+		}
+	}
+}
+
+
+.dz-zone {
+	position: absolute;
+	width: ~"calc(100% - 60px)";
+	height: ~"calc(100% - 60px)";
+	margin: 30px;
+	border: 1px dashed rgba(255, 255, 255,0.3);
+	border-radius: 10px;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+
+	animation: fade-in 0.6s ease-out;
+}
+
+.dz-title {
+	font-size: 32px;
+	color: #ffffff;
+	font-weight: 300;
+	animation: scale-in 0.3s ease-out;
+}
+.op.modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.title {
+		margin: 10px;
+		font-size: 32px;
+		font-weight: 300;
+		color: #ffffff;
+		animation: scale-in 0.3s ease-out;
+	}
+	.text {
+		font-size: @basic-font-size;
+		margin: 0 30px;
+		text-align: center;
+		max-width: 400px;
+		line-height: 1.5;
+		font-weight: 300;
+		opacity: 0.6;
+		color: #ffffff;
+		animation: scale-in 0.3s ease-out;
+	}
+	.controls {
+		position: relative;
+		background: none;
+		border: none;
+		left: none;
+		width: auto;
+		margin: 20px;
+
+		.button {
+			margin: 0 5px;
+			padding: 7px 25px;
+		}
+	}
+
+}
+
+.is-mvp #card-association .button--add {
+	display: none;
+}

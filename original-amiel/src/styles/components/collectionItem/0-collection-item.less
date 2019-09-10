@@ -1,0 +1,58 @@
+@import "../../variables.less";
+
+.collection-item {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    min-height: 60px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+
+    overflow: hidden;
+    background-color: #ffffff;
+
+    cursor: -webkit-grab;
+
+    .t-style & {
+        border: 1px solid #eeeeee;
+        border-radius: 2px;
+    }
+
+    &:hover {
+        .t-style & {
+            border-color: #dddddd;
+        }
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+
+    .c-Addable-row--collection.is-dragging & {
+        box-shadow: 0 2px 10px 0 fade(#000000, 30px);
+        background-color: #f5f5f5;
+        cursor: -webkit-grabbing;
+    }
+
+    &.is-appearing {
+        animation: collectionItem-pulse-out 0.7s ease-out 1; // 0.3s, pulse-scale 0.6s ease-out;
+    }
+}
+
+
+
+@keyframes collectionItem-pulse-out {
+    0% {box-shadow: 0 0 10px 0 fade(@color-accent, 20%);}
+    100% {box-shadow: 0 0 10px 20px fade(@color-accent, 0%);}
+}
+@keyframes pulse-scale {
+    0% {transform: scale(1.02, 1.1);}
+    30% {transform: scale(0.99, 0.95);}
+    //70% {transform: scale(1.01, 1.05);}
+    100% {transform: scale(1, 1);}
+}

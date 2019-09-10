@@ -1,0 +1,44 @@
+@import "../variables.less";
+
+.autocomplete {
+  position: absolute;
+  left: 0;
+  top: ~"calc(12px + 2.2em)";
+  width: 100%;
+  min-width: 250px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 200;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.3);
+
+  cursor: pointer;
+}
+
+.autocomplete__item {
+  position: relative;
+  padding: 10px 12px;
+  overflow: hidden;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:active, &.is-active {
+    background-color: @color-accent;
+    color: #ffffff;
+  }
+
+  &.is-hightlighted {
+    background-color: #eeeeee;
+    color: #000000;
+  }
+
+  .t-animation & {
+    transition: @transition-basic;
+  }
+}

@@ -1,0 +1,152 @@
+@import "../variables.less";
+
+.c-Content {
+	position: relative;
+	box-sizing: border-box;
+	padding: 170px 30px 40px 30px;
+	margin: 0;
+	left: 0;
+
+	opacity: 1;
+
+	@media @screen-l {
+		left: @size-menuWidth;
+		width: ~"calc(100% - @{size-menuWidth})";
+	}
+	@media @screen-s {
+		padding-top: 70px;
+	}
+	@media @screen-xs {
+		padding: 70px 0 40px 0;
+	}
+	.t-animation & {
+		transition: @transition-menu;
+	}
+	.c-Header--controls ~ & {
+		padding-top: 200px;
+
+		@media @screen-s {
+			padding-top: 55px;
+		}
+		@media @screen-xs {
+			padding-top: 55px;
+		}
+	}
+}
+
+.c-Content--visual-styles {
+	padding: 140px 0 40px 0;
+
+	@media @screen-s {
+		padding-top: 55px;
+	}
+	@media @screen-xs {
+		padding: 55px 0 40px 0;
+	}
+}
+.c-Content--dashboard {
+	.c-Content--visual-styles();
+}
+.c-Content--asset-library {
+	padding-left: 0;
+	padding-right: 0;
+}
+.c-Content--content-library {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 200px;
+
+	@media (min-width: @width-screen-s) and (max-width: 1070px) {
+		padding-top: 130px;
+	}
+	@media (max-width: @width-screen-s) {
+		padding-top: 55px!important;
+	}
+}
+
+.c-Content.is-invisible {
+	opacity: 0;
+}
+
+
+.c-Content-controls, .content__controls {
+	position: relative;
+	width: 100%;
+	padding: 15px 20px 10px 20px;
+	margin: 0;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+
+	border-bottom: 1px solid transparent;
+
+	&.is-stuck {
+		width: 100%!important;
+		z-index: @z-index-contentControls;
+
+		background-color: #ffffff;
+		border-color: #dddddd;
+
+		@media @screen-l {
+            left: @size-menuWidth;
+			width: ~"calc(100% - @{size-menuWidth})!important";
+        }
+		.t-style & {
+			opacity: 0.99;
+		}
+	}
+	.t-animation & {
+		transition: opacity 0.3s ease-out, left 0.3s ease-out;
+	}
+}
+.content__controls--library {
+	&.is-stuck {
+		position: fixed;
+		z-index: @z-index-contentControls;
+		top: 130px;
+		left: 0;
+		width: 100%;
+
+		@media @screen-l {
+			left: @size-menuWidth;
+			width: ~"calc(100% - @{size-menuWidth})";
+		}
+
+
+		@media (max-width: @width-screen-s) {
+			top: 55px;
+			left: 0;
+			width: 100%;
+			padding: 5px 20px;
+		}
+	}
+
+	&.is-hidden {
+		@media (max-width: @width-screen-s) {
+			display: none;
+		}
+	}
+}
+.content__controls-left {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+.content__controls-right {
+	float: right;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+
+.c-Content-files {
+	position: relative;
+	width: 100%auto;
+	padding: 10px;
+}

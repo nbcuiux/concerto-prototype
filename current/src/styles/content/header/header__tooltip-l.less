@@ -1,0 +1,50 @@
+@import "../../variables.less";
+
+.header__tooltip {
+    position: absolute;
+    z-index: @z-index-navItem;
+    box-sizing: border-box;
+    left: ~"calc(50% - 13px)";
+    top: 100%;
+    transform: translate(-50%, 0);
+    margin: 10px 15px;
+    padding: 4px 10px 4px 7px;
+
+    white-space: nowrap;
+
+    background-color: fade(#000000, 90%);
+    color: #ffffff;
+    font-size: @font-size-small;
+
+    opacity: 0;
+    pointer-events: none;
+
+    .c-Header-title-text:hover ~ & {
+        opacity: 1;
+    }
+
+    .t-style & {
+        border-radius: 4px;
+        box-shadow: 0 1px 2px 0 fade(#000000, 30%);
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 1px;
+            transform: translate(-50%, -100%);
+            width: 0;
+            height: 0;
+
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+            border-bottom: 8px solid fade(#000000, 90%);
+        }
+    }
+    .t-animation & {
+        transition: @transition-basic;
+    }
+    &.is-disabled {
+        display: none;
+    }
+}

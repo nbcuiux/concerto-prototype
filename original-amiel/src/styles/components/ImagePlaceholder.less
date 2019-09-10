@@ -1,0 +1,342 @@
+@import "../variables.less";
+@import "../keyframes.less";
+
+.c-ImagePlaceholder {
+  position: relative;
+  box-sizing: border-box;
+
+  .card__placeholder--card & {
+    width: 100%;
+    margin: 14px 0;
+  }
+  margin: 15px 5px 10px 5px;
+  width: ~"calc(100% - 10px)";
+
+  @media (min-width: 650px) {
+    margin: 5px 5px 0 5px;
+    width: ~"calc(50% - 10px)";
+  }
+  @media (min-width: 1000px) {
+    width: ~"calc(33% - 10px)";
+  }
+  @media (min-width: 1425px) {
+    width: ~"calc(25% - 10px)";
+  }
+  .col--wide & {
+    margin: 10px 5px 10px 5px;
+    width: ~"calc(100% - 10px)";
+
+    @media (min-width: 650px) {
+      margin: 0 5px;
+      width: ~"calc(50% - 10px)";
+    }
+    @media (min-width: 1071px) {
+      margin: 10px 20px 20px 20px;
+      width: ~"calc(50% - 40px)";
+    }
+    @media (min-width: 1400px) {
+      width: ~"calc(50% - 40px)";
+    }
+    @media (min-width: 1840px) {
+      width: ~"calc(33% - 40px)";
+    }
+  }
+  .controls__group--placeholder & {
+    margin: 20px 0 10px 0;
+    width: ~"calc(100% - 10px)";
+
+    @media (min-width: 650px) {
+      width: ~"calc(50% - 10px)";
+    }
+    @media (min-width: 1071px) {
+      width: ~"calc(50% - 40px)";
+    }
+    @media (min-width: 1400px) {
+      width: ~"calc(50% - 40px)";
+    }
+    @media (min-width: 1840px) {
+      width: ~"calc(33% - 40px)";
+    }
+  }
+  .post-item__content--file & {
+    width: 50%;
+    margin: 0;
+  }
+  .t-animation & {
+    transition: @transition-basic;
+  }
+}
+
+.c-ImagePlaceholder-img {
+  position: relative;
+  width: 100%;
+  padding-top: 66%;
+  box-sizing: border-box;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .t-style & {
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 fade(#000000, 30%);
+  }
+  .t-animation  & {
+    transition: @transition-basic;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: none;
+    border-radius: 2px;
+    background-color: fade(#000000, 0%);
+  }
+
+  &:hover {
+    &::after {
+      background-color: fade(#000000, 70%);
+    }
+
+    .t-style & {
+      box-shadow: 0 3px 10px 0 fade(#000000, 30%);
+    }
+  }
+
+  .c-ImagePlaceholder.is-empty & {
+    outline: 1px solid #eeeeee;
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+      &::after {
+        background-color: transparent;
+      }
+    }
+
+    .t-style  & {
+      outline: 1px dashed #bbbbbb;
+      background-color: #FAFAFA;
+    }
+
+    .dark & {
+      background: #2b2b2b;
+    }
+  }
+
+  .card__placeholder--card .c-ImagePlaceholder.is-empty & {
+    border: none;
+    outline: none;
+
+    &::before {
+      font-size: @font-size-basic;
+    }
+  }
+
+}
+
+.image-placeholder__controls {
+  display: none;
+
+  .c-ImagePlaceholder.is-empty & {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+.image-placeholder__controls-button {
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 0 0 0;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.image-placeholder__controls-button-icon {
+  text-align: center;
+  font-size: 36px;
+  color: @color-font-light;
+  pointer-events: none;
+
+  .image-placeholder__controls-button:hover & {
+    color: darken(@color-font-light, 20%);
+  }
+
+  .t-animation & {
+    transition: @transition-basic;
+  }
+}
+.image-placeholder__controls-button-text {
+  text-align: center;
+  font-size: @font-size-small;
+  color: @color-font-light;
+  padding: 10px 0;
+  pointer-events: none;
+
+  .image-placeholder__controls-button:hover & {
+    color: darken(@color-font-light, 20%);
+  }
+
+  .t-animation & {
+    transition: @transition-basic;
+  }
+}
+.image-placeholder__controls-divider {
+  padding: 0;
+  margin: 0 10px;
+  border-left: 1px solid #dddddd;
+  height: 90%;
+}
+
+.image-placeholder__controls-upload-button {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+
+    background-image:url(img/icons/add.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: transparent;
+
+    opacity: 0.5;
+  }
+  &::before {
+    content: 'Click to upload cover';
+    position: absolute;
+    //box-sizing:
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 15px auto;
+
+    text-align: center;
+
+    @media @screen-s {
+      top: 50%;
+    }
+    @media @screen-xs {
+      top: 50%;
+    }
+
+    .t-style  &{
+      font-size: @font-size-small;
+      color: @color-font-light;
+    }
+
+  }
+}
+
+.c-ImagePlaceholder-delete {
+  display: none;
+
+  .c-ImagePlaceholder-img:hover & {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    top: 6px;
+    right: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background-image: url('img/icons/close.svg');
+    background-size: 50%;
+    background-color: rgba(255,255,255,0.5);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .t-animation & {
+      animation: fade-in 0.2s ease-out 0.2s;
+      -webkit-animation-fill-mode: backwards;
+      transition: @transition-basic;
+    }
+  }
+
+  @media @screen-xs {
+    width: 22px;
+    height: 22px;
+  }
+
+  .c-ImagePlaceholder.is-empty &,
+  .c-ImagePlaceholder.is-empty .c-ImagePlaceholder-img:hover & {
+    display: none;
+  }
+
+  &:hover {
+    background-color: rgba(255,255,255,0.8)
+  }
+}
+
+.c-ImagePlaceholder-edit {
+  position: absolute!important;
+  display: none!important;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+
+  .c-ImagePlaceholder-img:hover & {
+    display: block!important;
+
+    .t-animation & {
+      animation: fade-in 0.3s ease-out 0.1s;
+      -webkit-animation-fill-mode: backwards;
+    }
+  }
+  .c-ImagePlaceholder.is-empty .c-ImagePlaceholder-img:hover & {
+    display: none!important;
+  }
+}
+.c-ImagePlaceholder-title {
+  display: block;
+  margin: 10px 0 0 0;
+  text-align: center;
+  color: #000000;
+  font-weight: 300;
+
+  .card__placeholder--card .c-ImagePlaceholder.is-empty & {
+    display: none;
+  }
+}
+.c-ImagePlaceholder-fileName {
+  display: block;
+  margin: 3px 0;
+  text-align: center;
+  font-size: @font-size-small;
+  color: @color-font-light;
+  font-weight: 300;
+
+  overflow: hidden;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  .c-ImagePlaceholder.is-empty & {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../variables.less";
+
+.collection-item__image {
+    display: block;
+    position: relative;
+    width: 110px;
+    margin: 0;
+    box-sizing: border-box;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    flex-shrink: 0;
+
+    .t-style & {
+        //border-radius: 2px;
+        //box-shadow: 0 0 1px 0 fade(#000000, 20%);
+    }
+
+    &.is-empty {
+        background-color: fade(@color-bg-light, 50%);
+        border-right: 1px solid #eeeeee;
+    }
+
+    @media @screen-xs {
+        display: none;
+    }
+}

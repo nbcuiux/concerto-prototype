@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15588) - http://www.bohemiancoding.com/sketch -->
+    <title>videoType</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="videoType" sketch:type="MSLayerGroup" fill-opacity="0.594287817" fill="#FFFFFF">
+            <path d="M1,1.99406028 L1,1.99406028 L1,14.0059397 C1,14.5543046 1.44469713,15 1.99079514,15 L18.0092049,15 C18.5520556,15 19,14.552393 19,14.0059397 L19,1.99406028 C19,1.44569536 18.5553029,1 18.0092049,1 L1.99079514,1 C1.44794441,1 1,1.44760701 1,1.99406028 L1,1.99406028 Z M0,1.99406028 C0,0.892771196 0.898212381,0 1.99079514,0 L18.0092049,0 C19.1086907,0 20,0.894513756 20,1.99406028 L20,14.0059397 C20,15.1072288 19.1017876,16 18.0092049,16 L1.99079514,16 C0.891309342,16 0,15.1054862 0,14.0059397 L0,1.99406028 L0,1.99406028 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M7,3.99539757 C7,3.44565467 7.38585663,3.24116039 7.85614014,3.53508759 L14.1438599,7.46491241 C14.616693,7.76043313 14.6141434,8.24116039 14.1438599,8.53508759 L7.85614014,12.4649124 C7.383307,12.7604331 7,12.5443356 7,12.0046024 L7,3.99539757 Z" id="Rectangle-5" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

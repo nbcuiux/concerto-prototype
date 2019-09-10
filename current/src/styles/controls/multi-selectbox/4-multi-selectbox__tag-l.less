@@ -1,0 +1,41 @@
+@import "../../variables.less";
+
+.multi-selectbox__tag {
+    display: inline-block;
+    position: relative;
+    z-index: 30;
+    padding: 3px 21px 3px 6px;
+    margin: 1px 4px 1px 0;
+    max-width: 80%;
+    font-size: @small-font-size;
+    font-weight: 300;
+    background-color: #eeeeee;
+    color: #000000;
+
+    overflow: hidden;
+    cursor: default;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    .t-style & {
+        border-radius: 2px;
+    }
+}
+
+.multi-selectbox__tag-delete {
+    position: absolute;
+    z-index: 50;
+    top: 50%;
+    right: 6px;
+    transform: translate(0, -50%);
+    color: #999999;
+    cursor: pointer;
+
+    &:hover {
+        color: #000000;
+    }
+}

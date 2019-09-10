@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Asset Library</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700,300italic,400italic,500italic,700italic,500,300" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="app-l.css">
+		<link rel="stylesheet" href="lib/cssControl/cssControl.css">
+		<link rel="stylesheet" href="app-s.css">
+		<link rel="stylesheet" href="app-a.css">
+
+	</head>
+	<body class="t-animation t-style">
+		<!-- Asset Library -->
+		<div id="wrapper" class="wrapper">
+			<div id="menuToggle" class="c-MenuToggle"></div>
+        	<div class="c-Logo js-logo">Concerto</div>
+
+			//= templates/menu.html
+
+			<div class="c-Header header--filter js-header">
+				<div class="c-Header-title">
+					<span class="c-Header-title-text">Content Library</span>
+					<div class="c-Header-favorite">
+						<input type="checkbox" class="favorite" id="toDashboard" />
+						<label for="toDashboard">Add to favorites</label>
+					</div>
+				</div>
+				<div class="c-Header-controls">
+					<button class="button button_style_transparent-gray u-noMargin filters__toggle" id="filterToggle"><i class="fa fa-filter"></i></button>
+				</div>
+				<div class="c-Header-controls header__controls--filter" id="filters">
+					<div class="filters__close" id="closeFilter">
+
+					</div>
+					<div class="header__filters">
+						<span class="filters__title"><i class="fa fa-filter filters__icon" ></i>Filter</span>
+						<div class="filters__wrapper">
+							<div class="filters__item">
+								<div class="" id="filterType" data-filter-type="type"></div>
+							</div>
+							<div class="filters__item">
+								<div class="" id="filterSeries" data-filter-type="series"></div>
+							</div>
+							<div class="filters__item">
+								<div class="" id="filterSeason" data-filter-type="season"></div>
+							</div>
+							<div class="filters__item">
+								<div class="" id="filterStatus" data-filter-type="status"></div>
+							</div>
+						</div>
+						<div class="filters__controls">
+							<button class="button button_style_outline-accent disabled" id="filterButton">Apply</button>
+							<button class="button button_style_outline-gray disabled" id="resetFilterButton">Reset</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="c-Content c-Content--content-library o-Grid o-Grid--col js-content">
+				<div class="content__controls content__controls--library">
+					<div class="content__controls-left">
+						<div class="" id="itemsPerPageSelectbox" style="width: 120px;"></div>
+
+						<button class="button button_style_transparent-gray js-dropdown u-noMargin" id="sortContentDropdown"><i class="fa fa-sort-amount-asc"></i></button>
+					</div>
+					<div class="content__controls-right">
+						<div class="content__results" id="contentResults">
+							<span class="content__results-number"></span>
+							<span class="content__results-text"></span>
+						</div>
+						<div class="pagination" id="contentPagination"></div>
+					</div>
+				</div>
+				<div class="content__library" id="contentLibrary">
+
+				</div>
+
+
+				</div>
+			</div>
+
+		</div>
+
+		//= templates/version.html
+
+		//= templates/fileEdit.html
+
+
+		<div id="dropZone" class="dz hidden">
+			<div class="dz-zone locked">
+				<div class="dz-title">Drop files here</div>
+			</div>
+		</div>
+
+		//= templates/jsFiles.html
+		//= templates/jsRichText.html
+	
+		<script src="js/content-library.js"></script>
+
+	</body>
+</html>

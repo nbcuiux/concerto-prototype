@@ -1,0 +1,100 @@
+@import "../../variables.less";
+
+.button:active, .button:focus {
+	outline: none;
+}
+
+.button_style_transparent-gray {
+	background-color: transparent;
+	border: none;
+	color: #555555;
+
+	&:hover {
+		background-color: fade(#000000, 6%);
+		color: #000000;
+	}
+	&:active {
+		background-color: fade(#000000, 12%);
+		color: #000000;
+	}
+}
+
+.button_style_outline-white {
+	background-color: transparent;
+	border: 1px solid fade(#ffffff, 50%);
+	color: fade(#ffffff, 70%);
+
+	&:hover {
+		border-color: fade(#ffffff, 70%);
+		color: #ffffff;
+	}
+	&:active {
+		background-color: fade(#ffffff, 70%);
+		color: #000000;
+	}
+}
+
+.button_style_outline-gray {
+	background-color: transparent;
+	border: 1px solid #dddddd;
+	color: #666666;
+
+	&:hover {
+		color: #000000;
+		border-color: #bbbbbb;
+	}
+	&:active {
+		background-color: #dddddd;
+		border-color: #dddddd;
+	}
+
+	&.is-selected {
+		border-color: #dddddd;
+		background-color: #dddddd;
+
+		&:hover {
+			color: #000000;
+			border-color: #aaaaaa;
+		}
+		&:active {
+			background-color: #dddddd;
+			border-color: #dddddd;
+		}
+	}
+}
+
+.button_style_outline-accent {
+	background-color: transparent;
+	min-width: 80px;
+	border: 1px solid fade(@color-accent, 70%);
+	color: @color-accent;
+
+	&:hover {
+		border-color: @accent-color;
+	}
+	&:active {
+		background-color: @accent-color;
+		color: #ffffff;
+	}
+}
+.button_style_fill-accent {
+	background-color: @color-accent;
+	border: 1px solid @color-accent;
+	color: #ffffff;
+
+	&:hover {
+		border-color: @color-accent-dark;
+	}
+	&:active {
+		background-color: @color-accent-dark;
+	}
+}
+
+.disabled .fa {
+	opacity: 0.5;
+}
+
+.button--filter {
+	margin-top: 5px;
+	min-width: 0;
+}

@@ -1,0 +1,52 @@
+@import "../variables.less";
+
+.section__title {
+  position: relative;
+  height: 9px;
+  border-bottom: 1px solid #dddddd;
+  margin: 0 0 10px 0;
+  padding: 0;
+
+  text-align: center;
+
+  .t-animation & {
+    transition: @transition-basic;
+  }
+}
+
+.section__title--card {
+  padding: 0;
+  border-color: #eeeeee;
+}
+
+.section__title-text {
+  position: relative;
+  display: inline-block;
+  padding: 0 6px;
+  background-color: @color-bg-light;
+  font-size: @small-font-size;
+  opacity: 1;
+
+  .section__title--card & {
+    background-color: #ffffff;
+  }
+
+  &.is-hidden {
+    opacity: 0;
+  }
+
+  .t-style & {
+    color: fade(@color-font-light, 50%);
+    text-transform: uppercase;
+  }
+
+  .t-style .section__title--card & {
+    font-weight: 300;
+  }
+
+  &.is-stuck {
+    z-index: @z-index-sectionTitle;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

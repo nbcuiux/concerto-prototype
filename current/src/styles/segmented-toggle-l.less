@@ -1,0 +1,43 @@
+@import "variables.less";
+
+.segmented-toggle {
+    position:relative;
+    display: inline-block;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            padding: 5px 5px;
+            margin: 0 -2px 0 -2px;
+            display: inline-block;
+
+            .fa {
+                padding: 4px 4px;
+            }
+        }
+    }
+}
+.segmented-toggle_transparent {
+    ul {
+        li {
+            border-radius: 2px;
+            transition: 0.3s ease-out;
+            color: #999999;
+
+            &:hover {
+                background-color: #eeeeee;
+                color: #000000;
+            }
+
+            &.active {
+                opacity: 1;
+                //border: 1px solid fade(@accent-color, 40%);
+                pointer-events: none;
+                color: @accent-color;
+
+            }
+        }
+    }
+}

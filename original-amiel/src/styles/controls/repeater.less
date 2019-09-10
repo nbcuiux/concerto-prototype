@@ -1,0 +1,135 @@
+
+
+
+
+
+
+.repeater__item,
+.repeater__add  {
+  padding: 20px;
+  //border: 2px dashed #DDD;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 2px;
+  background: #FFF;
+  margin: 0px 24px 20px 0px;
+  .c-Addable-row-dragHandler {
+    display: none;
+  }
+}
+
+
+
+.repeater__item {
+	position: relative;
+}
+
+
+
+.repeater__add {
+  font-weight: 300;
+  cursor: pointer;
+  color: #666;
+  &:hover  {
+    border-color: #AAA;
+  }
+  i {
+    margin-right: 10px;
+  }  
+}
+
+.repeater__remove,
+.repeater__count {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: -46px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.repeater__remove {
+	.button_style_outline-gray {
+		background-color: #fff;
+		top: 50%;
+		left: 0;
+		position: absolute;
+		transform: translateY(-50%);
+	}
+}
+
+.repeater__count {
+  right: auto;
+  left: -36px;
+  text-align: center;
+  font-size: 14px;
+  color: #222;
+}
+
+
+.repeater__item {
+
+  opacity: 1;
+  transition: opacity 0.3s;
+	cursor: move;
+
+  &-enter {
+    opacity: 0;
+  }
+
+  &-enter-active {
+    opacity: 1;
+  }
+
+  &-leave-active {
+    opacity: 0;
+  }
+
+
+  .c-ImagePlaceholder {
+    width: 100%;
+    margin: 20px 0px;
+    text-align: center;
+    justify-content: center;
+    &.is_empty {
+      width: 100%;
+      margin: 20px 0px;
+    }
+  }
+
+  .c-ImagePlaceholder-img {
+    position: relative;
+    padding-top: (270px/16) * 9px;
+    width: 270px;
+    display: inline-block;
+  }
+
+  .c-ImagePlaceholder.is-empty .c-ImagePlaceholder-img {
+    position: relative;
+    padding-top: 0px;
+    width: 100%;
+    display: block;
+
+    .image-placeholder__controls {
+      position: relative;
+      min-height: 150px;
+    }
+  }
+
+
+
+  .c-ImagePlaceholder.is-empty .image-placeholder__controls {
+    position: relative;
+  }
+
+	.c-Addable-row-dragHandler {
+		position: absolute;
+		display: flex;
+		left: -23px;
+		top: 50%;
+		transform: translateY(-50%);
+    display: none;
+	}
+}

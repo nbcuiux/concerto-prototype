@@ -1,0 +1,107 @@
+@import "../../variables.less";
+@import "../../keyframes.less";
+
+.c-Header-controls {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    margin: 13px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header__controls--filter {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 25px;
+    justify-content: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid transparent;
+
+    .c-Header.is-stuck & {
+        .header__controls--filter.is-stuck();
+    }
+    @media @screen-xs {
+        .header__controls--filter.is-stuck();
+        width: 40%;
+    }
+    @media @screen-s {
+        .header__controls--filter.is-stuck();
+    }
+}
+.header__controls--filter.is-stuck {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 20px 20px 10px 20px;
+    justify-content: flex-end;
+
+    background-color: #ffffff;
+    //border-color: #dddddd;
+
+    .t-animation & {
+        //transition: width 0.4s ease-out, left 0.4s ease-out;
+        //animation: fade-in 0.2s ease-out;
+    }
+
+    @media @screen-l {
+        left: @size-menuWidth;
+        width: ~"calc(100% - @{size-menuWidth})";
+    }
+
+}
+
+.c-Header-controls--center {
+    position: relative;
+    width: 50%;
+    margin-top: 25px;
+    justify-content: center;
+
+    .c-Header-controls.is-stuck & {
+        .c-Header-controls--center.is-stuck();
+    }
+    @media @screen-xs {
+        .c-Header-controls--center.is-stuck();
+        width: 40%;
+    }
+    @media @screen-s {
+        .c-Header-controls--center.is-stuck();
+    }
+}
+.c-Header-controls--center.is-stuck {
+    position: fixed;
+    margin-top: 11px;
+    justify-content: flex-end;
+
+    .t-animation & {
+        //transition: left 0.6s ease-out, width 0.6s ease-out;
+        animation: fade-in 0.2s ease-out;
+    }
+}
+
+.c-Header-controls.header__controls--filter {
+    @media (max-width: @width-screen-s) {
+        display: none;
+    }
+}
+.c-Header-controls.header__controls--filter.is-open {
+    @media (max-width: @width-screen-s) {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: @z-index-modal;
+        margin: 0;
+        overflow: auto;
+    }
+}

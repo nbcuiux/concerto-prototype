@@ -1,0 +1,22 @@
+@import "../variables.less";
+
+.c-Customcode {
+    min-height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #dddddd;
+
+    &:hover {
+        border-color: #bbbbbb;
+    }
+    &:active, &:focus {
+        border-color: @accent-color;
+        outline: none;
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}

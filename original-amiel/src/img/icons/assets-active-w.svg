@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="13px" height="11px" viewBox="0 0 13 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>assets-active-w</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Files-UserFLow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="assets-active-w" sketch:type="MSLayerGroup" transform="translate(-1.000000, -2.000000)">
+            <rect id="Rectangle-12" sketch:type="MSShapeGroup" x="0" y="0" width="15" height="15"></rect>
+            <path d="M1.06310879,5.49724301 C1.02190347,5.65708562 1,5.82467868 1,5.9973917 L1,11.0026083 C1,12.1041422 1.89666625,13 3.00276013,13 L11.9972399,13 C13.1064574,13 14,12.1057373 14,11.0026083 L14,5.9973917 C14,4.89585781 13.1033337,4 11.9972399,4 L7.99999422,4 C7.9973681,2.89128252 7.10029642,2 5.99408095,2 L3.00591905,2 C1.88655484,2 1,2.89761602 1,4.0048815 L1,4.9951185 C1,5.16864924 1.0219106,5.3368838 1.06310879,5.49724301 Z" id="Rectangle-51" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

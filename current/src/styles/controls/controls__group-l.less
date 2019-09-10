@@ -1,0 +1,19 @@
+@import "../variables.less";
+
+.controls__group {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+
+    &:first-child {
+        margin-top: 10px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.controls__group.is-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}

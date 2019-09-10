@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>button-add</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-6917.000000, -4176.000000)" fill="#999999">
+            <path d="M6924,4181 L6924,4177.00247 C6924,4176.45576 6923.55228,4176 6923,4176 C6922.44386,4176 6922,4176.44882 6922,4177.00247 L6922,4181 L6918.00247,4181 C6917.45576,4181 6917,4181.44772 6917,4182 C6917,4182.55614 6917.44882,4183 6918.00247,4183 L6922,4183 L6922,4186.99753 C6922,4187.54424 6922.44772,4188 6923,4188 C6923.55614,4188 6924,4187.55118 6924,4186.99753 L6924,4183 L6927.99753,4183 C6928.54424,4183 6929,4182.55228 6929,4182 C6929,4181.44386 6928.55118,4181 6927.99753,4181 L6924,4181 Z" id="button-add" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

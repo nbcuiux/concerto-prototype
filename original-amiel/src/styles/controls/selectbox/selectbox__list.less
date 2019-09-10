@@ -1,0 +1,46 @@
+@import "../../variables.less";
+
+.selectbox__list {
+    position: absolute;
+    left: 0;
+    top: ~"calc(12px + 2.2em)";
+    width: 100%;
+    min-width: 250px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 200;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0, 0.3);
+
+    cursor: pointer;
+
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+
+    li {
+         user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;       
+    }
+
+
+    /*&::-webkit-scrollbar,
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-track-piece,
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-corner,
+    &::-webkit-resizer {
+        display: none;
+    }*/
+}

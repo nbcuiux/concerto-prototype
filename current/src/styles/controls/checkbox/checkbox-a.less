@@ -1,0 +1,17 @@
+@import "../../variables.less";
+
+input[type="checkbox"] {
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+
+    & + label {
+        transition: @transition-basic;
+    }
+}
+
+input[type="checkbox"].toggle {
+    transition: border 0.2s ease-out, background 0.2s ease-out;
+}
+
+input[type="checkbox"].favorite {
+    transition: @transition-basic;    
+}

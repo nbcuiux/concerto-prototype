@@ -1,0 +1,325 @@
+@import "../../variables.less";
+
+.select__wrapper {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+.selectbox__label {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 10px 0 0 0;
+    padding: 7px 20px 7px 1px;
+
+    pointer-events: none;
+
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+
+    font-size: @font-size-basic;
+    font-weight: 300;
+    color: @color-font-light;
+
+    .is-required ~ & {
+        overflow-x: visible;
+        &::before {
+            content: '* ';
+            position: absolute;
+            right: 100%;
+            top: 0;
+            margin: 2px;
+            color: @color-accent;
+        }
+    }
+
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+.selectbox__help-text {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 5px 0;
+    line-height: 1.3;
+
+    font-size: 12px;
+    color:@color-font-light;
+    font-weight: 300;
+    opacity: 0.6;
+
+    .dark & {
+        opacity: 1;
+        color: #CCC;
+    }
+
+    //In case we wrap input in addable field, help text will be displayed only for last item
+    .c-Addable-row & {
+        display: none;
+    }
+    .c-Addable-row:last-child & {
+        display: block;
+    }
+    .t-animation & {
+        transition: @transition-basic;
+    }
+}
+.selectbox__err-msg {
+    display: none;
+}
+.selectbox__field {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 32px;
+    margin: 0 0 0 0;
+    padding: 7px 20px 7px 1px;
+
+    font-size: @font-size-basic;
+    background-color: transparent;
+
+    border: 1px solid #dddddd;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+
+    background-image: url(img/icons/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: ~"calc(100% - 5px) 50%";
+
+    &:focus {
+        outline: none;
+    }
+
+    .dark & {
+      color: #fff;
+      font-weight: 300;
+      border-color: rgba(255,255,255,0.3);
+      margin-bottom: 10px;
+    }
+
+    &.selectbox_state_not-empty ~ .selectbox__label {
+        margin: 0;
+        padding: 0 1px;
+        top: -1px;
+
+        font-size: 11px;
+        font-weight: 300;
+        color: @color-font-light;
+    }
+
+
+
+    &.selectbox_state_err {
+        border-color: @color-red;
+
+        &:hover {
+            border-color: @color-red-dark;
+        }
+
+        & ~ .selectbox__label {
+            color: @color-red;
+        }
+
+        & ~ .selectbox__help-text {
+            display: none;
+        }
+
+        & ~ .selectbox__err-msg {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 5px 0;
+
+            font-size: 10px;
+            color:@color-red;
+        }
+
+        .selectbox__placeholder {
+            color: @color-red;
+        }
+    }
+
+    &.selectbox_state_open,
+    &:active,
+    &.selectbox_state_focused
+     {
+        & ~ .selectbox__label {
+            margin: 0;
+            padding: 0 1px;
+            top: -1px;
+
+            font-size: 11px;
+            font-weight: 400;
+            color: @color-accent;
+        }
+
+        & ~ .selectbox__help-text {
+            display: block;
+            opacity: 1;
+        }
+        & ~ .selectbox__err-msg {
+            display: none;
+        }
+    }
+
+    &.selectbox_required ~ .selectbox__label::before,
+    &.selectbox.is-required ~ .selectbox__label::before {
+        content: '* ';
+        position: absolute;
+        right: 100%;
+        top: 0;
+        margin: 2px;
+        color: @color-accent;
+    }
+}
+
+.selectbox__placeholder-box {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    min-width: 0;
+    flex-direction: column;
+
+    border: 1px solid #eeeeee;
+    background: #FAFAFA;
+    border-radius: 2px;
+    /*
+    > div:first-child {
+        position: relative;
+        box-sizing: border-box;
+        margin: 0px;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow-wrap: break-word;
+    }
+
+    > div:last-child {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow-wrap: break-word;
+        font-size: 12px;
+        line-height: 1.4;
+        font-weight: 300;
+        color: #999999;
+        margin-top: 7px;
+    }
+    */
+}
+
+.selectbox__searchfield {
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 6px 1px;
+    margin: 0;
+
+    font-size: 14px;
+
+    border: none;
+    background-color: transparent;
+
+    &:focus, &active {
+        outline: none;
+    }
+
+    .placeholder ({
+        color: #999999;
+        font-weight: 300;
+    })
+}
+
+//Dark theme
+.selectbox_style_dark.selectbox__field {
+    color: #ffffff;
+    .selectbox__searchfield {
+        color: #ffffff;
+    }
+}
+
+.selectbox__help-text {
+    transition: @transition-basic;
+}
+.selectbox__err-msg {
+    display: @transition-basic;
+}
+.selectbox__field {
+    transition: @transition-basic;
+}
+
+.selectbox__field {
+    border: none;
+    border-bottom: 1px solid #dddddd;
+    color: #000000;
+    font-weight: normal;
+
+    &:hover {
+        border-color: #bbbbbb;
+    }
+
+    &.selectbox_state_open, &:active {
+        border-color: @color-accent!important;
+        box-shadow: 0 1px 0 0 @accent-color;
+        outline: none;
+
+        color: @color-font-light;
+        font-weight: 300;
+    }
+}
+
+//Dark theme
+.selectbox_style_dark.selectbox__field {
+    border-color: fade(#ffffff, 30%);
+
+    &:hover {
+        border-color: fade(#ffffff, 60%);
+    }
+}
+
+
+
+
+
+
+/**** MVP Version ****/
+
+.is-mvp {
+
+    .selectbox__field {
+        & ~ .selectbox__label {
+            margin: 0;
+            padding: 0 1px;
+            top: -1px;
+            font-size: 11px;
+            font-weight: 400;
+        }
+
+        & ~ .selectbox__help-text {
+            display: block;
+            opacity: 1;
+        }
+        & ~ .selectbox__err-msg {
+            display: none;
+        }
+
+    }
+
+}

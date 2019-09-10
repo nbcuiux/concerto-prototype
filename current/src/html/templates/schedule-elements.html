@@ -1,0 +1,72 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
+<script id="day-template" type="text/x-handlebars-template">
+    <div class="schedule-day-wrapper">
+        <div class="schedule-day-label">{{ dayTitle }}</div>
+        <div class="schedule-day">
+            <div class="schedule-day-empty">Unpublished</div>
+            <div class="schedule-day-items-wrapper"></div>
+        </div>
+        
+        <div class="schedule-day-expand">
+            <div class="schedule-day-expand__label"></div>
+        </div>
+    </div>
+</script>
+<script id="day-element" type="text/x-handlebars-template">
+    <div class="schedule-element">
+        <div class="schedule-element__name">{{ versionName }}</div>
+        <div class="schedule-element__dates">
+            {{#if publishDate}}
+                <div class="schedule-element__date-published">{{ publishDate }}</div>
+            {{/if}}
+        </div>
+    </div>
+</script>
+
+
+
+<script id="collection-element-simple" type="text/x-handlebars-template">
+    <div class="collection-item js-hasValue
+    {{#unless child}}
+        {{#isCollection type}}
+            collection-item--expandable
+        {{/isCollection}}
+    {{else}}
+        collection-item--not-expandable
+    {{/unless}}
+    ">
+        <div class="collection-item__wrapper collection-item__wrapper{{getStatusPrefix status}}">
+            {{#if thumbnail}}
+                <div class="collection-item__thumb-wrapper" style="background-image: url('{{ thumbnail }}')"></div>
+            {{/if}}
+            <div class="collection-item__info-wrapper">
+                <div class="collection-item__title">{{ title }}</div>
+                <div class="collection-item__info">
+                    {{sentence type}} | {{ sentence status }} | 
+                    {{#if publishDate}}
+                        {{formatDate publishDate "MM/DD/YY" }} @ {{formatDate publishDate "hh:mm a" }}
+                    {{else}}
+                        Not Scheduled
+                    {{/if}}
+                </div>
+                <a href="{{ target }}?id={{ id }}">
+                    <div class="library__row-edit"></div>
+                </a>
+                {{#unless child}}
+                    <div class="collection-item__pick"></div>
+                {{/unless}}
+            </div>
+        </div>
+        {{#unless child}}
+            {{#isCollection type}}
+                <div class="collection-item__collections js-addable">
+                </div>
+            {{/isCollection}}
+        {{/unless}}
+    </div>
+</script>
+
+
+
+

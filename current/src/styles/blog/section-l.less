@@ -1,0 +1,106 @@
+@import "../variables.less";
+
+.list__section {
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  margin: 10px 0 25px 0;
+  transform-origin: top;
+  opacity: 1;
+
+  border: 1px solid #eeeeee;
+  border-radius: 2px;
+  background-color: #ffffff;
+
+  &:last-child {
+    //margin-bottom: 30px;
+  }
+  &:last-of-type {
+    //border-bottom: 1px solid #eeeeee;
+    //padding-bottom: 20px;
+    //margin-bottom: 25px;
+  }
+  &.is-dragging {
+      box-shadow: 0 1px 2px 0 fade(#000000, 20%);
+      transition: none;
+      transition: opacity 0.3s ease-out;
+      transform: rotate(-1deg);
+      opacity: 0.95;
+  }
+}
+.list__placeholder {
+  min-height: 100px;
+  background-color: #fafafa;
+  border: 1px dashed #eeeeee;
+  border-radius: 2px;
+  margin: 10px 0 25px 0;
+}
+
+.section__handler {
+  position: absolute;
+  z-index: 2;
+  box-sizing: border-box;
+  left: 8px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-image: url('img/icons/drag-handler.svg');
+  opacity: 0.15;
+  cursor: move;
+
+  &:hover {
+      opacity: 0.4;
+  }
+  &:active {
+      opacity: 0.7;
+  }
+  .t-animation & {
+      transition: opacity 0.3s ease-out;
+  }
+}
+
+.section__remove {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background-image: url(img/icons/close-modal.svg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  opacity: 0.4;
+  transition: @transition-basic;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.section__index {
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  cursor: -webkit-grab;
+
+  .t-style & {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    color: @color-font-light;
+  }
+}
+
+.section__content {
+  position: relative;
+  box-sizing: border-box;
+  padding: 5px 25px;
+}

@@ -1,0 +1,218 @@
+@import "variables.less";
+
+.act(@counter) when (@counter > 0) {
+  .act((@counter - 1));    // next iteration
+	&:nth-child(@{counter}) {
+  		opacity: (1 - 0.2 * (@counter - 1)); // code for each iteration
+	}
+}
+
+
+#favorites {
+	width: ~"calc(100% - 30px);"
+}
+.placeholder {
+	width: ~"calc((100% - 140px)/6)";
+	max-width: 170px;
+	margin: 10px 10px 30px 10px;
+	border: 1px dashed #eeeeee;
+	border-radius: 2px;
+	color: #000000;
+	background-color: #fafafa;
+
+	@media (min-width: 1400px) {
+		width: ~"calc((100% - 180px)/8)";
+	}
+	@media (max-width: 768px) {
+		width: ~"calc((100% - 80px)/3)";
+	}
+	@media (max-width: 500px) {
+		width: ~"calc((100% - 60px)/2)";
+	}
+}
+.shortcut {
+	width: ~"calc((100% - 140px)/6)";
+	max-width: 190px;
+	margin: 10px 10px 30px 10px;
+	padding: 10px 0 20px 0;
+	text-decoration: none;
+	font-size: @basic-font-size;
+	border: 1px solid #eeeeee;
+	border-radius: 2px;
+	color: #000000;
+	background-color: #ffffff;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+
+	&:hover {
+		border-color: #dddddd;
+		box-shadow: 0 2px 6px 0 rgba(0,0,0,0.1);
+	}
+	&:active {
+		border-color: #dddddd;
+		box-shadow: 0 2px 6px 0 rgba(0,0,0,0.1), 0 6px 18px 0 rgba(0,0,0,0.1);
+	}
+
+	.shortcut-img {
+		background-image: url('img/icons/event-01.png');
+		background-position: center;
+		background-size: 30%;
+		background-repeat: no-repeat;
+		width: 100%;
+		padding-top: 60%;
+		margin-bottom: 10px;
+	}
+	.shortcut-title {
+		text-align: center;
+		padding: 0 5px;
+	}
+
+	@media (min-width: 1400px) {
+		width: ~"calc((100% - 180px)/8)";
+	}
+	@media (max-width: 768px) {
+		width: ~"calc((100% - 80px)/3)";
+	}
+	@media (max-width: 500px) {
+		width: ~"calc((100% - 60px)/2)";
+	}
+}
+#dash {
+	flex-flow: row;
+	flex-wrap: wrap;
+	padding: 10px;
+
+	.section {
+		padding: 10px;
+		margin: 5px;
+		animation: fade-in 0.5s ease-out 0.1s;
+
+		/*&:active {
+			box-shadow: 0 2px 6px 0 rgba(0,0,0,0.1), 0 6px 18px 0 rgba(0,0,0,0.1);
+			border-radius: 2px;
+		}*/
+
+		.section-title {
+			cursor: -webkit-grab;
+
+			.set {
+				position: absolute;
+				z-index: 40;
+				top: -3px;
+				left: 50%;
+				transform: translate(37px, 0);
+				width: 20px;
+				height: 20px;
+				background-color: #ffffff;
+				background-image: url('img/icons/settings.svg');
+				background-size: 60%;
+				background-position: center;
+				background-repeat: no-repeat;
+				cursor: default;
+
+				.pannel {
+					display: none;
+
+					.shortcut {
+						width: 120px;
+					}
+				}
+				&.open .pannel {
+					display: block;
+					position: absolute;
+					z-index: 50;
+					padding: 10px;
+					top: 100%;
+					left: 50%;
+					transform: translate(-50%, 4px);
+
+					background-color: #ffffff;
+					box-shadow: 0 4px 14px rgba(0,0,0,0.20);
+
+				}
+			}
+		}
+	}
+}
+
+
+	.act {
+		position: relative;
+		margin: 10px 20px;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 100%;
+			margin: 5px 14px 5px 0;
+			background-color: @accent-color;
+			border-radius: 50%;
+			width: 6px;
+			height: 6px;
+			content: '';
+		}
+
+		.act-info {
+			font-size: @small-font-size;
+			margin: 3px 0;
+			color: #999999;
+			font-weight: 100;
+		}
+		.act(10);
+	}
+
+	@media (max-width: 768px) {
+		width: ~"calc(100% - 30px)";
+	}
+
+
+    .content.series {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+
+        @media @screen-xs {
+            flex-direction: column;
+        }
+
+        .content-img {
+            position: relative;
+            width: 40%;
+            //padding-top: 70%;
+            margin: 0 20px 0 0;
+            background-position: center;
+            background-size: cover;
+            border-radius: 2px;
+
+            @media @screen-xs {
+                width: 100%;
+                height: 300px;
+            }
+        }
+        .content-cont {
+            width: 60%;
+            padding: 10px 0;
+            @media @screen-xs {
+                width: 100%
+            }
+        }
+
+
+        .content-title {
+            font-weight: 500;
+            margin-bottom: 5px
+        }
+        .content-des {
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        .content-info {
+            font-size: @small-font-size;
+            font-weight: 300;
+            color: @light-font-color;
+        }
+    }

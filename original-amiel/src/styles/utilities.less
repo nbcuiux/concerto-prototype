@@ -1,0 +1,77 @@
+@import "variables.less";
+
+.u-noMargin {
+    margin: 0px!important;
+}
+.u-noPadding {
+    padding: 0!important;
+}
+.u-noSidePadding {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.u-hidden {
+    display: none!important;
+}
+
+.u-hidden-xs {
+    @media @screen-xs {
+        .u-hidden();
+    }
+}
+.u-hidden-s {
+    @media @screen-s {
+        .u-hidden();
+    }
+}
+.u-hidden-n {
+    @media @screen-n {
+        .u-hidden();
+    }
+}
+.u-hidden-l {
+    @media @screen-l {
+        .u-hidden();
+    }
+}
+
+.u-visible-xs {
+    .u-hidden-s();
+    .u-hidden-n();
+    .u-hidden-l();
+    /*@media @screen-xs {
+        display: block!important;
+    }*/
+}
+
+.u-nowrap {
+    flex-wrap: nowrap!important;
+}
+
+.u-noPadding {
+    padding: 0!important;
+}
+
+.u-noPointerEvents {
+    pointer-events: none!important;
+}
+.u-right {
+    float: right!important;
+    align-self: flex-end!important;
+}
+
+
+
+*.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}

@@ -1,0 +1,56 @@
+<div class="al modal modal--full" id="asset-library">
+    <div class="modal__close js-close-overlay"></div>
+    <!-- Asset Library Header -->
+    <div class="header">
+        <div class="title">View Library</div>
+        <div class="searchField">
+                <input type="text" placeholder="Search asset ..." id="searchField"/>
+                <div class="filterIcon" id="filterButton"></div>
+                <div id="filterMenu" class="filter">
+                    <div class="section" id="filter-show">
+                        <div class="section-title">Show</div>
+                        <div class="section-options">
+                            <input type="checkbox" class="toggle" id="alcatraz"><label for="alcatraz" class="toggle-label">Alcatraz</label>
+                            <input type="checkbox" class="toggle" id="blade"><label for="blade" class="toggle-label">Blade</label>
+                            <input type="checkbox" class="toggle" id="blindspot"><label for="blindspot" class="toggle-label">Blindspot</label>
+                            <input type="checkbox" class="toggle" id="slashers"><label for="slashers" class="toggle-label">Great American Slashers</label>
+                            <input type="checkbox" class="toggle" id="kids"><label for="kids" class="toggle-label">Horror's Creepiest Kids</label>
+                            <input type="checkbox" class="toggle" id="river"><label for="river" class="toggle-label">The River</label>
+                            <input type="checkbox" class="toggle" id="gates"><label for="gates" class="toggle-label">The Gates</label>
+                        </div>
+                    </div>
+                    <div class="section" id="filter-files">
+                        <div class="section-title">File Types</div>
+                        <div class="section-options">
+                            <input type="checkbox" class="toggle" id="img"><label for="img" class="toggle-label">images</label>
+                            <input type="checkbox" class="toggle" id="video"><label for="video" class="toggle-label">video</label>
+                            <input type="checkbox" class="toggle" id="music"><label for="music" class="toggle-label">audio</label>
+                            <input type="checkbox" class="toggle" id="pres"><label for="pres" class="toggle-label">documents</label>
+                        </div>
+                    </div>
+                    <div class="section" id="filter-date">
+                        <div class="section-title">Date</div>
+                        <div class="section-options">
+                            <input type="checkbox" class="toggle" id="week"><label for="week" class="toggle-label">last week</label>
+                            <input type="checkbox" class="toggle" id="month"><label for="month" class="toggle-label">last month</label>
+                            <input type="checkbox" class="toggle" id="3month"><label for="3month" class="toggle-label">last 3 month</label>
+                            <input type="checkbox" class="toggle" id="year"><label for="year" class="toggle-label">year</label>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+    <!-- Asset Library Files-->
+    <div class="files">
+        <!-- Files Section-->
+        <div class="section">
+            <div class="section__files"></div>
+        </div>
+
+    </div>
+    <div class="modal__controls modal__controls--bottom">
+        <button class="button button_style_fill-accent js-overlay-save">Add Files</button>
+        <button class="button button_style_outline-white js-close-overlay">Cancel</button>
+    </div>
+</div>

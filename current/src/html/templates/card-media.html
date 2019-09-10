@@ -1,0 +1,53 @@
+<div class="card card--foldable js-foldable" id="card-media">
+    <div class="card__title js-foldedToggle js-stickyOnMobile">Media</div>
+    <div class="card__body u-noPadding o-Grid o-Grid--row">
+        <div class="c-Card-panel c-Card-panel--left c-Card-panel--wide">
+            <div class="card__controls c-Card-controls" data-uk-sticky="{boundary: true, top:50, clsactive: 'is-stuck'}">
+                <div class="left">
+                    <div class="selectAll">
+                        <button class="empty" id="selectAll" title="Select All"></button><label id="selectAllLabel" for="selectAll">All</label>
+                    </div>
+                    <button class="button button_style_transparent-gray" id="multiEdit">
+                        <i class="fa fa-pencil-square"></i>
+                        <span class="buttonText">  Multi Edit</span>
+                        <div class="button__warning is-hidden"></div>
+                    </button>
+                    <button class="button button_style_transparent-gray" id="bulkRemove"><i class="fa fa-times-circle"></i><span class="buttonText">  Remove</span></button>
+                </div>
+                <div class="right">
+
+                    <div class="media-lib__more">
+                        <div class="media-lib__trigger">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </div>
+                        <div class="media-lib__dropdown">
+                            <ul class="c-Dropdown-list" style="left: 0px; top: 100%;">
+                                <li class="dropdown__list-item uploadFiles">
+                                    <i class="fa fa-upload"></i>
+                                    <span class="">  Upload files</span>
+                                </li>
+                                <li class="dropdown__list-item assetLibrary">
+                                    <i class="fa fa-folder-open"></i>
+                                    <span class="">  Add from library</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div class="files js-files" data-files-type="mediaGallery">
+                <!-- Files Section-->
+                <div class="section">
+                    <div class="js-media-tab" id="js-media-tab"></div>
+                    <div class="section__files section__files_view_grid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+@import "../variables.less";
+@import "../controls/button/button.less";
+
+.post-item-thumbnails {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+
+.post-item-thumb {
+  .button();
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.post-item-thumb--post-card {
+    width: 70px;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 10px;
+    .button_style_outline-gray();
+  }
+  &.post-item-thumb--overlay {
+    .button_style_outline-white();
+    width: 20%;
+    min-width: 100px;
+    padding: 40px;
+    margin: -1px -1px 0 0;
+    border-radius: 0px;
+    border-color: darken(#929293, 30%);
+
+    &:hover {
+      z-index: 2;
+      background-color: #ffffff;
+      border-radius: 2px;
+      color: fade(#000000, 90%);
+      box-shadow: 0 0 4px 2px fade(#000000, 80%);
+    }
+  }
+  &.post-item-thumb--template {
+    position: relative;
+    min-height: 100px;
+    align-items: flex-start;
+    padding: 10px;
+  }
+}
+.post-item-thumb__icon {
+  position: relative;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.post-item-thumb__title {
+  font-size: 10px;
+  white-space: normal;
+  text-align: center;
+
+  .post-item-thumb--template & {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+  }
+}
+.post-item-thumb__description {
+  margin-top: 5px;
+  font-size: 10px;
+  line-height: 1.4;
+  white-space: normal;
+  opacity: 0.6;
+}
+.post-item-thumb__remove {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  background-image: url(img/icons/close-modal-w.svg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  transition: opacity 0.3s ease-out;
+  opacity: 0.5;
+
+  .post-item-thumb:hover & {
+    background-image: url(img/icons/close-modal.svg);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    opacity: 1;
+  }
+}
